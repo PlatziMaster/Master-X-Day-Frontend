@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "trello-reader",
   "version": "0.1.0",
   "private": true,
@@ -34,5 +35,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesusGarciaValadez/Master-X-Day-Frontend.git"
+  },
+  "keywords": [
+    "Platzi",
+    "Team",
+    "10",
+    "Platzi",
+    "Master",
+    "Frontend"
+  ],
+  "author": "Team 10",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JesusGarciaValadez/Master-X-Day-Frontend/issues"
+  },
+  "homepage": "https://github.com/JesusGarciaValadez/Master-X-Day-Frontend#readme"
 }

@@ -15,7 +15,9 @@ Instructions:
 
 ## Specifications about the design
 
-We choose some colors of a color palette called "Retro", we found this in a [blog post](https://ealmeida.blogspot.com/2017/03/paleta-de-colores-en-genexus.html)
+We choose some colors of a color palette called "Retro", we found this in a [blog post](https://ealmeida.blogspot.com/2017/03/paleta-de-colores-en-genexus.html). <br>
+we choose diferent colors that Trello because we want to comunicate a new view where you can get concrete information about the project. <br>
+
 
 # Trello API Collection
 

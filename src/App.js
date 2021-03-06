@@ -3,6 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect, useState } from 'react';
 import './assets/scss/global.scss'
 import Header from './components/header'
+import Footer from './components/footer'
+import Layout from './components/layout'
+import Card from './components/mobile-card-container'
+import Task from './components/Target'
 
 // const key = 'a9a2107d1296e0416a93bddf26491c4a'
 const key = '93e0e4c144003bf990231de2aab641ee'
@@ -78,8 +82,9 @@ function App() {
   }, [1])
 
   return (
-    <div className="container">
+    <div className="App">
       <Header/>
+      
       {lists.length >= 1 ? (
         lists.map(list => <div>
           <h2>{list.name}</h2>
@@ -88,6 +93,24 @@ function App() {
           </ul>
         </div>)
       ) : null}
+
+      <Layout title="Platzi Master Day">
+        <Card title="To do" counter="45">
+          <Task />
+          <Task />
+          <Task />
+          <Task />
+        </Card>
+        <Card title="In progress" counter="65">
+          <Task />
+          <Task />
+          <Task />
+        </Card>
+        <Card title="Done" counter="15">
+        <Task />
+        </Card>
+      </Layout>
+      <Footer />
     </div>
   );
 }

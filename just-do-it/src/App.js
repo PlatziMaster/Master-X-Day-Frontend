@@ -1,19 +1,21 @@
 // Import libraries
-import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
 // Import assets
-import logo from './logo.svg';
+import logo from "./logo.svg";
 // Import styles
-import './App.css';
+import "./App.css";
 // Import actions
-import { getBoards, resetRequest } from './redux/actions/boardActions';
+import { getBoards, resetRequest } from "./redux/actions/boardActions";
+
+import PieChart from "./components/Graphs/PieChart"
 
 const App = ({
   getBoards,
   resetRequest,
   boards,
   successRequest,
-  errorRequest
+  errorRequest,
 }) => {
   // Set State
   const [loading, setLoading] = useState(true);
@@ -21,7 +23,7 @@ const App = ({
   // Get boards
   useEffect(() => {
     getBoards();
-  }, [getBoards])
+  }, [getBoards]);
 
   if ((successRequest || errorRequest) && loading) {
     console.log(boards);
@@ -33,37 +35,36 @@ const App = ({
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p>Hello Team 11</p>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Ready to start
         </a>
       </header>
+      <PieChart />
     </div>
   );
-}
+};
 
 // Map dispatch
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   getBoards() {
-    dispatch(getBoards())
+    dispatch(getBoards());
   },
   resetRequest() {
-    dispatch(resetRequest())
-  }
+    dispatch(resetRequest());
+  },
 });
 
 // Map state
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   boards: state.boardReducer.boards,
   errorRequest: state.boardReducer.errorRequest,
-  successRequest: state.boardReducer.successRequest
+  successRequest: state.boardReducer.successRequest,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

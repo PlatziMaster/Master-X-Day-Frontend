@@ -1,0 +1,58 @@
+:root {
+  --border-color: #19BE46;
+
+}
+
+.header__icon {
+  display: none;
+}
+
+.header__nav {
+  display: flex;
+  width: 100%;
+  margin-left: 100px;
+}
+
+.header__nav--list {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.list-side-left li {
+  cursor: pointer;
+}
+.list-side-right li {
+  cursor: pointer;
+}
+
+.list-side-left {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 250px;
+  font-size: 1.6rem;
+}
+
+.list-side-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  font-size: 1.6rem;
+}
+
+.list-side-right li button {
+  color: var(--border-color);
+  border: 2px solid var(--border-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.container {
+  flex-direction: row;
+  justify-content: space-around;
+}

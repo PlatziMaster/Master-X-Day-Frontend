@@ -1,0 +1,11 @@
+URL to get all members
+https://api.trello.com/1/boards/6043b6b7c5a4cc2a8b71eaa9/memberships?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44
+
+URL to get all cards:
+https://api.trello.com/1/boards/6043b6b7c5a4cc2a8b71eaa9/cards?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44
+
+URL to get all lists
+https://api.trello.com/1/boards/6043b6b7c5a4cc2a8b71eaa9/lists?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44
+
+URL to get every list on board. The ID of every list must be changed
+https://api.trello.com/1/lists/%7Bid%7D/key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44

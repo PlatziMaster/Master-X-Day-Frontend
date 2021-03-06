@@ -1,13 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/scss/global.scss";
 import Header from "./components/header";
-import Target from "./components/Target";
+import Footer from "./components/footer";
+import CardContainer from "./components/mobile-card-container";
 
 function App() {
   return (
-    <div className="container">
+    <div className="App">
       <Header />
-      <Target />
+      <CardContainer />
+      <Footer />
     </div>
   );
 }

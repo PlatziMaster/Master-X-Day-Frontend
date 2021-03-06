@@ -1,5 +1,11 @@
 # Master X Day - FRONTEND
 
+
+## Design 
+
+The design was made with figma and can be accessed in https://imgur.com/a/TdCjzv2
+
+
 Instructions:
 
 1. Fork the project

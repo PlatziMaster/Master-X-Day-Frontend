@@ -1,4 +1,4 @@
-# Project Commit Standards
+# Platzi Master X Day - Team 10 Commit Standards
 
 There are many ways to handle committing. We uses [Conventional Commits](https://www.conventionalcommits.org/) for its commit standards.
 

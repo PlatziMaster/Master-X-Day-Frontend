@@ -22,8 +22,8 @@ function App() {
         db
       </Dashboard>
       <Card taskClassification="To-Do" icon={toDoIcon}/>
-      <Card taskClassification="To-Do" icon={inProgressIcon}/>
-      <Card taskClassification="To-Do" icon={doneIcon}/>
+      <Card taskClassification="In-progress" icon={inProgressIcon}/>
+      <Card taskClassification="Done" icon={doneIcon}/>
     </div>
   );
 }

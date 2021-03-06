@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const urlBackend = "http://localhost:3000";
+const urlBackend = "https://api.trello.com";
 
-function managementError(error: any) {
+function managementError(error) {
   if (error.response) {
     console.log(error.response.data);
   } else if (error.request) {
@@ -13,7 +13,7 @@ function managementError(error: any) {
   console.log(error.config);
 }
 
-const getRequest = (url: string): Promise<any> => {
+const getRequest = (url) => {
   return axios
     .get(`${urlBackend}/${url}`)
     .then((response) => response.data)
@@ -22,7 +22,7 @@ const getRequest = (url: string): Promise<any> => {
     });
 };
 
-const deleteRequest = (url: string): Promise<any> => {
+const deleteRequest = (url) => {
   return axios
     .delete(`${urlBackend}/${url}`)
     .then((response) => response.data)
@@ -31,7 +31,7 @@ const deleteRequest = (url: string): Promise<any> => {
     });
 };
 
-const postRequest = (url: string, data: any): Promise<any> => {
+const postRequest = (url, data) => {
   return axios
     .post(`${urlBackend}/${url}`, data)
     .then((response) => response.data)
@@ -40,7 +40,7 @@ const postRequest = (url: string, data: any): Promise<any> => {
     });
 };
 
-const putRequest = (url: string, data: any): Promise<any> => {
+const putRequest = (url, data) => {
   return axios
     .put(`${urlBackend}/${url}`, data)
     .then((response) => response.data)

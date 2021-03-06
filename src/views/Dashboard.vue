@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
   <div class="about pb-24">
     <div class="text-white mb-12 text-center md:text-left md:ml-32">
       <h1 class="underline text-4xl font-bold mb-2">{{ "Dashboard name" }}</h1>
@@ -25,18 +26,31 @@
   </div>
 </template>
 <script>
-
 // @ is an alias to /src
 import MTDashboardCard from "@/components/MTDashboardCard.vue";
 import MTDashboardCardLarge from "@/components/MTDashboardCardLarge.vue";
 import MTDashboardCardSmall from "@/components/MTDashboardCardSmall.vue";
+import NavBar from "@/components/MTNavBar.vue";
+
+import { boardData } from "@/api/trello.service.js";
+
+const idBoard = "6043b76b2ab9f31967290262";
 
 export default {
   name: "Dashboard",
   components: {
     MTDashboardCard,
     MTDashboardCardLarge,
-    MTDashboardCardSmall
+    MTDashboardCardSmall,
+    NavBar
+  },
+  data() {
+    return { board: {}, members: [], totalCardsBoard: 0, lists: [] };
+  },
+  created() {
+    boardData(idBoard).then((board) => {
+      console.log(board);
+      this.board = board});
   },
 };
 </script>

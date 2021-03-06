@@ -6,7 +6,7 @@ import Menu from "../assets/menu.svg";
 
 export default function Target(props) {
   return (
-    <article className="target">
+    <article className="target mb-3">
       <figure className="target__menu">
         <img src={Menu} alt="" />
       </figure>

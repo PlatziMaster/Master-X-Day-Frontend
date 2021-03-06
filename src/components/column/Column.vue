@@ -7,9 +7,10 @@
     </div>
     <div class="content">
       <ul>
-        <div v-for="item in items" :key="item.id">
-          {{ item.mensaje }}
-        </div>
+        <card v-for="card in cards" :key="card.id"
+          taskName='card.name'
+          dueDate="card.dueData"
+          labels="card.labels"/>
       </ul>
     </div>
     <div class="counter">Cards: {{counter}}</div>

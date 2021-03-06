@@ -236,7 +236,7 @@
     "prefer-const": 2,
     "quote-props": 0,
     "quotes": [
-      2,
+      1,
       "single",
       "avoid-escape"
     ],
@@ -245,7 +245,9 @@
     "jsx-a11y/click-events-have-key-events": 0,
     "jsx-a11y/no-noninteractive-element-interactions": 0,
     "jsx-a11y/media-has-caption": 0,
+    "react/destructuring-assignment": 1,
     "react/display-name": 0,
+    "react/jsx-tag-spacing": 1,
     "react/jsx-boolean-value": 0,
     "react/jsx-closing-bracket-location": 2,
     "react/jsx-curly-spacing": [
@@ -282,7 +284,7 @@
     "react/prefer-stateless-function": 0,
     "react/require-default-props": 0,
     "react/react-in-jsx-scope": 0,
-    "react/self-closing-comp": 2,
+    "react/self-closing-comp": 0,
     "react/sort-comp": 0,
     "react/jsx-wrap-multilines": 2,
     "semi-spacing": 0,

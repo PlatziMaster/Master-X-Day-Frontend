@@ -31,13 +31,13 @@ const boardData = (idBoard) => {
 
 const members = (idBoard) => {
   return getBoardMembers(idBoard).then((data) =>
-    data && data.lenght > 0 ? data.map((item) => item.fullName) : []
+    data && data.length > 0 ? data.map((item) => item.fullName) : []
   );
 };
 
 const totalCardsBoard = (idBoard) => {
   return getBoardTotalCards(idBoard).then((data) => {
-    return data && data.lenght > 0
+    return data && data.length > 0
       ? data.reduce((acum, item) => (acum = acum + 1), 0)
       : 0;
   });
@@ -53,7 +53,7 @@ const lists = (idBoard) => {
 const cardsNumberInList = (idList) => {
     return getBoardListCards(idList)
     .then(data => {
-        return data && data.lenght > 0
+        return data && data.length > 0
         ? data.reduce((acum, item) => (acum = acum + 1), 0)
         : 0;
     })

@@ -1,14 +1,13 @@
 ---
 name: 'Phase I: Design of the project'
 about: FIGMA prototype and API connection
-title: "[Phase I: Design of the project]"
+title: '[Phase I: Design of the project]'
 labels: ''
 assignees: ''
-
 ---
 
 **Is the design of your prototype complete?**
-A clear and concise description of how you accomplished this task. 
+A clear and concise description of how you accomplished this task.
 _Eg. I used FIGMA and adobe XD to..._
 
 **How would you improve this phase in the future?**

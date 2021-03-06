@@ -31,32 +31,36 @@ const boardData = (idBoard) => {
 
 const members = (idBoard) => {
   return getBoardMembers(idBoard).then((data) =>
-    data && data.lenght > 0 ? data.map((item) => item.fullName) : []
+    data && data.length > 0 ? data.map((item) => item.fullName) : []
   );
 };
 
 const totalCardsBoard = (idBoard) => {
   return getBoardTotalCards(idBoard).then((data) => {
-    return data && data.lenght > 0
+    return data && data.length > 0
       ? data.reduce((acum) => (acum = acum + 1), 0)
       : 0;
   });
 };
 
 const lists = (idBoard) => {
-    return getBoardList(idBoard)
-    .then(data => {
-        return data && data.length > 0 ? data.map(item => ({id: item.id, name: item.name})) : []
-    })
-}
+  return getBoardList(idBoard).then((data) => {
+    return data && data.length > 0
+      ? data.map((item) => ({ id: item.id, name: item.name }))
+      : [];
+  });
+};
 
-const cardsNumberInList = (idList) => {
-    return getBoardListCards(idList)
-    .then(data => {
-        return data && data.lenght > 0
-        ? data.reduce((acum) => (acum = acum + 1), 0)
-        : 0;
-    })
-}
+const cardsInList = (idList) => {
+  return getBoardListCards(idList).then((data) => {
+    return data && data.length > 0
+      ? data.map((item) => ({
+          id: item.id,
+          closed: item.closed,
+          name: item.name,
+        }))
+      : [];
+  });
+};
 
-export { boardData, members, totalCardsBoard, lists, cardsNumberInList };
+export { boardData, members, totalCardsBoard, lists, cardsInList };

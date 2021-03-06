@@ -4,7 +4,7 @@
   >
     <!--Componente de gráfico-->
     <div class="h-3/5 flex flex-wrap content-center justify-center ">
-      <mt-dashboard-pie color="#FF8C8C" backgroundColor="#FFE5E5" label="prueba" :percent="50"/>
+      <mt-dashboard-pie :id="id" color="#FF8C8C" backgroundColor="#FFE5E5" label="prueba" :percent="50"/>
     </div>
     <div class="bg-MTLightGreen h-1/5 align-middle my-auto flex flex-wrap content-center justify-center text-MTWhite">
       <div class="flex flex-col">
@@ -27,7 +27,8 @@ export default {
   props: {
     msg: String,
     listName: String,
-    cardsNumber: String
+    cardsNumber: String,
+    id: String,
   },
   components: {
     'mt-dashboard-pie': MTDashboardPieChart

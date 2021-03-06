@@ -36,7 +36,7 @@ jobs:
         run: dotnet restore Team18\PlatziMasterTrello
 
       # Run dotnet build and publish
-      - name: dotnet build and publish WEBAPI
+      - name: dotnet build and publish WEBAPP
         run: |
           dotnet build Team18\PlatziMasterTrello\PlatziMasterTrello\PlatziMasterTrello.csproj --configuration Release
           dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/MyWebAPP' Team18\PlatziMasterTrello\PlatziMasterTrello\PlatziMasterTrello.csproj

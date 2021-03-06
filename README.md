@@ -1,10 +1,10 @@
 # Master X Day - FRONTEND
+PHASE2
+work until phase II in this part. I worked alone in team #23. work in html, javascript, css, troll's API
 
-Instructions:
+PHASE1
+Prototipo
+![mockup](https://user-images.githubusercontent.com/49377574/110216592-f3217500-7e7d-11eb-9906-51d8bf016f06.png)
 
-1. Fork the project
-2. Make your changes for each stage
-3. Make a Pull Request
-4. In url link eg. "https://github.com/PlatziMaster/Master-X-Day-Frontend/compare/main...rafalagunas:main" you have to concatenate
-   "?template=phase1.md" so your url looks like this => "https://github.com/PlatziMaster/Master-X-Day-Frontend/compare/main...rafalagunas:main?template=phase1.md"
-5. Create the pull request
+¿Cómo te conectaste a la API?
+Se pudo conectar API , pruebas con Postman

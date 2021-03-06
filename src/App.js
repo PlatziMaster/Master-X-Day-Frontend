@@ -7,6 +7,7 @@ import Footer from './components/footer'
 import Layout from './components/layout'
 import Card from './components/mobile-card-container'
 import Task from './components/Target'
+import Interface from './components/interface'
 
 // const key = 'a9a2107d1296e0416a93bddf26491c4a'
 const key = '93e0e4c144003bf990231de2aab641ee'
@@ -95,7 +96,13 @@ function App() {
         
       </Layout>
       <Footer />
+
+      <Interface />
+
     </div>
+
+  
+
   );
 }
 

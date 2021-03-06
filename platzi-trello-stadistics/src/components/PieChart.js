@@ -1,7 +1,7 @@
 import React from 'react'
 import Chart from 'react-apexcharts'
 
-class ApexChart extends React.Component {
+class PieChart extends React.Component {
     constructor(props) {
         super(props);
 
@@ -41,5 +41,5 @@ class ApexChart extends React.Component {
     }
 }
 
-export default ApexChart
+export default PieChart
 

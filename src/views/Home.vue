@@ -1,22 +1,21 @@
 <template>
-  <div class='home'>
-    <img alt='Vue logo' src='../assets/logo.png' />
+  <div>
+    <Card
+      taskName="Finish Second phase"
+      dueDate="06-03-2020"
+      description="We have to finish the second phase"
+    />
+    <Card
+      taskName="Finish Second phase 234"
+      dueDate="06-03-2020"
+      description="We have to finish the second phase"
+    />
+    <Card
+      taskName="Finish Second phase 12312"
+      dueDate="06-03-2020"
+      description="We have to finish the second phase"
+    />
   </div>
 </template>
-
-<script lang='ts'>
-import { Component, Vue } from 'vue-property-decorator';
-import { testAPI } from '../api';
-
-@Component({
-  components: {},
-})
-export default class Home extends Vue {
-  created() {
-    this.$nextTick(async () => {
-      const result = await testAPI();
-      console.log(result);
-    });
-  }
-}
-</script>
+<style src="./Home.css" lang="css"/>
+<script src="./Home.ts" lang="ts"/>

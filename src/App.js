@@ -5,13 +5,15 @@ import {
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/scss/global.scss'
-//compoments
-import Footer from './components/footer';
-import Header from './components/header';
-import Layout from './components/layout';
-// views
+import Header from './components/header'
+import Footer from './components/footer'
+import Layout from './components/layout'
+import Main from './components/Main'
+import Interface from './components/interface'
+import Dashboard from './views/dashboard'
 import DasboardDetail from './views/dasboard-detail'
-import Dashboard from './views/dashboard';
+
+
 
 function App() {
   return (

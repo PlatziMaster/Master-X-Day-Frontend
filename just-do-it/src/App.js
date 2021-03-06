@@ -8,6 +8,8 @@ import "./App.css";
 // Import actions
 import { getBoards, resetRequest } from "./redux/actions/boardActions";
 
+import DoughnutChart from "./components/Graphs/Graphs"
+
 const App = ({
   getBoards,
   resetRequest,
@@ -43,6 +45,7 @@ const App = ({
           Ready to start
         </a>
       </header>
+      <DoughnutChart />
     </div>
   );
 };

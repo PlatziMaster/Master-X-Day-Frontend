@@ -1,10 +1,17 @@
 import React from "react";
+import "./BasicCard.css";
 
-const BasicCard = () => {
+const BasicCard = ({children}) => {
   return (
-    <div>
-      <h1>Edit here</h1>
-    </div>
+    <>
+      <section className="card-hero">
+        <h3 className="card-hero__title"></h3>
+        <section className="card-hero__task-list">
+          {children}
+        </section>
+        <button></button>
+      </section>
+    </>
   );
 };
 

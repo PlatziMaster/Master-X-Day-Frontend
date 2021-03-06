@@ -4,9 +4,9 @@ import styles from "./Login.module.css";
 const Login = () => {
   return (
     <div>
-      <h1 class="title">Platzi Trello</h1>
+      <h1 class={styles.title}>Platzi Trello</h1>
 
-      <h2 class="subtitle">#ID Tablero</h2>
+      <h2 class={styles.subtitle}>#ID Tablero</h2>
 
       <input
         type="text"
@@ -19,3 +19,5 @@ const Login = () => {
     </div>
   );
 };
+
+export default Login;

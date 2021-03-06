@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Dashboard.module.css";
 
 const Dashboard = () => {
   return (
@@ -77,3 +78,5 @@ const Dashboard = () => {
     </div>
   );
 };
+
+export default Dashboard;

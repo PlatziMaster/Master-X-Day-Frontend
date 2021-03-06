@@ -3,8 +3,8 @@ import styles from "./ProgressBar.module.css";
 
 const ProgressBar = () => {
   return (
-    <div class="progress">
-      <div class="progress-inner" style={{ width: "10%" }}></div>
+    <div class={styles.progress}>
+      <div class={styles.progressInner} style={{ width: "10%" }}></div>
     </div>
   );
 };

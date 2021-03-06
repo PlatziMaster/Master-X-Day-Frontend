@@ -17,6 +17,8 @@ const IDBoard = "6043a61f64db4380f9d6a37b"
 
 function App() {
   const [lists, setLists] = useState([])
+  const [members, setMembers] = useState([])
+  const [boards, setBoards] = useState([])
 
   const getLists = async () => {
     let res = await axios.get(`https://api.trello.com/1/boards/${IDBoard}/lists/?key=${key}&token=${token}`)
@@ -78,10 +80,21 @@ function App() {
     }
 
     getBoards()
+    .then(res => {
+      console.log('Boards', res);
+      setBoards(res)
+    })
     
     getMembersOfBoard()
-    .then(res => {
-      // TODO: get members information
+    .then(members => {
+      console.log('getMembersOfBoard', members)
+      members.forEach(member => {
+        getMembersInfo(member.idMember)
+        .then(res => {
+          console.log(`getMembersInfo ${member.id}`, res)
+          setMembers(members => [...members, res])
+        })
+      });
     })
 
   }, [1])
@@ -90,6 +103,15 @@ function App() {
     <div className="App">
       <Header/>
       <Layout title="Platzi Master Day">
+
+      {boards.length >= 1 ? (
+        boards.map(board => <div key={board.id}>{board.name}</div>)
+      ) : null}
+
+      {members.length >=1 ? (
+        members.map(member => <p>{member.username}</p>)
+      ) : null}
+
       {lists.length >= 1 ? (
         lists.map(list => 
         <Card  title={list.name} counter={list.cards.length}>
@@ -97,7 +119,6 @@ function App() {
         </Card>
         )
       ) : null}
-        
       </Layout>
       <Footer />
     </div>

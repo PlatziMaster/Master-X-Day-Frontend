@@ -1,6 +1,6 @@
 <template>
   <NavBar />
-  <div class="about pb-24">
+  <div class="about pb-24 pt-12">
     <div class="text-white mb-12 text-center md:text-left md:ml-32">
       <h1 class="underline text-4xl font-bold mb-2">{{ board.name }}</h1>
       <h2 class="text-2xl font-bold">{{ listsData.length }} Lists</h2>

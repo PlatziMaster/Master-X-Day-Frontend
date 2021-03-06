@@ -1,15 +1,15 @@
 <template>
-  <nav class="bg-MTBlack">
-    <div class="align-middle">
-      <img id="MTlogo" src="../assets/logo.png" alt="" class="" />
-      <h1 class="text-white font-black text-lg">{{ nameApp }} Drello</h1>
+  <nav class="bg-MTBlack flex flex-row h-14 justify-between	">
+    <div class="align-middle flex flex-wrap content-center h-full pl-6">
+      <img id="MTlogo" src="https://i.imgur.com/OT8gRC0.png" alt="" class="h-10" />
+      <h1 class="text-white font-black text-lg pl-3 align-middle my-auto">Drello</h1>
     </div>
-    <ul class="none text-white font-medium align-middle">
+    <ul class="none text-white font-medium align-middle flex flex-wrap gap-x-6 content-center pr-6">
       <li>
-        <router-link to="/">{{ home }} home</router-link>
+        <router-link to="/">Home</router-link>
       </li>
       <li>
-        <router-link to="/dashboard">{{ dashboard }} dashboard</router-link>
+        <router-link to="/dashboard">Dashboard</router-link>
       </li>
     </ul>
   </nav>

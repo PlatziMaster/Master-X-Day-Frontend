@@ -1,6 +1,7 @@
 // Import libraries
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import UserCard from './components/UsersCard/UserCard' 
 // Import assets
 // Import styles
 import './App.css';
@@ -37,7 +38,7 @@ const App = ({
 
   return (
     <div className="App">
-      <UserCard boards={boards} />
+      <UserCard members={members} />
      
     </div>
   );

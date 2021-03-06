@@ -15,7 +15,7 @@ class PieChart extends React.Component {
                 },
                 labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
                 responsive: [{
-                    breakpoint: 480,
+                    breakpoint: [375, 250],
                     options: {
                         chart: {
                             width: 200

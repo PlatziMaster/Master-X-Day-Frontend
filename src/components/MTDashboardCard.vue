@@ -4,26 +4,36 @@
   >
     <!--Componente de gráfico-->
     <div class="h-3/5 flex flex-wrap content-center justify-center ">
-      <mt-dashboard-pie :id="id" color="#FF8C8C" backgroundColor="#FFE5E5" label="prueba" :percent="50"/>
+      <mt-dashboard-pie
+        v-if="id"
+        :id="id"
+        color="#FF8C8C"
+        backgroundColor="#FFE5E5"
+        label="prueba"
+        :percent="50"
+      />
     </div>
-    <div class="bg-MTLightGreen h-1/5 align-middle my-auto flex flex-wrap content-center justify-center text-MTWhite">
+    <div
+      class="bg-MTLightGreen h-1/5 align-middle my-auto flex flex-wrap content-center justify-center text-MTWhite"
+    >
       <div class="flex flex-col">
         <span class="text-lg">{{ listName }}</span>
         <span class="text-bold text-sm">List</span>
       </div>
     </div>
-    <div class="bg-MTDarkGreen h-1/5 rounded-b-xl align-middle flex flex-wrap content-center justify-center text-MTWhite">
-      <span> {{cardsNumber}} Cards</span> 
+    <div
+      class="bg-MTDarkGreen h-1/5 rounded-b-xl align-middle flex flex-wrap content-center justify-center text-MTWhite"
+    >
+      <span> {{ cardsNumber }} Cards</span>
     </div>
   </div>
 </template>
 
 <script>
-
-import MTDashboardPieChart from '@/components/MTDashboardPieChart.vue';
+import MTDashboardPieChart from "@/components/MTDashboardPieChart.vue";
 
 export default {
-  name: "HelloWorld",
+  name: "MTDashBoardCard",
   props: {
     msg: String,
     listName: String,
@@ -31,8 +41,14 @@ export default {
     id: String,
   },
   components: {
-    'mt-dashboard-pie': MTDashboardPieChart
-  }
+    "mt-dashboard-pie": MTDashboardPieChart,
+  },
+  created() {
+    debugger;
+    console.log(this.id);
+    console.log(this.listName);
+    console.log(this.listName);
+  },
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="canvas" />
+    <canvas :id="id" />
     <h1 class="text-2xl legend">{{ percent }} %</h1>
   </div>
 </template>
@@ -80,7 +80,8 @@ export default {
   },
   methods: {
     createChart(chartData) {
-      const canvas = document.getElementById('canvas');
+      debugger;
+      const canvas = document.getElementById(this.id);
       const options = {
         type: "pie",
         data: chartData,

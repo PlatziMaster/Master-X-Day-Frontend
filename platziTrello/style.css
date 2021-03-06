@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   box-sizing: border-box;
   padding: 0;
@@ -106,3 +107,99 @@ span {
   font-size: 1.5rem;
   font-family: 'Roboto', sans-serif;
 }
+=======
+*
+{
+    margin:0px;
+    padding:0px;
+    border-style: none;
+}
+
+body
+{
+    background-color: #303F9F;
+}
+
+/*Media Query for 320px*/
+@media (min-width: 320px){
+main
+{
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    width: 100%;
+    text-align: center;
+}
+
+#maintitle
+{
+    padding-top: 150px;
+    line-height: 60px;
+    font-family: "Poppins";
+}
+
+#maintitle h1
+{
+    font-size: 48px;
+}
+
+#maintitle p
+{
+    font-size: 28px;
+}
+
+#idtablero form
+{
+    display:block;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    margin: auto;
+    width: 300px;
+}
+
+
+#idtablero input[type="text"]
+{
+    text-align: center;
+    color:#747474;
+    width: 240px;
+    height: 54px;
+    border-radius: 10px;
+    font-family: "Roboto";
+    font-size: 18px;
+}
+
+#idtablero input[type="button"]
+{
+    color: white;
+    text-align: center;
+    background-color:#898989;
+    font-family: "Poppins";
+    font-size: 24px;
+    width: 193px;
+    height: 56px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+footer
+{
+    position: fixed;
+    background-color: #3F51B5;
+    width: 100%;
+    height: 68px;
+    color: white;
+    text-align: center;
+    bottom: 0px;
+}
+
+footer p
+{
+    font-family: "Roboto";
+    font-style: italic;
+    padding-top: 20px;
+}
+}
+>>>>>>> 10bd5a03ecfc04f7d2dc60916cd59561efef808c

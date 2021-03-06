@@ -38,7 +38,7 @@ const members = (idBoard) => {
 const totalCardsBoard = (idBoard) => {
   return getBoardTotalCards(idBoard).then((data) => {
     return data && data.length > 0
-      ? data.reduce((acum, item) => (acum = acum + 1), 0)
+      ? data.reduce((acum) => (acum = acum + 1), 0)
       : 0;
   });
 };
@@ -54,7 +54,7 @@ const cardsNumberInList = (idList) => {
     return getBoardListCards(idList)
     .then(data => {
         return data && data.length > 0
-        ? data.reduce((acum, item) => (acum = acum + 1), 0)
+        ? data.reduce((acum) => (acum = acum + 1), 0)
         : 0;
     })
 }

@@ -45,12 +45,18 @@ nav a
 {
     font-size: 1.3rem;
     text-decoration: none;
-    font-weight: bold;
     color: #9E9E9E;
 }
 nav a:hover
 {
     color: #000;
+    border-bottom: 2px solid #41BBFF;
+}
+
+.nav_active
+{
+    color: #000;
+    border-bottom: 2px solid #41BBFF;
 }
 
 .dashdetails {

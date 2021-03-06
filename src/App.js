@@ -43,28 +43,33 @@ function App() {
   }
 
   useEffect(() => {
-    getLists()
-    .then(res => {
-      let temporalList = []
-      res.map(list => temporalList.push({id: list.id, name: list.name }))
-      return temporalList
-    })
-    .then((res) => {
-      console.log('list after the getLists', res)
-      res.forEach(list => {
-        getCardsByList(list.id)
-        .then(res => {
-          console.log('getCardsByList', res)
-          let object = {
-            name: list.name,
-            listId: list.id,
-            cards: res
-          }
-          setLists(lists => [...lists, object])
-        })
-      });
-      // setCards(CardsInList)
-    })
+    if(lists.length >= 1) {
+      console.log('the cards');
+    } else {
+      getLists()
+      .then(res => {
+        let temporalList = []
+        res.map(list => temporalList.push({id: list.id, name: list.name }))
+        return temporalList
+      })
+      .then((res) => {
+        console.log('list after the getLists', res)
+        res.forEach(list => {
+          getCardsByList(list.id)
+          .then(res => {
+            console.log('getCardsByList', res)
+            let object = {
+              name: list.name,
+              listId: list.id,
+              cards: res
+            }
+            setLists(lists => [...lists, object])
+          })
+        });
+        // setCards(CardsInList)
+      })
+    }
+    
 
     const getBoards = async ()  => {
       let res = await axios.get(`https://api.trello.com/1/members/me/boards?key=${key}&token=${token}`)

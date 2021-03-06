@@ -6,6 +6,15 @@ import {
     START_GET_MEMBERS_BY_BOARD_ID,
     SUCCESS_GET_MEMBERS_BY_BOARD_ID,
     ERROR_GET_MEMBERS_BY_BOARD_ID,
+    START_GET_LISTS_BY_BOARD_ID,
+    SUCCESS_GET_LISTS_BY_BOARD_ID,
+    ERROR_GET_LISTS_BY_BOARD_ID,
+    START_GET_CARDS_BY_BOARD_ID,
+    SUCCESS_GET_CARDS_BY_BOARD_ID,
+    ERROR_GET_CARDS_BY_BOARD_ID,
+    START_GET_CARDS_BY_LIST_ID,
+    SUCCESS_GET_CARDS_BY_LIST_ID,
+    ERROR_GET_CARDS_BY_LIST_ID,
     RESET_REQUEST
 } from '../consts';
 
@@ -13,6 +22,9 @@ import {
 const initialState = {
     boards: [],
     members: [],
+    lists: [],
+    cardsByBoard: [],
+    cardsByList: [],
     message: "",
     successRequest: false,
     errorRequest: false,
@@ -57,6 +69,69 @@ const boardReducer = (state = initialState, action) => {
                 members
             };
         case ERROR_GET_MEMBERS_BY_BOARD_ID:
+            console.log(action.error);
+            return { 
+                ...state,
+                errorRequest: true,
+                message: action.error.message
+            };
+        case START_GET_LISTS_BY_BOARD_ID:
+            return { 
+                ...state, 
+                data: action.payload,
+                lists: [] 
+            };
+        case SUCCESS_GET_LISTS_BY_BOARD_ID:
+            console.log(action.result);
+            const lists = action.result;
+            return { 
+                ...state,
+                successRequest: true,
+                lists
+            };
+        case ERROR_GET_LISTS_BY_BOARD_ID:
+            console.log(action.error);
+            return { 
+                ...state,
+                errorRequest: true,
+                message: action.error.message
+            };
+        case START_GET_CARDS_BY_BOARD_ID:
+            return { 
+                ...state, 
+                data: action.payload,
+                cardsByBoard: [] 
+            };
+        case SUCCESS_GET_CARDS_BY_BOARD_ID:
+            console.log(action.result);
+            const cardsByBoard = action.result;
+            return { 
+                ...state,
+                successRequest: true,
+                cardsByBoard
+            };
+        case ERROR_GET_CARDS_BY_BOARD_ID:
+            console.log(action.error);
+            return { 
+                ...state,
+                errorRequest: true,
+                message: action.error.message
+            };
+        case START_GET_CARDS_BY_LIST_ID:
+            return { 
+                ...state, 
+                data: action.payload,
+                cardsByList: [] 
+            };
+        case SUCCESS_GET_CARDS_BY_LIST_ID:
+            console.log(action.result);
+            const cardsByList = action.result;
+            return { 
+                ...state,
+                successRequest: true,
+                cardsByList
+            };
+        case ERROR_GET_CARDS_BY_LIST_ID:
             console.log(action.error);
             return { 
                 ...state,

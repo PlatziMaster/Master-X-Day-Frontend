@@ -41,3 +41,171 @@ ul{
 .listas{
     width: 80%;
 }
+
+/*Aside*/
+:root{
+    --blanco:#fff;
+    --principal: #8EE0FF;
+    --principalVariacion: #E6F7FF;
+    --secundario: #B784D8;
+    --grisClaro: #EEEEEE;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.row{
+    margin: 0;
+}
+
+
+.aside{
+    background-color: var(--principalVariacion);
+    padding: 60px 20px;
+    height: 100%;
+}
+.aside__boxPrincipal{
+    background-color: var(--blanco);
+    border-radius: 20px;
+    padding: 15px 20px;
+}
+.aside__boxPrincipal h1{
+    font-weight: 800;
+    font-size: 5rem;
+    color: var(--principal);
+
+}
+.aside__progressBar{
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    background-color: var(--grisClaro)
+
+}
+.aside__progressBar--percent{
+    color: var(--secundario);
+    font-weight: 800;
+    font-size: 2rem;
+
+}
+.aside__boxSecondary{
+    padding:25px 50px 0px 50px;
+}
+
+/*Aside Members*/
+.aside__members--head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.aside__members--head h2{
+    font-weight: 800;
+    color: var(--secundario);
+    font-size: 3.5rem;   
+    text-align: left; 
+    margin-bottom: 30px;
+
+}
+.button__plus{
+    background-image: url('../img/plusIcon.svg');
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.members__cards{
+    background-color: var(--blanco);
+    border-radius: 20px;
+    padding: 10px 15px;
+    display: flex;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
+-moz-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
+box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
+}
+.members__cards--image{
+    width: 50px;
+    height: 50px;
+    background-color: var(--grisClaro);
+    border-radius: 100%;
+}
+.members__cards--text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+.members__cards--text h4{
+    font-weight: 800;
+    font-size: 2rem ;
+    color: var(--principal);
+    text-align: left;
+}
+.members__cards--text p{
+    font-weight: 300;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    width: 100%;
+
+
+}
+
+
+/*Aside Cards -lists*/
+
+.aside__cards--head, .aside__lists--head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.aside__cards--head h2, .aside__lists--head h2{
+    font-weight: 800;
+    color: var(--secundario);
+    font-size: 3.5rem;   
+    text-align: left; 
+    margin-bottom: 30px;
+
+}
+
+
+.cards__cards, .lists__cards{
+    background-color: var(--blanco);
+    border-radius: 20px;
+    padding: 10px 15px;
+    display: flex;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
+-moz-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
+box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
+}
+
+.cards__cards--text, .lists__cards--text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+}
+.cards__cards--text h4, .lists__cards--text h4{
+    font-weight: 800;
+    font-size: 2rem ;
+    color: var(--principal);
+    text-align: left;
+    margin-bottom: 0;
+}
+.cards__cards--text p, .lists__cards--text p{
+    font-weight: 300;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+
+
+}

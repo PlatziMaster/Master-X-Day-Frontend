@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Stats </title>
+    <script src="https://www.chartjs.org/dist/2.9.4/Chart.min.js"></script>
+</head>
+<style>
+    .containerStats {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    .chartDisplay {
+        max-width: 400px;
+        border: 1px solid #ccc;
+        margin: 1em auto;
+        padding: 1em;
+        display: inline-block  !important;
+    }
+    .chartDisplay.longDisplay {
+        width: 100%;
+        max-width: 840px;
+        border: 1px solid #ccc;
+        margin: 1em auto;
+        display: inline-block;
+    }
+
+
+</style>
+<body>
+
+    <div class="containerStats">
+        <canvas id="pie-chart"  class="chartDisplay"></canvas>
+        <canvas id="bar-chart" class="chartDisplay"></canvas>
+        <!-- <canvas id="radar-chart" class="chartDisplay longDisplay"></canvas> -->
+    </div>
+    
+
+
+  
+    <script src="./js/stats.js"></script>
+
+</body>
+</html>

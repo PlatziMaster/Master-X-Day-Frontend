@@ -1,0 +1,6 @@
+export const RESET_REQUEST = 'RESET_REQUEST';
+
+// Boards
+export const START_GET_BOARDS = 'START_GET_BOARDS';
+export const SUCCESS_GET_BOARDS = 'SUCCESS_GET_BOARDS';
+export const ERROR_GET_BOARDS = 'ERROR_GET_BOARDS';

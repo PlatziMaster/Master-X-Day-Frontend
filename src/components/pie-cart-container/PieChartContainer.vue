@@ -32,4 +32,4 @@ export default class Chart extends Vue {
   };
 }
 </script>
-<style src="./Chart.css" lang="css"></style>
+<style src="./PieChartContainer.css" lang="css"></style>

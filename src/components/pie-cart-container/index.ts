@@ -1,3 +1,3 @@
-import Chart from './Chart.vue';
+import PieChartContainer from './PieChartContainer.vue';
 
-export default Chart;
+export default PieChartContainer;

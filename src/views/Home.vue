@@ -37,8 +37,8 @@ import NavBar from "@/components/MTNavBar.vue";
 
 export default {
   name: "Home",
-  components: {
-    NavBar,
-  },
+  components: {    
+    NavBar
+  }
 };
 </script>

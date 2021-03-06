@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  display: block;
+  width: 10rem;
+  background-color: rgb(177, 174, 174);
+  height: 100%;
+  position: absolute;
+  padding-top: 4rem;
+  border-radius: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 50%;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 50%;
+}
+.items {
+  margin-bottom: 2rem;
+  margin-left: 0;
+}

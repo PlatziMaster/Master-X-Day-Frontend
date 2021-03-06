@@ -1,14 +1,19 @@
 // Import libraries
-import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
-import UserCard from './components/UsersCard/UserCard' 
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import UserCard from "./components/UsersCard/UserCard";
 // Import assets
 // Import styles
-import './App.css';
+import "./App.css";
 // Import actions
 
-import { getBoards, getMembersByBoardId, resetRequest } from './redux/actions/boardActions';
+import {
+  getBoards,
+  getMembersByBoardId,
+  resetRequest,
+} from "./redux/actions/boardActions";
 
+import Menu from "./components/Menu-lateral.js/Menu";
 
 const App = ({
   getBoards,
@@ -17,7 +22,7 @@ const App = ({
   boards,
   members,
   successRequest,
-  errorRequest
+  errorRequest,
 }) => {
   // Set State
   const [loading, setLoading] = useState(true);
@@ -25,44 +30,44 @@ const App = ({
   // Get boards
   useEffect(() => {
     getBoards();
-  }, [getBoards])
-  
+  }, [getBoards]);
+
   if ((successRequest || errorRequest) && loading) {
     setTimeout(() => resetRequest());
     setLoading(false);
   }
-  
+
   if (boards[0] && loading) {
     getMembersByBoardId(boards[0].id);
   }
 
   return (
     <div className="App">
+      <Menu />
       <UserCard members={members} />
-     
     </div>
   );
-}
+};
 
 // Map dispatch
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   getBoards() {
-    dispatch(getBoards())
+    dispatch(getBoards());
   },
   getMembersByBoardId(boardId) {
-    dispatch(getMembersByBoardId({ boardId }))
+    dispatch(getMembersByBoardId({ boardId }));
   },
   resetRequest() {
-    dispatch(resetRequest())
-  }
+    dispatch(resetRequest());
+  },
 });
 
 // Map state
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   boards: state.boardReducer.boards,
   members: state.boardReducer.members,
   errorRequest: state.boardReducer.errorRequest,
-  successRequest: state.boardReducer.successRequest
+  successRequest: state.boardReducer.successRequest,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

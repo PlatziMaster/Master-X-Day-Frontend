@@ -34,7 +34,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/components/PieChart.ts", "src/components/PieChart.ts", "src/components/pie-cart-container/Chart.ts"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,0 +1,43 @@
+html {
+    box-sizing: border-box;
+}
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+.header{
+    background-color: #8ee0ff;
+}
+.contenedor{
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.svg{
+    width: 12rem;
+}
+.container{
+    display: flex;
+    background-color: #F2FBFF;
+}
+.aside{
+    flex-direction: column;
+    background-color: #E6F7FF;
+    padding: 5rem;
+    height: 91.3vh;
+}
+
+ul{
+    list-style: none;
+}
+.main{
+    display: flex;
+}
+
+.listas{
+    width: 80%;
+}

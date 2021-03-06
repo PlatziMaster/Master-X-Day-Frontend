@@ -1,8 +1,4 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/dashboard">Dashboard</router-link>
-  </div>
   <router-view />
 </template>
 
@@ -15,21 +11,7 @@
   color: #2c3e50;
 }
 
-body{
-  background-color: #0D1C2E;
-}
-
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body {
+  background-color: #0d1c2e;
 }
 </style>

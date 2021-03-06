@@ -1,0 +1,42 @@
+.html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
+.card-container {
+  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.75);
+  width: 180px;
+  margin: 10px auto;
+  height: 24em;
+  border-radius: 30px;
+}
+
+.percentage-container {
+  font-size: 3em;
+  width: 94px;
+  margin: 0 auto;
+  padding-top: 34px;
+}
+
+.icon-container {
+  width: 3em;
+  margin: 20px auto 0;
+}
+
+.icon {
+  width: 3em;
+}
+
+.classification-container {
+  margin: 0 auto;
+  margin-top: 0px;
+  height: 25px;
+  margin-top: 40px;
+  font-size: 1.2em;
+  text-align: center;
+  color: #F24C27;
+  font-weight: 700;
+}

@@ -15,6 +15,8 @@ Instructions:
 ## Platzi Master : Front End, Team 9
 ####  :sparkles:Adrian, Anthony, Girlesa, Michael :sparkles:
 
+
+[![Link Figma X](https://www.figma.com/file/bIEDM9EGcgfxgpNXLW0QV4/Trello-Team9?node-id=0%3A1)
 ### Is the design of your prototype complete?
 - [X] Must show how many cards are contained in a list.
 - [X] It should not require login, user management, roles or authentication system.

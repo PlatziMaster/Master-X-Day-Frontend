@@ -2,9 +2,9 @@
   <NavBar />
   <div class="about pb-24">
     <div class="text-white mb-12 text-center md:text-left md:ml-32">
-      <h1 class="underline text-4xl font-bold mb-2">{{ "Dashboard name" }}</h1>
-      <h2 class="text-2xl font-bold">{{ "3" }} Lists</h2>
-      <h3 class="text-md">{{ "80" }} Cards</h3>
+      <h1 class="underline text-4xl font-bold mb-2">{{ board.name }}</h1>
+      <h2 class="text-2xl font-bold">{{ lists.length }} Lists</h2>
+      <h3 class="text-md">{{ totalCardsBoard }} Cards</h3>
     </div>
     <div class="w-full flex flex-col content-center ">
 
@@ -21,6 +21,15 @@
           <MTDashboardCard listName="To-Do" cardsNumber="50" />
           <MTDashboardCard listName="In Progress" cardsNumber="20" />
           <MTDashboardCard listName="Done" cardsNumber="10" />
+        <MTDashboardCard
+          v-for="list in lists"
+          :key="list.id"
+          :listName="list.name"
+          :cardsNumber="list.cardsNumber"
+          :id="list.id"
+        />
+        <!-- <MTDashboardCard listName="In Progress" cardsNumber="20" />
+        <MTDashboardCard listName="Done" cardsNumber="10" /> -->
       </div>
     </div>
   </div>
@@ -32,7 +41,13 @@ import MTDashboardCardLarge from "@/components/MTDashboardCardLarge.vue";
 import MTDashboardCardSmall from "@/components/MTDashboardCardSmall.vue";
 import NavBar from "@/components/MTNavBar.vue";
 
-import { boardData } from "@/api/trello.service.js";
+import {
+  lists,
+  boardData,
+  members,
+  totalCardsBoard,
+  cardsInList,
+} from "@/api/trello.service.js";
 
 const idBoard = "6043b76b2ab9f31967290262";
 
@@ -42,15 +57,36 @@ export default {
     MTDashboardCard,
     MTDashboardCardLarge,
     MTDashboardCardSmall,
-    NavBar
+    NavBar,
   },
   data() {
     return { board: {}, members: [], totalCardsBoard: 0, lists: [] };
   },
+  computed: {
+    
+  },
   created() {
-    boardData(idBoard).then((board) => {
-      console.log(board);
-      this.board = board});
+    boardData(idBoard).then((board) => (this.board = board));
+    members(idBoard).then((members) => (this.members = members));
+    totalCardsBoard(idBoard).then((totalCardsBoard) => {
+      this.totalCardsBoard = totalCardsBoard;
+    });
+    lists(idBoard).then((lists) => {
+      this.lists = lists;
+      this.loadCardsInList();
+    });
+  },
+  methods: {
+    loadCardsInList() {
+      this.lists = this.lists.map(async (list) => {
+        const cards = cardsInList(list.id);
+        return {
+          ...list,
+          cards,
+          cardsNumber: cards.reduce((acum) => (acum = acum + 1), 0),
+        };
+      });
+    },
   },
 };
 </script>

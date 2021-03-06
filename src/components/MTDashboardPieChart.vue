@@ -1,16 +1,20 @@
 <template>
   <div>
-    <canvas id="pie" />
+    <canvas id="canvas" />
     <h1 class="text-2xl legend">{{ percent }} %</h1>
   </div>
 </template>
 
-<script >
+<script>
 import Chart from "chart.js";
 
 export default {
   name: "sc-doughnut-chart",
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     labelDone: {
       type: String,
       default: () => {
@@ -54,7 +58,7 @@ export default {
     };
   },
   watch: {
-    percent: function () {
+    percent: function() {
       if (this.chart && this.chart.data && this.chart.data.datasets) {
         this.chart.data.datasets[0].data = this.dataset;
         this.chart.data.labels = this.labels;
@@ -76,7 +80,7 @@ export default {
   },
   methods: {
     createChart(chartData) {
-      const canvas = document.getElementById("pie");
+      const canvas = document.getElementById('canvas');
       const options = {
         type: "pie",
         data: chartData,

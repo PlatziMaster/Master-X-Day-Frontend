@@ -2,7 +2,12 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        "180": "27rem",
+        "192": "30rem"
+      }
+    },
     textColor: theme => theme('colors'),
      textColor: {
       'white': "#FFFFFF",

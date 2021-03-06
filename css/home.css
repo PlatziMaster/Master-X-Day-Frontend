@@ -80,4 +80,46 @@ nav a:hover
 .dashdetails__title--black {
     color: black;
     font-weight: bold;
-  }
+}
+
+.lists {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    background: #41BBFF;
+    color: white;
+}
+
+.lists__title {
+    padding: 2px 5px;
+} 
+
+.listdetail {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.listdetail__title p {
+    text-align: center;
+}
+
+.listblocks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.listblocks__list {
+    padding: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 18px;
+}
+
+.listblocks__card {
+    padding: 1rem;
+    font-size: 0.8rem;
+    background: #56CCF2;
+    border-radius: 4px;
+    margin: 15px 20px;
+}

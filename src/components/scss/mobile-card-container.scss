@@ -1,7 +1,9 @@
+@media (max-width: 767px) {
+    /* Your mobile styles here */
+    
+}
 .card-container {
-    @media (max-width: 767px) {
-        /* Your mobile styles here */
-    }
+        
 }
 
 .card-body{
@@ -13,4 +15,44 @@
 .card-header{
     background-color: #24385B;
     color: #89C739;
+    border-bottom: none;
+    
+}
+
+.card-header span{
+    font-size: 1.75rem;
+}
+
+.card-header .d-flex{
+    border-bottom: 2px solid #EAD9D9;
+}
+
+.card-footer p{
+    border-top: 2px solid #EAD9D9;
+    padding-top: 8px;
+}
+
+.card-footer{
+    border-top: none;
+    background-color: #24385B;
+    color: #89C739;
+}
+
+.card-footer p:hover{
+    cursor: pointer;
+}
+.card-footer p::before{
+    content: '+';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 3px;
+   border-radius: 50%;
+   border: 1px solid #000;
+   font-size: 11px;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 5px;
+   color: #000;
 }

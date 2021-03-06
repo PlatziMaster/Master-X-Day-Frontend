@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-60 h-96 sm:text-sm md:text-md xl:text-xl rounded-xl shadow-md bg-gray-100"
+    class="w-60 h-96 sm:text-sm md:text-md xl:text-xl rounded-xl shadow-xl bg-gray-100"
   >
     <!--Componente de gráfico-->
     <div class="h-3/5 flex flex-wrap content-center justify-center ">

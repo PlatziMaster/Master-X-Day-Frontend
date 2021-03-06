@@ -25,11 +25,23 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+<<<<<<< HEAD
     
     <link rel="stylesheet" href="./css/style.scss" />    
+=======
+    <link rel="stylesheet" href="./css/container.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+>>>>>>> d9ccb07f48c2311463c30df744c5141f1420065e
   </head>
   <body>
-    <header class="header">
+    <header
+      class="header"
+      data-aos="fade-down"
+      data-aos-easing="ease"
+      data-aos-duration="1000"
+    >
       <div class="contenedor">
         <div class="logo">
           <img class="svg" src="./img/trello-logo-gradient-white.svg" alt="" />
@@ -37,8 +49,18 @@
       </div>
     </header>
     <div class="row">
-      <aside class="col-12 col-lg-4 aside">
-        <div class="aside__boxPrincipal">
+      <aside
+        class="col-12 col-lg-4 aside"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="1000"
+      >
+        <div
+          class="aside__boxPrincipal"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
           <h1>Team #16</h1>
           <div class="progress __progressBar">
             <div
@@ -53,7 +75,12 @@
             </div>
           </div>
         </div>
-        <div class="aside__boxSecondary">
+        <div
+          class="aside__boxSecondary"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
           <div class="aside__members">
             <div class="aside__members--head">
               <h2>Members</h2>
@@ -82,7 +109,12 @@
             </div>
           </div>
         </div>
-        <div class="aside__boxSecondary">
+        <div
+          class="aside__boxSecondary"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
           <div class="aside__cards">
             <div class="aside__cards--head">
               <h2>Cards</h2>
@@ -95,7 +127,12 @@
             </div>
           </div>
         </div>
-        <div class="aside__boxSecondary">
+        <div
+          class="aside__boxSecondary"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
           <div class="aside__lists">
             <div class="aside__lists--head">
               <h2>Lists</h2>
@@ -110,7 +147,12 @@
         </div>
       </aside>
       <main class="row col-12 col-lg-8 p-lg-5 pt-5 pb-5">
-        <div class="col-lg-4">
+        <div
+          class="col-lg-4"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
           <center>
             <div class="trelo__container">
               <div class="trelo__container-header">
@@ -144,7 +186,12 @@
             </div>
           </center>
         </div>
-        <div class="col-lg-4">
+        <div
+          class="col-lg-4"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
           <center>
             <div class="trelo__container">
               <div class="trelo__container-header">
@@ -195,7 +242,12 @@
             </div>
           </center>
         </div>
-        <div class="col-lg-4">
+        <div
+          class="col-lg-4"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
           <center>
             <div class="trelo__container">
               <div class="trelo__container-header">
@@ -287,6 +339,10 @@
       integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>

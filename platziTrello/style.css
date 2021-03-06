@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+aside {
+  background-color: #3F51B5;
+  height: 100vh;
+  position: fixed;
+  width: 25%;
+}
+
+aside h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 5rem;
+}
+
+.aside__progressBar {
+  margin-top: 5rem;
+}
+
+
+.aside__progressBar--figureRed {
+  margin: auto;
+  background-color: red;
+  height: 1rem;
+  width: 15rem;
+}
+
+/* .aside__progressBar--figureYellow {
+  background-color: yellow;
+  position: relative;
+  z-index: 2;
+  top: -1rem;
+  left: 9rem;
+  height: 1rem;
+  width: 10rem;
+} */
+
+.aside__buttons--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+button {
+  display: block;
+  width: 15rem;
+  margin-top: 5rem;
+  height: 5rem;
+  border-radius: 3.8rem;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-column: 2;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ECECEC;
+  width: 30rem;
+  height: 23rem;
+  border-radius: 3rem;
+  margin: 4rem;
+}
+
+.card__tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 18rem;
+}
+
+h4 {
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+span {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+}

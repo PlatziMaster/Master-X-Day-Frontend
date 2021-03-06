@@ -4,10 +4,7 @@
     "es6": true,
     "node": true
   },
-  "extends": [
-    "airbnb",
-    "airbnb/hooks"
-  ],
+  "extends": [ "airbnb" ],
   "globals": {
     "document": false,
     "escape": false,
@@ -27,9 +24,11 @@
     "import"
   ],
   "rules": {
-    "react/jsx-filename-extension": 0,
+    // allow jsx syntax in js files (for next.js project)
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], //should add ".ts" if typescript project
     "array-bracket-spacing": 2,
     "arrow-body-style": 0,
+    "arrow-parens": 0,
     "block-scoped-var": 2,
     "brace-style": [
       2,
@@ -38,6 +37,7 @@
         "allowSingleLine": true
       }
     ],
+    "comma-dangle": 0,
     "comma-spacing": [
       2,
       {
@@ -241,10 +241,7 @@
       "avoid-escape"
     ],
     "radix": 2,
-    "jsx-quotes": [
-      2,
-      "prefer-single"
-    ],
+    "jsx-quotes": 0,
     "jsx-a11y/click-events-have-key-events": 0,
     "jsx-a11y/no-noninteractive-element-interactions": 0,
     "jsx-a11y/media-has-caption": 0,
@@ -275,6 +272,7 @@
     "react/jsx-sort-props": 0,
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
+    "react/jsx-one-expression-per-line": 0,
     "react/no-did-mount-set-state": 2,
     "react/no-did-update-set-state": 2,
     "react/no-multi-comp": 0,
@@ -283,7 +281,7 @@
     "react/forbid-prop-types": 0,
     "react/prefer-stateless-function": 0,
     "react/require-default-props": 0,
-    "react/react-in-jsx-scope": 2,
+    "react/react-in-jsx-scope": 0,
     "react/self-closing-comp": 2,
     "react/sort-comp": 0,
     "react/jsx-wrap-multilines": 2,

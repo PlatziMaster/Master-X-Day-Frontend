@@ -84,31 +84,15 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      
-      {lists.length >= 1 ? (
-        lists.map(list => <div>
-          <h2>{list.name}</h2>
-          <ul>
-            {list.cards.map(i => <li>{i.name}</li>)}
-          </ul>
-        </div>)
-      ) : null}
-
       <Layout title="Platzi Master Day">
-        <Card title="To do" counter="45">
-          <Task />
-          <Task />
-          <Task />
-          <Task />
+      {lists.length >= 1 ? (
+        lists.map(list => 
+        <Card  title={list.name} counter={list.cards.length}>
+          {list.cards.map(i => <Task title={i.name} />)}
         </Card>
-        <Card title="In progress" counter="65">
-          <Task />
-          <Task />
-          <Task />
-        </Card>
-        <Card title="Done" counter="15">
-        <Task />
-        </Card>
+        )
+      ) : null}
+        
       </Layout>
       <Footer />
     </div>

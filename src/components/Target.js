@@ -12,7 +12,7 @@ export default function Target(props) {
       </figure>
 
       <div className="target__title">
-        <h2>Design Figma</h2>
+        <h2>{props.title}</h2>
         <small>Performlayout for platzi master x day test...</small>
       </div>
 

@@ -1,65 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/styles/styles.css">
-    <link rel="stylesheet" href="../src/styles/tablet.css" media="(min-width: 900px)">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/styles/styles.css">
+  <link rel="stylesheet" href="../src/styles/tablet.css" media="(min-width: 900px)">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Document</title>
 </head>
-
 <body>
-    <header class="header">
-        <a href="#/">
-            <img class="header__logo" src="../src/static/img/logo.svg" alt="logo">
-        </a>
-        <nav class="header__nav">
-            <ul class="header__nav--list">
-                <div class="list-side-left">
-                    <li>¿Cómo funciona?</li>
-                    <li>Funciones</li>
-                </div>
-                <div class="list-side-right">
-                    <li>Ayuda</li>
-                    <li><button>Pruebalo Ahora</button></li>
-                </div>
-            </ul>
-        </nav>
-        <img class="header__icon" class="header__menu" src="../src/static/img/menu-bar.svg" alt=".menu-bar">
-    </header>
-    <section class="hero">
-        <h1>View the progress of your projects more easily with Eye progress</h1>
-        <div class="hero__input">
-            <h2>Insert your Trello Dashboard ID</h2>
-            <input type="text">
+
+  <!-- Menu exit -->
+  <div class="menu-exit" id="menu-exit">
+    <div class="menu-exit__nav">
+      <a href="#/">
+        <img class="header__logo" src="../src/static/img/logo.svg" alt="logo">
+      </a>
+      <img id="exit-icon" class="header__exit" src="../src/static/img/exit.svg" alt="exit-menu">
+    </div>
+    <div class="menu-exit__info">
+      <ul>
+        <li>login</li>
+        <li>about</li>
+        <li>Platzi M</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Menu exit -->
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#/">
+      <img class="header__logo" src="../src/static/img/logo.svg" alt="logo">
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav--list">
+        <div class="list-side-left">
+          <li>¿Cómo funciona?</li>
+          <li>Funciones</li>
         </div>
+<<<<<<< HEAD
+        <div class="list-side-right">
+          <li>Ayuda</li>
+          <li><button>Pruebalo Ahora</button></li>
+=======
         <div class="hero__btn">
             <button class="hero__btn--get" id="GetDashBoardButton">Get Dashboard</button>
+>>>>>>> be55e197b7b97444d49f0191403784c6ded84ab1
         </div>
-    </section>
-    <section class="container">
-        <section class="container__item">
-            <img src="../src/static/img/Team-work-bro.svg" alt="Team-work-bro">
-            <h2>Visualiza</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet vestibulum velit. Vestibulum mattis vehic</p>
-        </section>
-        <section class="container__item">
-            <img src="../src/static/img/Pair-programming.svg" alt="Pair-programming">
-            <h2>Compara</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet vestibulum velit. Vestibulum mattis vehic</p>
-        </section>
-        <section class="container__item">
-            <img src="../src/static/img/Content-team-rafiki.svg" alt="Content-team-rafiki">
-            <h2>Implementa</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet vestibulum velit. Vestibulum mattis vehic</p>
-        </section>
-    </section>
-    <script src="../src/styles/index.js">
-    </script>
-</body>
+      </ul>
+    </nav>
+    <img id="menu-hamburguer" class="header__icon" src="../src/static/img/menu-bar.svg" alt=".menu-bar">
+  </header>
+  <!-- Header -->
 
+  <!-- Hero -->
+  <section class="hero">
+    <h1>View the progress of your projects more easily
+      with Eye progress</h1>
+    <div class="hero__input">
+      <h2>Insert your Trello Dashboard ID</h2>
+      <input type="text">
+    </div>
+    <div class="hero__btn">
+      <button class="hero__btn--get">Get Dashboard</button>
+      <button class="hero__btn--fail">FAIL</button>
+    </div>
+  </section>
+  <!-- Hero -->
+
+  <!-- Container -->
+  <section class="container">
+    <section class="container__item">
+      <img src="../src/static/img/Team-work-bro.svg" alt="Team-work-bro">
+      <h2>Visualiza</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet vestibulum velit. Vestibulum mattis vehic</p>
+    </section>
+    <section class="container__item">
+      <img src="../src/static/img/Pair-programming.svg" alt="Pair-programming">
+      <h2>Compara</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet vestibulum velit. Vestibulum mattis vehic</p>
+    </section>
+    <section class="container__item">
+      <img src="../src/static/img/Content-team-rafiki.svg" alt="Content-team-rafiki">
+      <h2>Implementa</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet vestibulum velit. Vestibulum mattis vehic</p>
+    </section>
+  </section>
+  <!-- Container -->
+  <script src="../src/styles/index.js"></script>
+</body>
 </html>

@@ -1,31 +1,22 @@
 <template>
   <div class='home'>
-    <Graphics :loaded='loaded' :todo="ttodo" :complete="tcompleted" :progress="tprogress" />
+    <img alt='Vue logo' src='../assets/logo.png' />
   </div>
 </template>
 
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
 import { testAPI } from '../api';
-import Graphics from '../components/Graphics.vue';
 
-export default {
-  data() {
-    return {
-    	loaded: true,
-    	tcompleted: 10,
-    	tprogress: 5,
-    	ttodo: 1,
-    };
-  },
-  components: {
-    Graphics,
-  },
+@Component({
+  components: {},
+})
+export default class Home extends Vue {
   created() {
     this.$nextTick(async () => {
-		  const result = await testAPI();
-		  console.log(result);
+      const result = await testAPI();
+      console.log(result);
     });
-  },
-};
+  }
+}
 </script>

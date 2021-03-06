@@ -15,7 +15,7 @@ import PieChart from '../PieChart.ts';
 
 export default {
   name: 'LineChartContainer',
-  props: ['todo', 'complete', 'progress', 'loaded'],
+  props: ['Pmayor', 'Pmenor', 'loaded', 'labelg'],
   components: {
     PieChart,
   },
@@ -27,12 +27,12 @@ export default {
       chartData: {
         hoverBackgroundColor: 'red',
         hoverBorderWidth: 10,
-        labels: ['Todo', 'Completed', 'In progress'],
+        labels: [this.labelg],
         datasets: [
           {
             label: 'Data One',
-            backgroundColor: ['#41B883', '#E46651','#eabf46'],
-            data: [this.todo, this.complete, this.progress],
+            backgroundColor: ['#41B883', '#E46651'],
+            data: [this.Pmayor, this.Pmenor],
           },
         ],
       },
@@ -52,7 +52,7 @@ export default {
 </script>
 <style>
   .container-graphics {
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
   }
 </style>

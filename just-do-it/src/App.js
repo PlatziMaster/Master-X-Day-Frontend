@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 // Import assets
-import logo from './logo.svg';
 // Import styles
 import './App.css';
 // Import actions
 import { getBoards, resetRequest } from './redux/actions/boardActions';
+import UserCard from './components/UsersCard/UserCard';
 
 const App = ({
   getBoards,
@@ -31,20 +31,8 @@ const App = ({
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserCard boards={boards} />
+     
     </div>
   );
 }

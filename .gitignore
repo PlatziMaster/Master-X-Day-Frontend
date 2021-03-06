@@ -21,3 +21,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/dist
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+
+/.idea

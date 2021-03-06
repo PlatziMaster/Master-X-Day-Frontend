@@ -1,18 +1,15 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
+import Home from '../views/Home.vue';
+import Column from '../components/column';
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/card',
-    name: 'Card',
-    component: () => import('../components/card'),
-  },
-  {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Home'),
+    component: Home,
   },
 ];
 

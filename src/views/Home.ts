@@ -1,15 +1,18 @@
 import { Component, Vue } from 'vue-property-decorator';
-import Card from '../components/card';
+import { testAPI } from '../api';
+import Column from '../components/column';
 
 @Component({
   components: {
-    Card,
+    Column,
   },
 })
+
 export default class Home extends Vue {
   created() {
-    this.$nextTick(() => {
-      console.log('kajsn');
+    this.$nextTick(async () => {
+      const result = await testAPI();
+      console.log(result);
     });
   }
 }

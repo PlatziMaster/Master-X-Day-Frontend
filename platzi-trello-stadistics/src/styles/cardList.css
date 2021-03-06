@@ -1,0 +1,26 @@
+
+.containerCards{
+    max-width: 1200px;
+    display: flex;
+}
+
+.Card{
+    width: 5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #E7E7DE;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.Card__head{
+    font-size: 10px;
+}
+
+.Card__Number{
+    font-size: 2rem;
+    margin: 0px auto ;
+}

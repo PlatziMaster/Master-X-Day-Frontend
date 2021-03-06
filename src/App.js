@@ -26,6 +26,18 @@ function App() {
     return res.data
   }
 
+  const getMembersOfBoard = async () => {
+    let res = await axios.get(`https://api.trello.com/1/boards/${IDBoard}/memberships/?key=${key}&token=${token}`)
+    console.log('getMembersOfBoard =>', res.data);
+    return res.data
+  }
+
+  const getMembersInfo = async (id) => {
+    let res = await axios.get(`https://api.trello.com/1/members/${id}/?key=${key}&token=${token}`)
+    console.log('getMembersInfo =>', res.data);
+    return res.data
+  }
+
   useEffect(() => {
     getLists()
     .then(res => {
@@ -50,12 +62,18 @@ function App() {
       // setCards(CardsInList)
     })
 
-    const getBoards = async () => {
+    const getBoards = async ()  => {
       let res = await axios.get(`https://api.trello.com/1/members/me/boards?key=${key}&token=${token}`)
       console.log('getInfo',res.data)
       return res.data
     }
+
     getBoards()
+    
+    getMembersOfBoard()
+    .then(res => {
+      // TODO: get members information
+    })
 
   }, [1])
 

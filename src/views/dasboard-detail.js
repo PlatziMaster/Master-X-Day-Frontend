@@ -5,22 +5,22 @@ import Footer from '../components/footer'
 import Layout from '../components/layout'
 import Card from '../components/mobile-card-container'
 import Task from '../components/Target'
+import { useParams } from 'react-router';
 
 // const key = 'a9a2107d1296e0416a93bddf26491c4a'
 const key = '93e0e4c144003bf990231de2aab641ee'
 // const token = '779a267d8327c2224e92e70dbf12b4fc228de2bc7689136202358106b2d56fcc'
 const token ='77d05764808a1a37da01293c2fde4e21f5aaa3d377fc79d6402528654984fc85'
 
-const IDBoard = "6043a61f64db4380f9d6a37b"
 
-
-function App() {
+function DasboardDetail(props) {
 const [lists, setLists] = useState([])
 const [members, setMembers] = useState([])
 const [boards, setBoards] = useState([])
+const { id } = useParams()
 
 const getLists = async () => {
-    let res = await axios.get(`https://api.trello.com/1/boards/${IDBoard}/lists/?key=${key}&token=${token}`)
+    let res = await axios.get(`https://api.trello.com/1/boards/${id}/lists/?key=${key}&token=${token}`)
     console.log('getLists =>', res.data);
     return res.data
 }
@@ -32,7 +32,7 @@ const getCardsByList = async (id) => {
 }
 
 const getMembersOfBoard = async () => {
-    let res = await axios.get(`https://api.trello.com/1/boards/${IDBoard}/memberships/?key=${key}&token=${token}`)
+    let res = await axios.get(`https://api.trello.com/1/boards/${id}/memberships/?key=${key}&token=${token}`)
     console.log('getMembersOfBoard =>', res.data);
     return res.data
 }
@@ -44,6 +44,8 @@ const getMembersInfo = async (id) => {
 }
 
 useEffect(() => {
+    console.log(id);
+
     if(lists.length >= 1) {
     console.log('the cards');
     } else {
@@ -100,18 +102,21 @@ useEffect(() => {
 
 return (
     <Fragment>
+        <Fragment>
+        {members.length >=1 ? (
+            members.map(member => <p>{member.username}</p>)
+        ) : null}
+        </Fragment>
         {/* {boards.length >= 1 ? (
             boards.map(board => <div key={board.id}>{board.name}</div>)
         ) : null} */}
 
-        {/* {members.length >=1 ? (
-            members.map(member => <p>{member.username}</p>)
-        ) : null} */}
+        
 
         {lists.length >= 1 ? (
             lists.map(list => 
             <Card  title={list.name} counter={list.cards.length}>
-            {list.cards.map(i => <Task title={i.name} />)}
+                {list.cards.map(i => <Task title={i.name} />)}
             </Card>
             )
         ) : null}
@@ -119,4 +124,4 @@ return (
 );
 }
 
-export default App;
+export default DasboardDetail;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 // const key = 'a9a2107d1296e0416a93bddf26491c4a'
 const key = '93e0e4c144003bf990231de2aab641ee'
@@ -38,13 +39,16 @@ export default function Dashboard(props) {
     return (
         <div>
             DASBOARD
-            {boards.length >= 1 ? (
-                boards.map(board => <div key={board.id}>{board.name}</div>)
-            ) : null}
-
             {/* {members.length >=1 ? (
                 members.map(member => <p>{member.username}</p>)
             ) : null} */}
+
+            {boards.length >= 1 ? (
+                boards.map(board => <Link to={`/dashboard/${board.id}`} key={board.id}>{board.name}</Link>)
+            ) : null}
+
+
+            
         </div>
     )
 }

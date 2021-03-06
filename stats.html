@@ -30,6 +30,28 @@
         display: inline-block;
     }
 
+  
+.informationTable {
+    width: 100%;
+    max-width: 880px;
+}
+
+.informationTable td, .informationTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.informationTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.informationTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #56CCF2;
+  font-weight: bold;
+}
+
 
 </style>
 <body>
@@ -37,7 +59,34 @@
     <div class="containerStats">
         <canvas id="pie-chart"  class="chartDisplay"></canvas>
         <canvas id="bar-chart" class="chartDisplay"></canvas>
-        <!-- <canvas id="radar-chart" class="chartDisplay longDisplay"></canvas> -->
+
+        <div id="dataTable" class="dataTable">
+            
+        </div>
+        <table class="informationTable">
+            <tr>
+              <th>Stage</th>
+              <th>Total Activities</th>
+              <th>Overall Percentage</th>
+            </tr>
+            <tr>
+              <td>To do</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>In progress</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Completed</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            
+           
+          </table>
     </div>
     
 

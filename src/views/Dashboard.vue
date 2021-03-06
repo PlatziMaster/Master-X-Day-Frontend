@@ -1,6 +1,6 @@
 <template>
   <NavBar />
-  <div class="about pb-24">
+  <div class="about pb-24 pt-12">
     <div class="text-white mb-12 text-center md:text-left md:ml-32">
       <h1 class="underline text-4xl font-bold mb-2">{{ board.name }}</h1>
       <h2 class="text-2xl font-bold">{{ lists.length }} Lists</h2>
@@ -15,12 +15,9 @@
         <div class="block md:hidden">
           <MTDashboardCardSmall />
         </div>
-        
+
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 mx-auto">
-          <MTDashboardCard listName="To-Do" cardsNumber="50" />
-          <MTDashboardCard listName="In Progress" cardsNumber="20" />
-          <MTDashboardCard listName="Done" cardsNumber="10" />
         <MTDashboardCard
           v-for="list in lists"
           :key="list.id"

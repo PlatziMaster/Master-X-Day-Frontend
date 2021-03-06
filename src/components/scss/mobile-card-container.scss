@@ -1,0 +1,16 @@
+.card-container {
+    @media (max-width: 767px) {
+        /* Your mobile styles here */
+    }
+}
+
+.card-body{
+    background-color: #24385B;
+    border-radius: 3rem solid #24385B;
+    color: #89C739;
+}
+
+.card-header{
+    background-color: #24385B;
+    color: #89C739;
+}

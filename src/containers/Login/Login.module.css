@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: #04042C;
+  background-color: #04042c;
 }
 
 .container {
@@ -21,7 +21,7 @@ body {
 }
 
 .title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 4.8rem;
   text-align: center;
@@ -29,7 +29,7 @@ body {
 }
 
 .subtitle {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 2.8rem;
   text-align: center;
@@ -39,7 +39,7 @@ body {
 #id__input {
   display: block;
   margin: 0 auto;
-  background-color: #F4F4FC;
+  background-color: #f4f4fc;
   width: 24rem;
   height: 5.4rem;
   border-radius: 1rem;
@@ -54,7 +54,7 @@ body {
   color: 747474;
   text-align: center;
   font-size: 1.8rem;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 button {
@@ -68,7 +68,7 @@ button {
   outline: none;
   border: none;
   margin-top: 1.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: white;
 }

@@ -52,6 +52,30 @@ function drawCharts(){
 
 function drawTable(){
     tableInfo.innerHTML = `
+    <table class="informationTable">
+            <tr>
+              <th>Stage</th>
+              <th>Total Activities</th>
+              <th>Overall Percentage</th>
+            </tr>
+            <tr>
+              <td>To do</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>In progress</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Completed</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            
+           
+          </table>
     
     `
 }

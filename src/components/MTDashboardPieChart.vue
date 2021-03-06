@@ -80,7 +80,6 @@ export default {
   },
   methods: {
     createChart(chartData) {
-      debugger;
       const canvas = document.getElementById(this.id);
       const options = {
         type: "pie",

@@ -4,32 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/stats.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
-    <title>Your Dashboard</title>
+    <title>Dashboard Stats </title>
+    <script src="https://www.chartjs.org/dist/2.9.4/Chart.min.js"></script>
 </head>
+<style>
+    .containerStats {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    .chartDisplay {
+        max-width: 400px;
+        border: 1px solid #ccc;
+        margin: 1em auto;
+        padding: 1em;
+        display: inline-block  !important;
+    }
+    .chartDisplay.longDisplay {
+        width: 100%;
+        max-width: 840px;
+        border: 1px solid #ccc;
+        margin: 1em auto;
+        display: inline-block;
+    }
+
+
+</style>
 <body>
-    <div id="container">
-        <nav>
-          <span class="dashname">X- Project</span>
-          <li><a class="nav_active" href="home.html">Home</a></li>
-          <li><a href="members.html">Members</a></li>
-          <li><a href="stats.html">Stats</a></li>
-        </nav>
-        
-        <section class="dashdetails">
-            <div class="dashdetails__count"> 
-                <p class="dashdetails__title--darkblue">TOTAL CARDS: </p><p class="dashdetails__title--black">6</p>
-            </div>
-            <div class="dashdetails__count">
-                <p class="dashdetails__title--blue">TOTAL MEMBERS: </p><p class="dashdetails__title--black">4</p>
-            </div> 
-            <div class="dashdetails__count">
-                <p class="dashdetails__title--blue">PROJECT COMPLETION: </p><p class="dashdetails__title--black">50%</p>
-            </div>   
-        </section>
-          
-        </div>
+
+    <div class="containerStats">
+        <canvas id="pie-chart"  class="chartDisplay"></canvas>
+        <canvas id="bar-chart" class="chartDisplay"></canvas>
+        <!-- <canvas id="radar-chart" class="chartDisplay longDisplay"></canvas> -->
+    </div>
+    
+
+
+  
+    <script src="./js/stats.js"></script>
+
 </body>
 </html>

@@ -2,31 +2,37 @@ body{
     background-color: #F2FBFF;
 }
 .trelo__container{    
-    width: 90%;
+    
     margin: 10px;
     border-radius: 10px;
     height: auto;
     background-color: white;
-    border: 3px solid #8EE0FF80;
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
+-moz-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
+box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
+padding: 10px 15px;
+margin-bottom: 30px;
 }
 .icon__ad{
-    height: 20px;
+    height: 2.5rem;
 }
 .trelo__container-header{
     color: #B784D8;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 800;
+    font-size: 3rem;
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    text-align: left;
 }
 .trelo__container-cards{
-    width: 90%;
-    border: 1px solid #E6E6E6;
+    
+    border: 2px solid #E6E6E6;
     border-radius: 10px;
-    height: 40px;
+    
     margin: 20px 0px;
-}
-.progress{
-    height: .5rem;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    font-weight: 300    ;
+    text-align: left;
 }

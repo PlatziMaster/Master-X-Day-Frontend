@@ -6,3 +6,18 @@ fetch('https://api.trello.com/1/boards/6043b6b7c5a4cc2a8b71eaa9/lists?key=d19d98
 	console.warn('Something went wrong.', err);
 });
 
+
+// Menu Hamburguer
+const iconMenu = document.getElementById('menu-hamburguer');
+const menuExit = document.getElementById('menu-exit')
+const exitIcon = document.getElementById('exit-icon')
+
+iconMenu.addEventListener('click', () => {
+	menuExit.style.display = 'block'
+})
+
+exitIcon.addEventListener('click', () => {
+	menuExit.style.display = 'none'
+})
+// Menu Hamburguer
+

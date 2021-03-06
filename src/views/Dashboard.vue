@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
   <div class="about pb-24">
     <div class="text-white mb-12 text-center md:text-left md:ml-32">
       <h1 class="underline text-4xl font-bold mb-2">{{ "Dashboard name" }}</h1>
@@ -18,11 +19,13 @@
 
 // @ is an alias to /src
 import MTDashboardCard from "@/components/MTDashboardCard.vue";
+import NavBar from "@/components/MTNavBar.vue";
 
 export default {
   name: "Dashboard",
   components: {
     MTDashboardCard,
+    NavBar
   },
 };
 </script>

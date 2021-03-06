@@ -1,13 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import { Provider } from './context';
+import { Router } from "react-router";
+import { createBrowserHistory } from 'history'
 import App from "./router/App";
 import reportWebVitals from "./reportWebVitals";
+import "./index.css";
+
+const initialState = { token: '' }
+const history = createBrowserHistory();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider initialState={initialState}>
+    <Router history={history}>
+      <App />
+    </Router>
+  </Provider>,
   document.getElementById("root")
 );
 

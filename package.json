@@ -1,0 +1,27 @@
+{
+  "name": "master-x-day-frontend",
+  "version": "1.0.0",
+  "description": "Platzi Master X Day Frontend - Team 10",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesusGarciaValadez/Master-X-Day-Frontend.git"
+  },
+  "keywords": [
+    "Platzi",
+    "Team",
+    "10",
+    "Platzi",
+    "Master",
+    "Frontend"
+  ],
+  "author": "Team 10",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JesusGarciaValadez/Master-X-Day-Frontend/issues"
+  },
+  "homepage": "https://github.com/JesusGarciaValadez/Master-X-Day-Frontend#readme"
+}

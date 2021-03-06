@@ -21,6 +21,7 @@ function App() {
         </div>
       <div className="container-fluid">
         <div className="navbar">
+          <button className="btn btn-light"><img src={dashb} alt="Dashboard Icon"/>Board</button>
           <h3>Board Title</h3>
           <button className="btn btn-light"><img src={star} alt="Star Icon"/></button>
           <button className="btn btn-light"><img src={lock} alt="Lock Icon"/>Private</button>

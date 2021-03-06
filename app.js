@@ -1,20 +1,36 @@
 const button = document.getElementById("button");
 button.addEventListener('click', () => {
-    getdashboard();
+    //getdashboard();
+    getList();
 
 });
 
 getdashboard = () => {
-    fetch("https://api.trello.com/1/boards/%7B6043cb72ae0b4b23d1dd8690%7D?key=%7B7b763abd9e2cec104a280f13b4075fcd%7D&token=%7B80dbe63416c0d24c60bff4c76f8544051f0f38832a3e08b72ed7b2f137cf8b58%7D")
+    fetch("https://api.trello.com/1/boards/6043df7d663af602cf77c881?key=3ecdfc55093cc26752e7056b0834e1e4&token=57a87b374c6043be18dbc60f00962ba3a650c731b54df7f86b83e967becf22ec")
     .then((res)=>res.ok? Promise.resolve(res) : Promise.reject(res))
-    /* .then((res)=>res.json()) */
-    /* .then((res) => console.log(res)) */
-    .then((res) => {
+    .then((res)=>res.json()) 
+    .then((res) => console.log(res)) 
+ /*    .then((res) => {
         const list = document.getElementById('lista')
         for (const userInfo of res) {
             const itemList = document.createElement("Li");
-            /* itemList.textContent=`${id} - ${}`; */
+             itemList.textContent=`${id} - ${}`; 
             list.appendChild(itemList);
         }
-    })
+    }) */
+}
+
+getList = () => {
+    fetch("https://api.trello.com/1/boards/6043df7d663af602cf77c881?key=3ecdfc55093cc26752e7056b0834e1e4&token=57a87b374c6043be18dbc60f00962ba3a650c731b54df7f86b83e967becf22ec")
+    .then((res)=>res.ok? Promise.resolve(res) : Promise.reject(res))
+    .then((res)=>res.json()) 
+    .then((res) => console.log(res)) 
+ /*    .then((res) => {
+        const list = document.getElementById('lista')
+        for (const userInfo of res) {
+            const itemList = document.createElement("Li");
+             itemList.textContent=`${id} - ${}`; 
+            list.appendChild(itemList);
+        }
+    }) */
 }

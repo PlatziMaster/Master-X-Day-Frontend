@@ -33,13 +33,14 @@ jobs:
       
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore Team18\PlatziMasterTrello
 
       # Run dotnet build and publish
       - name: dotnet build and publish WEBAPI
         run: |
           dotnet build Team18\PlatziMasterTrello\PlatziMasterTrello\PlatziMasterTrello.csproj --configuration Release
-          dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/MyWebAPI' Team18\PlatziMasterTrello\PlatziMasterTrello\PlatziMasterTrello.csproj
+          dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/MyWebAPP' Team18\PlatziMasterTrello\PlatziMasterTrello\PlatziMasterTrello.csproj
+
           
       # Deploy to Azure Web apps
       - name: 'Run Azure webapp deploy action using publish WEBAPI profile credentials'

@@ -1,17 +1,16 @@
 body{
     background-color: #F2FBFF;
 }
-.trelo__container{    
-    
+.trelo__container{
     margin: 10px;
     border-radius: 10px;
     height: auto;
     background-color: white;
     -webkit-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
--moz-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
-padding: 10px 15px;
-margin-bottom: 30px;
+    -moz-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
+    box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
+    padding: 10px 15px;
+    margin-bottom: 30px;
 }
 .icon__ad{
     height: 2.5rem;
@@ -26,10 +25,8 @@ margin-bottom: 30px;
     text-align: left;
 }
 .trelo__container-cards{
-    
     border: 2px solid #E6E6E6;
     border-radius: 10px;
-    
     margin: 20px 0px;
     padding: 10px 15px;
     font-size: 1.5rem;

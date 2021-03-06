@@ -6,12 +6,14 @@ import logo from './logo.svg';
 // Import styles
 import './App.css';
 // Import actions
-import { getBoards, resetRequest } from './redux/actions/boardActions';
+import { getBoards, getMembersByBoardId, resetRequest } from './redux/actions/boardActions';
 
 const App = ({
   getBoards,
+  getMembersByBoardId,
   resetRequest,
   boards,
+  members,
   successRequest,
   errorRequest
 }) => {
@@ -22,11 +24,14 @@ const App = ({
   useEffect(() => {
     getBoards();
   }, [getBoards])
-
+  
   if ((successRequest || errorRequest) && loading) {
-    console.log(boards);
     setTimeout(() => resetRequest());
     setLoading(false);
+  }
+  
+  if (boards[0] && loading) {
+    getMembersByBoardId(boards[0].id);
   }
 
   return (
@@ -54,6 +59,9 @@ const mapDispatchToProps = dispatch => ({
   getBoards() {
     dispatch(getBoards())
   },
+  getMembersByBoardId(boardId) {
+    dispatch(getMembersByBoardId({ boardId }))
+  },
   resetRequest() {
     dispatch(resetRequest())
   }
@@ -62,6 +70,7 @@ const mapDispatchToProps = dispatch => ({
 // Map state
 const mapStateToProps = state => ({
   boards: state.boardReducer.boards,
+  members: state.boardReducer.members,
   errorRequest: state.boardReducer.errorRequest,
   successRequest: state.boardReducer.successRequest
 });

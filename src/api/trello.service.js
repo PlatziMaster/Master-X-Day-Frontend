@@ -4,23 +4,23 @@ const token =
   "ccfa841bfb3b0aa714e28fb412191f9199e4e82a07404c6c22e60f188bc25d76";
 
 const getBoardDatails = (idBoard) => {
-  return getRequest(`/1/boards/${idBoard}?key=${key}&token=${token}`);
+  return getRequest(`1/boards/${idBoard}?key=${key}&token=${token}`);
 };
 
 const getBoardMembers = (idBoard) => {
-  return getRequest(`/1/boards/${idBoard}/members?key=${key}&token=${token}`);
+  return getRequest(`1/boards/${idBoard}/members?key=${key}&token=${token}`);
 };
 
 const getBoardTotalCards = (idBoard) => {
-  return getRequest(`/1/boards/${idBoard}/cards?key=${key}&token=${token}`);
+  return getRequest(`1/boards/${idBoard}/cards?key=${key}&token=${token}`);
 };
 
 const getBoardList = (idBoard) => {
-  return getRequest(`/1/boards/${idBoard}/lists?key=${key}&token=${token}`);
+  return getRequest(`1/boards/${idBoard}/lists?key=${key}&token=${token}`);
 };
 
 const getBoardListCards = (idList) => {
-  return getRequest(`/1/lists/${idList}/cards?key=${key}&token=${token}`);
+  return getRequest(`1/lists/${idList}/cards?key=${key}&token=${token}`);
 };
 
 const boardData = (idBoard) => {
@@ -38,7 +38,7 @@ const members = (idBoard) => {
 const totalCardsBoard = (idBoard) => {
   return getBoardTotalCards(idBoard).then((data) => {
     return data && data.lenght > 0
-      ? data.reduce((acum, item) => (acum = acum + 1), 0)
+      ? data.reduce((acum) => (acum = acum + 1), 0)
       : 0;
   });
 };
@@ -54,7 +54,7 @@ const cardsNumberInList = (idList) => {
     return getBoardListCards(idList)
     .then(data => {
         return data && data.lenght > 0
-        ? data.reduce((acum, item) => (acum = acum + 1), 0)
+        ? data.reduce((acum) => (acum = acum + 1), 0)
         : 0;
     })
 }

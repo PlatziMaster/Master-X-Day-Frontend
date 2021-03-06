@@ -7,6 +7,7 @@ import { getToken } from "../context/actions";
 import OnBoarding from "../containers/Onboarding/";
 import Dashboard from "../containers/Dashboard/";
 import Login from "../containers/Login/";
+import Staticts from "../containers/Staticts";
 
 const App = () => {
   const { token, dispatch } = useStateValue();
@@ -23,6 +24,7 @@ const App = () => {
         <Route exact path="/auth" component={Auth} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/onboarding" component={OnBoarding} />
+        <Route exact path="/statics" component={Staticts} />
         <Route path="/" component={Login} />
       </Switch>
     </BrowserRouter>

@@ -3,12 +3,12 @@ name: 'Phase I: Design of the project'
 about: FIGMA prototype and API connection
 title: "[Phase I: Design of the project]"
 labels: ''
-assignees: ''
+assignees: 'Sergio González, Danilo Morales, Brayan Cardozo, Oswaldo Trejo'
 
 link to figma : https://www.figma.com/file/jJ0FR52N3UqJliugwc9nxr/Trello-Stadistics?node-id=0%3A1
 --- 
 
-**Is the design of your prototype complete?**
+# Is the design of your prototype complete?
 
 A clear and concise description of how you accomplished this task. 
 _Eg. I used FIGMA and adobe XD to..._
@@ -24,17 +24,17 @@ At the end, we can show the pie-chart about how is the percentage of the differe
 
 And head Our logo of Platzi :D
 
-**How would you improve this phase in the future?**
+# How would you improve this phase in the future?
 A clear and concise description of what else would you do.
 
 Even thought the time was liitle , we can improve our design in colors, distribution and images.
 
-**Describe other alternatives that you considered:**
+# Describe other alternatives that you considered:
 Explain why you chose your current methods.
 
 Accoring to pie-chart we thought it is a beeter option because that show all percentages of the differents steps. So pie chart it is easy to read. The other cards it is informative!
 
-**How did you connect to the API?**
+# How did you connect to the API?**
 Provide details about the process that you followed in this step.
 
 We can connect API with our project through key and tokens, to do that we want to use fetch method of JavaScript 

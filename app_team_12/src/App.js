@@ -1,14 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import user from './assets/001-user.svg';
+import ApiService from './services/api';
 
 import './App.css';
 
 function App() {
+
+  ApiService.getBoards().then(response => {
+    console.log(response);
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-       
-      </header>
+      <header className="App-header"></header>
 
       <div className="container">
         <h2>Dashboard</h2>

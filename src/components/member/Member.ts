@@ -1,2 +1,3 @@
-import Member from './Member.vue'
-export default Member
+import Member from './Member.vue';
+
+export default Member;

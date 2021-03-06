@@ -1,5 +1,7 @@
-@import './variables.scss';
-
+@import "./variables.scss";
+html {
+  font-size: 62.5%;
+}
 body {
-    background: $brand-color;
+  background: $brand-color;
 }

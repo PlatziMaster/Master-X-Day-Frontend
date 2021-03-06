@@ -6,13 +6,13 @@
     <div class="h-3/5 flex flex-wrap content-center justify-center ">
       Graph goes here
     </div>
-    <div class="bg-MTLightGreen h-1/5 align-middle my-auto flex flex-wrap content-center justify-center text-white">
+    <div class="bg-MTLightGreen h-1/5 align-middle my-auto flex flex-wrap content-center justify-center text-MTWhite">
       <div class="flex flex-col">
         <span class="text-lg">{{ listName }}</span>
         <span class="text-bold text-sm">List</span>
       </div>
     </div>
-    <div class="bg-MTDarkGreen h-1/5 rounded-b-xl align-middle flex flex-wrap content-center justify-center text-white ">
+    <div class="bg-MTDarkGreen h-1/5 rounded-b-xl align-middle flex flex-wrap content-center justify-center text-MTWhite">
       <span> {{cardsNumber}} Cards</span> 
     </div>
   </div>

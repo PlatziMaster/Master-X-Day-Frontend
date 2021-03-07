@@ -35,7 +35,9 @@ const ListsContainer = () => {
   return (
     <div className='ListsPadding'>
       {loading ? (
-        <div className='ListsGrid'>
+        <div className='ListsGrid '>
+          
+        
           {columnsNames.includes('To do', 'In progress', 'done') ? (
             columns.map((column) => {
               return (
@@ -58,6 +60,8 @@ const ListsContainer = () => {
           ) : (
             <div>The dashboard can't be read</div>
           )}
+              
+          
         </div>
       ) : (
         <div> Cargando ...</div>

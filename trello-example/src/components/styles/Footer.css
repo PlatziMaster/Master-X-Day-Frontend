@@ -10,9 +10,13 @@
       justify-content: space-between;
   }
   
-  .Footer__container-logo {
-    padding-left: 10px;
-    margin-right: 5rem;
+  .Footer__container-logo{
+    width: 100px;
+    /* padding-left: 10px;
+    margin-right: 5rem; */
   }
+.font-weight-bold{
+  color: white;
+}
   
   

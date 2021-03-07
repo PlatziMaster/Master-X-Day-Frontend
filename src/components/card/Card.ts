@@ -5,11 +5,8 @@ import { Component, Vue } from 'vue-property-decorator';
   props: {
     taskName: String,
     dueDate: String,
-    labels: [],
-    description: String,
+    labels: Array,
   },
 })
 
-export default class Card extends Vue {
-
-}
+export default class Card extends Vue {}

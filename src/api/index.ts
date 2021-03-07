@@ -9,22 +9,29 @@ const GET_LISTS = `${BASE_URL}/boards/6043bc7c1097aa4c08408b1d/lists?${AUTH}`;
 
 interface List {
   id: string;
+  cards: [];
 }
-
-const getListAndCategories = async () => {
-  try {
-    const { data } = await axios.get(GET_LISTS);
-
-    const listOfCards: object[] = [];
-    await Promise.all(data.map(async (list: List) => {
-      const cards = await axios.get(`${BASE_URL}/lists/${list.id}/cards?${AUTH}`);
-      listOfCards.push({ ...list, cards: cards.data });
-    }));
-
-    return listOfCards;
-  } catch (error) {
-    return error;
+export default class API {
+  static async getListAndCategories(): Promise<any[]> {
+    try {
+      const { data } = await axios.get(GET_LISTS);
+      const listOfCards: object[] = [];
+      await Promise.all(data.map(async (list: List) => {
+        const cards = await axios.get(`${BASE_URL}/lists/${list.id}/cards?${AUTH}`);
+        listOfCards.push({ ...list, cards: cards.data });
+      }));
+      return listOfCards;
+    } catch (error) {
+      return error;
+    }
   }
-};
 
-export default getListAndCategories;
+  static async getBoard(): Promise<any> {
+    try {
+      const { data } = await axios.get(`${BASE_URL}/boards/6043bc7c1097aa4c08408b1d/?${AUTH}`);
+      return data;
+    } catch (error) {
+      return error;
+    }
+  }
+}

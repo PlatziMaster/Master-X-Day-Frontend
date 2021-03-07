@@ -6,7 +6,7 @@ import Header from "../../components/Header/";
 import Card from "../../components/Card/";
 
 const Dashboard = () => {
-  const { list } = useBoardLists();
+  const { list } = useBoardLists({ text: "cards" });
 
   const currentDate = () => {
     let date = new Date();

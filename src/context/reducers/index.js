@@ -5,6 +5,11 @@ const reducer = (state, action) => {
         ...state,
         token: action.payload,
       };
+    case 'SET_ID':
+      return {
+        ...state,
+        id: action.payload,
+      };
     default: return state;
   }
 };

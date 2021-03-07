@@ -1,49 +1,57 @@
-/*Media Query for 320px*/
-@media (min-width: 320px) {
-  #welcome {
-    text-align: center;
-    font-family: "Poppins";
-    color: black;
-    font-size: 36px;
-    line-height: 72px;
-  }
-
-  #userimg figure {
-    background-color: gray;
-    border-radius: 100%;
-    width: 75px;
-    height: 75px;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  #members h2 {
-    font-family: "Poppins";
-    font-size: 30px;
-    padding-left: 20px;
-    display: inline-block;
-  }
-
-  .member {
-    font-family: "Roboto";
-    font-size: 18px;
-    width: 80%;
-    margin: auto;
-  }
-
-  #listcards {
-    font-family: "Poppins";
-    font-size: 28px;
-    font-weight: 700;
-    margin: 20px 10%;
-    width: 100px;
-  }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #303f9f;
 }
 
-@media (min-width: 768px) {
-  #userimg figure {
-    width: 269px;
-    height: 269px;
-  }
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 4.8rem;
+  text-align: center;
+  color: white;
+}
+
+.subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-align: center;
+  color: white;
+  margin: 15px auto;
+}
+
+.id__input {
+  display: block;
+  margin: 0 auto;
+  background: rgba(197, 202, 233, 0.5);
+  width: 32rem;
+  height: 5.4rem;
+  border-radius: 1rem;
+  border: none;
+  padding: 1rem 2.5rem;
+  color: #fff;
+  margin-top: 1.5rem;
+  box-shadow: 0px 3px 10px #000;
+}
+
+.id__input::placeholder {
+  color: 747474;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: "Roboto";
+  color: #fff;
+}
+
+.error {
+  display: flex;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.form {
+  display: grid;
 }

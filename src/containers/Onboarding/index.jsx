@@ -1,40 +1,42 @@
 import React from "react";
 import styles from "./Onboarding.module.css";
+import Button from "../../components/Button"
+import { useForm } from 'react-hook-form';
+import { useHistory } from "react-router";
+import { useStateValue } from "../../context";
+import { setId } from '../../context/actions'
 
 const OnBoarding = () => {
+  const { dispatch } = useStateValue();
+  const { register, handleSubmit, errors } = useForm();
+  const history = useHistory();
+
+  const onSubmit = (data) => {
+    dispatch(setId(data.idBoard));
+    history.push('/dashboard');
+  }
+
   return (
-    <div>
-      <section id="welcome">
-        <h1>Welcome to ID user</h1>
-      </section>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Platzi Trello</h1>
 
-      <section id="userimg">
-        <figure>
-          <img src alt />
-        </figure>
-      </section>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        <label htmlFor="IdBoard">
+          <p className={styles.subtitle}>Welcome! <br></br> Bring your Board ID</p>
+          <input
+            id='IdBoard'
+            type="text"
+            placeholder="Escriba el id del tablero"
+            name="idBoard"
+            className={styles.id__input}
+            ref={register({ required: "Required", })}
+          />
+          {errors.idBoard && <span className={styles.error}>{errors.idBoard.message}</span>}
+        </label>
 
-      <section id="members">
-        <h2>Members</h2>
+        <Button type='submit'>Continue</Button>
+      </form>
 
-        <div id="member1" className="member">
-          <p>Name Member</p>
-        </div>
-
-        <div id="member2" className="member">
-          <p>Name Member</p>
-        </div>
-      </section>
-
-      <section id="listcards">
-        <p id="list" className="lctitle">
-          Lists
-        </p>
-
-        <p id="cards" className="lctitle">
-          Cards
-        </p>
-      </section>
     </div>
   );
 };

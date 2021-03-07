@@ -2,11 +2,9 @@ import React from 'react';
 // import useBoardLists from "../../hooks/useBoardLists";
 import TrelloClient from 'react-trello-client';
 import { useStateValue } from "../../context";
-import useBoardLists from "../../hooks/useBoardLists";
 
 const Auth = () => {
   const { token } = useStateValue();
-  const { lists } = useBoardLists();
   return (
     <>
       {!token && (

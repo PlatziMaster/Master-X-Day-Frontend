@@ -17,7 +17,7 @@
       </div>
       <router-link to="/dashboard">
         <div
-          class="bg-MTLightGreen	rounded-full w-28 pt-2 pb-2 pl-4 pr-4 text-white mx-auto mb-4"
+          class="bg-MTLightBlueLogin	rounded-full w-28 pt-2 pb-2 pl-4 pr-4 text-white mx-auto mb-4"
         >
           Login
         </div>

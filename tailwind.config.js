@@ -30,7 +30,7 @@ module.exports = {
       'MTDarkBlue': '#0D1C2E',
       'MTLightGreen': '#67A2A7',
       'MTDarkGreen': '#204051',
-      'MTLightGreen': "#608EB9",
+      'MTLightBlueLogin' : '#608EB9',
       'MTWhite': '#EFEFEF', 
       'MTGraphRed': '#FF8C8C',
       'MTGraphRedBackground': '#FFE5E5',

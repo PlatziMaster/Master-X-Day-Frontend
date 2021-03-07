@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Card.module.css";
 
 function Card(props) {
-  const { title, tasks, progress, color } = props;
+  const { title, color } = props;
 
   return (
     <div className={styles.card}>
@@ -10,8 +10,6 @@ function Card(props) {
 
       <div>
         <p className={styles.h4}>{title}</p>
-
-        <p className={styles.text}>{`${tasks} tasks`}</p>
       </div>
 
       <div>
@@ -30,8 +28,6 @@ function Card(props) {
             />
           </svg>
         </div>
-
-        <p className={styles.text}>{`${progress} %`}</p>
       </div>
     </div>
   );

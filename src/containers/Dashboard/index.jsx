@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Dashboard.module.css";
 import useBoardLists from "../../hooks/useBoardLists";
 
@@ -6,7 +6,10 @@ import Header from "../../components/Header/";
 import Card from "../../components/Card/";
 
 const Dashboard = () => {
-  const { list } = useBoardLists({ text: "cards" });
+  const { lists } = useBoardLists({ text: "lists" });
+  const cards = useBoardLists({ text: "cards" });
+  const [color, setColor] = useState("");
+  console.log(cards.lists);
 
   const currentDate = () => {
     let date = new Date();
@@ -33,8 +36,6 @@ const Dashboard = () => {
     return [day, monthName, year];
   };
 
-  useEffect(() => {}, []);
-
   return (
     <>
       <Header />
@@ -49,8 +50,8 @@ const Dashboard = () => {
         </div>
 
         <div>
-          {list.map((card) => (
-            <Card title={card.name} tasks={5} progress={21} color={"#FFACAC"} />
+          {lists?.map((card) => (
+            <Card title={card.name} color={color} />
           ))}
         </div>
       </main>

@@ -1,14 +1,31 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import user from './assets/001-user.svg';
+import ApiService from './services/api';
 
 import './App.css';
 
+
 function App() {
+
+  let idBoard = ApiService.getBoards().then(response => {
+    return response.data[0].id
+  })
+
+  
+ 
+  idBoard.then(function(result){
+    console.log(result);
+
+    ApiService.getCards(result).then(response =>{
+      console.log(response);
+    })
+  })
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-       
-      </header>
+      <header className="App-header"></header>
 
       <div className="container">
         <h2>Dashboard</h2>
@@ -48,7 +65,7 @@ function App() {
           <div className="col-md-4">
             <h3>To do</h3>
             <div className="total-todo">
-
+              
             </div>
           </div>
           <div className="col-md-4">

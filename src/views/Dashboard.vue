@@ -1,10 +1,25 @@
 <template>
   <NavBar />
 
-  <div class="flex flex-col md:flex-row  w-full h-full">
+  <div class="flex flex-col xl:flex-row w-full h-full">
+    <div class="w-full bg-MTDarkGreen flex content-center block xl:hidden">
+      <div
+        class=" w-14  mt-4 mb-4 ml-4 bg-MTLightGreen flex flex-col jusfity-center content-center cursor-pointer"
+        @click="openSidebar = !openSidebar"
+      >
+        <div v-if="openSidebar" class="mx-auto">
+          <div class="burger"></div>
+          <div class="burger"></div>
+          <div class="burger"></div>
+        </div>
+        <div v-if="!openSidebar" class="mx-auto mt-2 mb-2">
+          <span class="text-xl text-white font-bold">X</span>          
+        </div>
+      </div>
+    </div>
+
     <div class="w-1/4 h-screen bg-MTDarkGreen hidden xl:block">
-      <!-- <MTDashboardSidebar /> -->
-      <img 
+      <img
         aria-label="Profile Image"
         class="my-8 h-32 w-32 rounded-full border-4 mx-auto mt-24"
         alt=""
@@ -15,10 +30,11 @@
 
       <div class="flex flex-col items-start text-white ">
         <ul class="my-0 list-disc mx-auto">
-          <li v-for="(member, index) in members"
+          <li
+            v-for="(member, index) in members"
             :key="index"
             class="my-2 text-base font-thin mx-auto"
-            >
+          >
             {{ member }}
           </li>
         </ul>
@@ -82,7 +98,13 @@ export default {
     NavBar,
   },
   data() {
-    return { board: {}, members: [], totalCardsBoard: 0, listsData: [] };
+    return {
+      board: {},
+      members: [],
+      totalCardsBoard: 0,
+      listsData: [],
+      openSidebar: true,
+    };
   },
   computed: {},
   created() {
@@ -113,3 +135,21 @@ export default {
   },
 };
 </script>
+
+<style>
+.burger {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+.burgerSide{
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+
+}
+
+</style>

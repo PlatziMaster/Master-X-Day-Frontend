@@ -94,7 +94,6 @@
 
         }
 
-
         private async Task Find()
         {
             //?ProductSearchField=CategoryID&ProductSearchText=3&PageIndex=0&PageSize=10&SortList[0]SortBy=ProductName&SortList[0]SortDirection=asc
@@ -139,6 +138,11 @@
             {
                 httpList = httpResponseList.Response;
                 totallist = httpList.Count();
+
+                //foreach (var item in httpList)
+                //{
+                //    item.
+                //}
             }
 
 

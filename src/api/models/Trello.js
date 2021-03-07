@@ -112,7 +112,7 @@ export default class Trello
         try {
             const response = await this.httpClient({
                 method: 'get',
-                url: `${config.API_URL}/1/lists/${listId}?key=${config.API_KEY}&token=${config.API_TOKEN}`,
+                url: `${config.API_URL}/1/lists/${listId}/cards?key=${config.API_KEY}&token=${config.API_TOKEN}`,
                 headers: this.headers,
             })
 

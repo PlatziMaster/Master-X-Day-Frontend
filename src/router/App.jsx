@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Auth from "../containers/auth";
 import { useStateValue } from "../context";
 import { getToken } from "../context/actions";
 import OnBoarding from "../containers/Onboarding/";
@@ -21,7 +20,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/auth" component={Auth} />
+        <Route exact path="/" component={!token ? Login : Dashboard} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/onboarding" component={OnBoarding} />
         <Route exact path="/statics" component={Staticts} />

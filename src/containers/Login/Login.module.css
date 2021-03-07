@@ -8,8 +8,20 @@ html {
   font-size: 62.5%;
 }
 
-body {
+.body {
+  height: 100vh;
   background-color: #04042c;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
 }
 
 .container {

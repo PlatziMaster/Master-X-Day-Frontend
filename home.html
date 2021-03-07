@@ -31,15 +31,15 @@
             </div>   
         </section>
 
-        <section class="lists">
-            <div class="lists__title"> 
-                <p>TO DO</p>
+        <section id="tabs" class="lists">
+            <div id="todos" class="lists__title--active"> 
+                <p class="tab">TO DO</p>
             </div>
-            <div class="lists__title">
-                <p>IN PROGRESS</p>
+            <div id="inprocess" class="lists__title">
+                <p class="tab">IN PROCESS</p>
             </div> 
-            <div class="lists__title">
-                <p>DONE</p>
+            <div id="done" class="lists__title">
+                <p class="tab">DONE</p>
             </div>   
         </section>
 
@@ -56,15 +56,15 @@
         </section>
 
         <section class="listblocks">
-            <div class="listblocks__list"> 
+            <div id="todolist"    class="listblocks__list"> 
                 <div class="listblocks__card">Upload Images</div>
             </div>
-            <div class="listblocks__list">
+            <div  id="inprocesslist" class="listblocks__list--hidden">
                 <div class="listblocks__card">Build Structure</div>
                 <div class="listblocks__card">Create API Connection</div>
                 
             </div> 
-            <div class="listblocks__list">
+            <div id="donelist" class="listblocks__list--hidden">
                 <div class="listblocks__card">Start Repo</div>
                 <div class="listblocks__card">Create Components</div>
                 <div class="listblocks__card">Select Color Design</div>
@@ -72,5 +72,7 @@
         </section>
           
         </div>
+
+        <script src="./js/home.js"></script>
 </body>
 </html>

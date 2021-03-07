@@ -1,5 +1,8 @@
 # Master X Day - FRONTEND
 
+Trello: https://trello.com/b/GFT0iihl/master
+App : https://60442e05bc9af915e235f7e2--relaxed-kirch-b6233d.netlify.app/
+
 Instructions:
 
 1. Fork the project

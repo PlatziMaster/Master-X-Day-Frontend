@@ -1,4 +1,22 @@
 
+<<<<<<< HEAD
+=======
+.body {
+  height: 100vh;
+  background-color: #04042c;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+>>>>>>> 14685be6a4e0b39a7a45ad7d0572403cb6892402
 
 .container {
   display: flex;

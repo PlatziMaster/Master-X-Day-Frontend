@@ -1,0 +1,25 @@
+.Chart {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  align-content: center;
+}
+
+.Chart h1 {
+  padding: 50px 0;
+  color: #C0FFA2;
+}
+
+.ContainerChart {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.ContainerChart > div {
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+}

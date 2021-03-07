@@ -5,7 +5,8 @@ import ButtonSecondary from "../../components/ButtonSecondary";
 
 const BoardConfirm = () =>
 {
-    
+    const {list} = useBoardList({text : 'members'});
+    console.log(list);
     return(
         <main id={styles.main}>
         <section id={styles.welcome}>

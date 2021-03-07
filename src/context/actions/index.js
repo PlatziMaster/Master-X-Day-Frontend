@@ -3,6 +3,11 @@ export const setToken = (payload) => ({
   payload,
 });
 
+export const setId = (payload) => ({
+  type: 'SET_ID',
+  payload,
+});
+
 export const getToken = ({ dispatch }) => {
   try {
     const token = window.localStorage.getItem('trello_token');

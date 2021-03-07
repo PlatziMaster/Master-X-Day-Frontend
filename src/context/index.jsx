@@ -2,6 +2,7 @@ import React, { createContext, useReducer, useContext } from 'react';
 import reducer from './reducers';
 
 export const Context = createContext({
+  id: '',
   token: '',
   dispatch: () => {},
 });

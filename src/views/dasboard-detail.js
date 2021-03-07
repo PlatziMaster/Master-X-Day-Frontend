@@ -96,9 +96,9 @@ useEffect(() => {
 return (
     <Fragment>
         <Fragment>
-        {members.length >=1 ? (
+        {/* {members.length >=1 ? (
             members.map(member => <p>{member.username}</p>)
-        ) : null}
+        ) : null} */}
         </Fragment>
         {/* {boards.length >= 1 ? (
             boards.map(board => <div key={board.id}>{board.name}</div>)

@@ -1,0 +1,48 @@
+@mixin media-breakpoint-down($width) {
+  @media only screen and (max-width: $width) {
+    @content
+  }
+}
+
+.presentation-info {
+  @include media-breakpoint-down(480px) {
+    padding-top: 25%;
+  }
+  padding-top: 12%;
+}
+
+.header-container {
+  background: linear-gradient(243.2deg, #A8F0F9 0%, #037E8C 74.36%), linear-gradient(180deg, #024959 0%, #037E8C 45.31%);
+  height: 100vh;
+}
+
+.title, .slogan {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: 'Roboto';
+}
+
+.title {
+  h1 {
+    @include media-breakpoint-down(480px) {
+      font-size: 1.5em; 
+    }
+    font-size: 3.5em;
+  }
+}
+
+.image-container {
+  @include media-breakpoint-down(480px) {
+    width: 75%;
+  }
+  width: 20%;
+  margin: 0 auto;
+}
+
+.loading-bar {
+  @include media-breakpoint-down(480px) {
+    max-width: 240px;
+  }
+  max-width: 280px;
+}

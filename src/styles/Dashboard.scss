@@ -1,0 +1,11 @@
+@import './root.scss';
+
+.dbContainer{
+  grid-row-start: 2;
+  grid-column-start: 2;
+  background-color: $darkBlue;
+  width: 90%;
+  // height: 80%;
+  margin: 3%;
+  border-radius: 30px;
+}

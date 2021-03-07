@@ -4,10 +4,8 @@ import Member from '../member';
 import { getMembers } from '../../api';
 
 @Component({
-  components: {},
-  props: {
-    name: String,
-    image: String,
+  components: {
+    member: Member,
   },
 })
 

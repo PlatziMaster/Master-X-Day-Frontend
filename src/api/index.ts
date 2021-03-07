@@ -15,8 +15,9 @@ export const testAPI = async () => {
 
 export const getMembers = async () => {
   try {
-    const result = await axios.get(`${URL}/1/members/{id}/organizations?key=${key}&token=${token}`);
-    return result;
+    const result = await axios.get(`${URL}/1/boards/6043bc7c1097aa4c08408b1d/members?key=${key}&token=${token}`);
+    console.log(result.data);
+    return result.data;
   } catch (error) {
     return error;
   }

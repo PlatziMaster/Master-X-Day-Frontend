@@ -33,8 +33,8 @@ const BoardConfirm = () =>
             <p id="cards" className={styles.lctitle}>Cards</p>
         </section>
         <form id="buttons">
-            <ButtonBoard>Continue</ButtonBoard>
-            <ButtonSecondary>Back</ButtonSecondary>
+            <ButtonBoard><a href="#">Continue</a></ButtonBoard>
+            <ButtonSecondary><a href="http://localhost:3000/Onboarding">Back</a></ButtonSecondary>
         </form> 
     </main>
     );

@@ -38,16 +38,6 @@ export default {
       },
     };
   },
-  // async mounted () {
-  //   this.loaded = false
-  //   try {
-  //     const { userlist } = await fetch('/api/userlist')
-  //     this.chartdata = userlist
-  //     this.loaded = true
-  //   } catch (e) {
-  //     console.error(e)
-  //   }
-  // }
 };
 </script>
 <style>

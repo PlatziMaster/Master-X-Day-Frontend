@@ -5,8 +5,8 @@ import { useStateValue } from "../context";
 const API_URL = 'https://api.trello.com';
 const KEY = '9bd9d6de105c7952b848676d6b28f553';
 
-const useBoardLists = ({ id }) => {
-  const { token } = useStateValue();
+const useBoardLists = () => {
+  const { token, id } = useStateValue();
   const [lists, setLists] = useState();
 
   const getBoards = async () => {
@@ -24,7 +24,7 @@ const useBoardLists = ({ id }) => {
     if (token && id) {
       getBoards();
     }
-  }, [token])
+  }, [token, id])
 
   return { lists };
 }

@@ -31,7 +31,6 @@
   width: 32rem;
   height: 5.4rem;
   border-radius: 1rem;
-  outline: none;
   border: none;
   padding: 1rem 2.5rem;
   color: #fff;
@@ -45,5 +44,15 @@
   font-size: 1.8rem;
   font-family: "Roboto";
   color: #fff;
+}
+
+.error {
+  display: flex;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.form {
+  display: grid;
 }
 

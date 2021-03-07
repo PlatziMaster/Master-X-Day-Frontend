@@ -20,7 +20,7 @@ const App = ({
   lists,
   cardsByBoard,
   successRequest,
-  errorRequest
+  errorRequest,
 }) => {
   // Set State
   const [loading, setLoading] = useState(true);
@@ -46,18 +46,19 @@ const App = ({
 
   return (
     <div className="App">
+      <Menu />
       <UserCard members={members} />
     </div>
   );
-}
+};
 
 // Map dispatch
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   getBoards() {
-    dispatch(getBoards())
+    dispatch(getBoards());
   },
   getMembersByBoardId(boardId) {
-    dispatch(getMembersByBoardId({ boardId }))
+    dispatch(getMembersByBoardId({ boardId }));
   },
   getListsByBoardId(boardId) {
     dispatch(getListsByBoardId({ boardId }))
@@ -66,18 +67,18 @@ const mapDispatchToProps = dispatch => ({
     dispatch(getCardsByBoardId({ boardId }))
   },
   resetRequest() {
-    dispatch(resetRequest())
-  }
+    dispatch(resetRequest());
+  },
 });
 
 // Map state
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   boards: state.boardReducer.boards,
   members: state.boardReducer.members,
   lists: state.boardReducer.lists,
   cardsByBoard: state.boardReducer.cardsByBoard,
   errorRequest: state.boardReducer.errorRequest,
-  successRequest: state.boardReducer.successRequest
+  successRequest: state.boardReducer.successRequest,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

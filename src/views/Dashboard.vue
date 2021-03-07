@@ -1,4 +1,32 @@
 <template>
+  <!-- Overlay -->
+  <div
+    class="transform top-0 left-0 w-full bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30 lg:hidden bg-MTDarkGreen"
+  >
+    <div class="w-full h-full bg-MTDarkGreen">
+      <!-- <MTDashboardSidebar /> -->
+      <img 
+        aria-label="Profile Image"
+        class="my-8 h-32 w-32 rounded-full border-4 mx-auto mt-24"
+        alt=""
+        src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
+      />
+
+      <h2 class="my-4 text-2xl font-bold text-MTWhite">Team Members</h2>
+
+      <div class="flex flex-col items-start text-white ">
+        <ul class="my-0 list-disc mx-auto">
+          <li v-for="(member, index) in members"
+            :key="index"
+            class="my-2 text-base font-thin mx-auto"
+            >
+            {{ member }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <NavBar />
 
   <div class="flex flex-col md:flex-row  w-full h-full">
@@ -24,6 +52,7 @@
         </ul>
       </div>
     </div>
+
     <div class="w-full xl:w-3/4 ">
       <div class="about pb-24 pt-12">
         <div class="text-white mb-12 text-center md:text-left md:ml-32">

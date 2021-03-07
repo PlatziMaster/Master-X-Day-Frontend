@@ -1,13 +1,16 @@
 import React from 'react';
-import { Pie, Bar } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 import "./PieChart.css"
 
-export const PieChart = ({ tasks }) => {
+export const PieChart = ({ lists, cards }) => {
   const data = {
-    labels: ['To do', 'In progress', 'Done'],
+    labels: lists.map(list => list.name),
     datasets: [
       {
-        data: tasks,
+        data: lists.map(list => {
+          const newList = cards.filter(card => card.idList === list.id);
+          return newList.length
+        }),
         backgroundColor: [
           'rgba(244, 67, 54)',
           'rgba(255, 160, 0)',

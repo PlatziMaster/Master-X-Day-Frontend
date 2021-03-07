@@ -31,4 +31,8 @@
     margin-bottom: 2rem;
     margin-left: 0;
   }
+  .icon_container {
+    display: flex;
+    justify-content: center;
+  }
   

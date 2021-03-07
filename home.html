@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
+    <title>Your Dashboard</title>
+</head>
+<body>
+    <div id="container">
+        <nav>
+          <span class="dashname">X- Project</span>
+          <li><a class="nav_active" href="home.html">Home</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="stats.html">Stats</a></li>
+        </nav>
+        
+        <section class="dashdetails">
+            <div class="dashdetails__count"> 
+                <p class="dashdetails__title--darkblue">TOTAL CARDS: </p><p class="dashdetails__title--black">6</p>
+            </div>
+            <div class="dashdetails__count">
+                <p class="dashdetails__title--blue">TOTAL MEMBERS: </p><p class="dashdetails__title--black">4</p>
+            </div> 
+            <div class="dashdetails__count">
+                <p class="dashdetails__title--blue">PROJECT COMPLETION: </p><p class="dashdetails__title--black">50%</p>
+            </div>   
+        </section>
+
+        <section id="tabs" class="lists">
+            <div id="todos" class="lists__title--active"> 
+                <p class="tab">TO DO</p>
+            </div>
+            <div id="inprocess" class="lists__title">
+                <p class="tab">IN PROCESS</p>
+            </div> 
+            <div id="done" class="lists__title">
+                <p class="tab">DONE</p>
+            </div>   
+        </section>
+
+        <section class="listdetail">
+            <div class="listdetail__title"> 
+                <p>1 CARD </p> <p>17%</p>
+            </div>
+            <div class="listdetail__title">
+                <p>2 CARDS </p> <p>33%</p>
+            </div> 
+            <div class="listdetail__title">
+                <p>3 CARDS</p> <p>50%</p>
+            </div>   
+        </section>
+
+        <section class="listblocks">
+            <div id="todolist"    class="listblocks__list"> 
+                <div class="listblocks__card">Upload Images</div>
+            </div>
+            <div  id="inprocesslist" class="listblocks__list--hidden">
+                <div class="listblocks__card">Build Structure</div>
+                <div class="listblocks__card">Create API Connection</div>
+                
+            </div> 
+            <div id="donelist" class="listblocks__list--hidden">
+                <div class="listblocks__card">Start Repo</div>
+                <div class="listblocks__card">Create Components</div>
+                <div class="listblocks__card">Select Color Design</div>
+            </div>   
+        </section>
+          
+        </div>
+
+        <script src="./js/home.js"></script>
+</body>
+</html>

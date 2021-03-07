@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { AppContext } from "./context/index";
 import Card from "./components/card";
 import menu from "./icons/app-menu.svg";
 import home from "./icons/home.svg";
@@ -6,7 +8,9 @@ import dashb from "./icons/dashb.svg";
 import star from "./icons/star.svg";
 import lock from "./icons/lock.svg";
 
-function App() {
+const App = () => {
+  const { list } = useContext(AppContext);
+
   return (
     <div className="App">
       {/*Dont delete*/}
@@ -44,13 +48,15 @@ function App() {
           </div>
         </div>
         <div className="row">
-          <Card title="To Do" color="rgb(255, 238, 0)" />
-          <Card title="In progress" color="rgb(248, 120, 0)" />
-          <Card title="Done" color="rgb(248, 0, 0)" />
+          {
+            list && list.map(item => (
+              <Card key={item.id} id={item.id} title={item.name} color="rgb(255, 238, 0)" />    
+            ))
+          }
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default App;

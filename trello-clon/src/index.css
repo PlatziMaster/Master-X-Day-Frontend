@@ -24,7 +24,7 @@ body {
   background-color: var(--BlueMarine);
 }
 .background-card {
-   background-color: var(--LightGrey);
+  background-color: var(--LightGrey);
   border-radius: 5px;
   padding: 3rem 1.5rem;
   margin-top: 2rem;
@@ -35,12 +35,12 @@ body {
   margin: 1.5rem 0;
 }
 h1 {
-    font-size: 2.6rem;
-    font-family: var(--Secondary);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: left;
-    margin: 0 2rem;
+  font-size: 2.6rem;
+  font-family: var(--Secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0 2rem;
 }
 h2 {
   font-size: 2.4rem;

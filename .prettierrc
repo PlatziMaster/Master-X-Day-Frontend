@@ -1,0 +1,33 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 4,
+  "semi": false,
+  "singleQuote": true,
+  "eslint.autoFixOnSave": true,
+  "printWidth": 80,
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "overrides": [
+    {
+      "files": "*.test.js",
+      "options": {
+        "semi": true
+      }
+    },
+    {
+      "files": [
+        "*.html",
+        "legacy/**/*.js"
+      ],
+      "options": {
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}

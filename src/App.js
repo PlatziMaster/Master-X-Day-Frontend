@@ -40,7 +40,7 @@ function App() {
               </li>
               <li>
                 <img src={user} alt="User" className="img-user"></img>
-                <label>Nestor David Galeana</label>
+                <label>Nestor David Galeano</label>
               </li>
               <li>
                 <img src={user} alt="User" className="img-user"></img>

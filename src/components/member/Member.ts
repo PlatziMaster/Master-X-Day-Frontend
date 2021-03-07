@@ -1,3 +1,12 @@
-import Member from './Member.vue';
+import { Component, Vue } from 'vue-property-decorator';
 
-export default Member;
+@Component({
+  components: {},
+  props: {
+    member: String,
+  },
+})
+
+export default class Member extends Vue {
+
+}

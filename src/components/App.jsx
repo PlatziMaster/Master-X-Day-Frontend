@@ -2,12 +2,6 @@ import '../styles/App.scss';
 
 import AsideBar from './AsideBar';
 import Dashboard from './Dashboard';
-import Card from './components/Card';
-
-import toDoIcon from './icons/to-do-list.svg';
-import inProgressIcon from './icons/gear.svg'
-import doneIcon from './icons/work-done.svg';
-import './styles/Card.scss'
 
 function App() {
   return (
@@ -21,9 +15,6 @@ function App() {
       <Dashboard>
         db
       </Dashboard>
-      <Card taskClassification="To-Do" icon={toDoIcon}/>
-      <Card taskClassification="In-progress" icon={inProgressIcon}/>
-      <Card taskClassification="Done" icon={doneIcon}/>
     </div>
   );
 }

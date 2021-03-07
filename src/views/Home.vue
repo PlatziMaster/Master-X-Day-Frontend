@@ -11,14 +11,13 @@
 
     <div class="tab-content">
       <div id="board" class="tab-pane fade in active show">
-        <!-- Board content -->
+        <team />
+    <column columnName="To Do" />
       </div>
       <div id="graphics" class="tab-pane fade">
         <!-- Graphics content -->
       </div>
     </div>
-    <!--  -->
-  </div>
 </template>
 
 <script lang='ts'>

@@ -1,6 +1,5 @@
 <template>
   <div>
-    Member
-    <div>image</div>
+    {{member}}
   </div>
 </template>

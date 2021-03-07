@@ -26,7 +26,7 @@
 
       <img 
         aria-label="Profile Image"
-        class="my-8 h-32 w-32 rounded-full border-4"
+        class="my-8 h-32 w-32 rounded-full border-4 mx-auto"
         alt=""
         src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
       />

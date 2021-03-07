@@ -1,0 +1,37 @@
+body{
+  background-color: #F6F5FA;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.img-user{
+  width: 30px;
+}
+
+.list-user{
+  list-style: none;
+}
+
+.total-container{
+  background-color: #40CC7C;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.total-todo, .total-progress, .total-done{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.total-todo{
+  background-color: #7033FF;
+}
+
+.total-progress{
+  background-color:#FF9066 ;
+}
+
+.total-done{
+  background-color:#FFCC40 ;
+}

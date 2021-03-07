@@ -15,9 +15,9 @@ class Navbar extends React.Component{
                             <img className="Navbar__container-logo" src={masterLogo} alt="Logo Master"/>
                             <span className="font-weight-bold">Bienvenido a platzi master</span>
                             
-                            <a className="d-none d-sm-block font-weight-light" href='#'>Opción 1 </a>
-                            <a className="d-none d-sm-block font-weight-light" href='#'>Opción 2 </a>
-                            <a className="d-none d-sm-block font-weight-light" href='#'>Opción 3 </a>
+                            <a className="d-none d-sm-block font-weight-light" href='https://github.com/jorrgeCruz/'>Opción 1 </a>
+                            <a className="d-none d-sm-block font-weight-light" href='https://github.com/jorrgeCruz/'>Opción 2 </a>
+                            <a className="d-none d-sm-block font-weight-light" href='https://github.com/jorrgeCruz/'>Opción 3 </a>
 
                             <img className="Navbar__icon d-block d-sm-none" src={menuIcon} alt="MenuIcon"/>
                     </div>  

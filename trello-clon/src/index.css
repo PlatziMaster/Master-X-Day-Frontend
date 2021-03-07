@@ -1,13 +1,64 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap");
+
+:root {
+  /* Primary colors */
+  --deppblue: #2355ba;
+  --BlueMarine: #3e77e8;
+  --LightGrey: #a9b8d8;
+  --LightBlue: #8cacea;
+  --WhiteBone: #f2f5fc;
+
+  --Primary: "Montserrat", sans-serif;
+  --Secondary: "Merriweather", serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--BlueMarine);
+}
+.background-card {
+  background-color: var(--LightGrey);
+  border-radius: 5px;
+  padding: 3rem 1.5rem;
+  margin-top: 2rem;
+}
+.background-p {
+  background-color: var(--WhiteBone);
+  border-radius: 5px;
+  margin: 1.5rem 0;
+}
+h1 {
+  font-size: 2.6rem;
+  font-family: var(--Secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0 2rem;
+}
+h2 {
+  font-size: 2.4rem;
+  color: black;
+  font-family: var(--Secondary);
+}
+p {
+  font-size: 1.6rem;
+  font-family: var(--Primary);
+  padding: 4rem 2rem;
+}
+
+a{
+  font-weight: bold;
+  color: var(--WhiteBone);
+}
+
+a:hover {
+  font-weight: bold;
+  color: var (--LightGrey);
 }

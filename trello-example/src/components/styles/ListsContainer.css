@@ -2,6 +2,7 @@
   height: 100vh;
   display: flex;
   padding: 10%;
+  
 }
 
 .ListsGrid {
@@ -12,6 +13,7 @@
 }
 
 .List {
+  background-color: #C4C4C4;
 }
 
 .List__header {

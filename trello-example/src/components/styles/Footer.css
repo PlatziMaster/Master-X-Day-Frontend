@@ -11,10 +11,12 @@
   }
   
   .Footer__container-logo{
-    width: 5px;
-    padding-left: 10px;
-    margin-right: 5rem;
+    width: 100px;
+    /* padding-left: 10px;
+    margin-right: 5rem; */
   }
-
+.font-weight-bold{
+  color: white;
+}
   
   

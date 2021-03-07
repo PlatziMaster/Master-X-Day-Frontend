@@ -10,9 +10,15 @@ class Footer extends React.Component{
         return (
             <div className="Footer">
                 <div className="container">
-                        <img className="Footer__container-logo" src={platziLogo} alt="Logo Platzi"/>
-                        <span className="font-weight-bold">Hecho con amor ❤️ para platzi master </span>   
-                </div>  
+                    <div className="row align-items-center">
+                        <div className="col-12 col-md-4">
+                            <img className="Footer__container-logo" src={platziLogo} alt="Logo Platzi"/>
+                        </div>
+                        <div className="col-12">
+                            <span className="font-weight-bold">Hecho con amor ❤️ para platzi master </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

@@ -1,0 +1,22 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    font-family: 'Lato', 'Helvetica Neue', sans-serif;
+    background-color: #333366;
+  }
+  
+  h1 {
+    font-family: 'Anton', sans-serif;
+  }
+  
+  a.link-unstyled {
+    color: inherit;
+  }
+  
+  a.link-unstyled:hover {
+    color: inherit;
+    text-decoration: none;
+  }

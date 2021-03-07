@@ -13,8 +13,6 @@ import Interface from './components/interface'
 import Dashboard from './views/dashboard'
 import DasboardDetail from './views/dasboard-detail'
 
-
-
 function App() {
   return (
     <Router>

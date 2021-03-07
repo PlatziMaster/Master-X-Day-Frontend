@@ -1,10 +1,8 @@
 import axios from 'axios';
 import { Fragment, useEffect, useState } from 'react';
-import Header from '../components/header'
-import Footer from '../components/footer'
-import Layout from '../components/layout'
 import Card from '../components/mobile-card-container'
 import Task from '../components/Target'
+import Charts from '../components/charts'
 import { useParams } from 'react-router';
 
 // const key = 'a9a2107d1296e0416a93bddf26491c4a'
@@ -17,6 +15,9 @@ function DasboardDetail(props) {
 const [lists, setLists] = useState([])
 const [members, setMembers] = useState([])
 const { id } = useParams()
+const [data, setdata] = useState([])
+const dataTest = [ {angle: 1, radius: 10}, {angle: 2, label: 'Super Custom label', subLabel: 'With annotation', radius: 20}, {angle: 5, radius: 5, label: 'Alt Label'}, {angle: 3, radius: 14}, {angle: 5, radius: 12, subLabel: 'Sub Label only', className: 'custom-class'} ];
+
 
 const getLists = async () => {
     let res = await axios.get(`https://api.trello.com/1/boards/${id}/lists/?key=${key}&token=${token}`)
@@ -66,6 +67,7 @@ useEffect(() => {
             cards: res
             }
             setLists(lists => [...lists, object])
+            setdata(data => [...data, {angle: res.length, label: list.name, subLabel: list.name}])
         })
         });
     })
@@ -85,6 +87,8 @@ useEffect(() => {
 
 }, [1])
 
+
+
 return (
     <Fragment>
         <Fragment>
@@ -97,12 +101,17 @@ return (
         ) : null} */}
 
         {lists.length >= 1 ? (
-            lists.map(list => 
+            lists.sort(function(a, b){
+                if(a.name < b.name) { return -1; }
+                if(a.name > b.name) { return 1; }
+                return 0;
+            }).map(list => 
             <Card  title={list.name} counter={list.cards.length}>
                 {list.cards.map(i => <Task title={i.name} />)}
             </Card>
             )
         ) : null}
+        <Charts data={data}/>
     </Fragment>
 );
 }

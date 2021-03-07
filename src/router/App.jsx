@@ -6,6 +6,7 @@ import { getToken } from "../context/actions";
 import OnBoarding from "../containers/Onboarding/";
 import Dashboard from "../containers/Dashboard/";
 import Login from "../containers/Login/";
+import BoardConfirm from "../containers/Onboarding/";
 import Staticts from "../containers/Staticts";
 
 const App = () => {
@@ -20,12 +21,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={!token ? Login : Dashboard} />
+        <Route exact path="/board-confirm" component={BoardConfirm} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/onboarding" component={OnBoarding} />
         <Route exact path="/statics" component={Staticts} />
-        <Route path="/" component={Login} />
+        <Route exact path="/" component={!token ? Login : Dashboard} />
       </Switch>
     </BrowserRouter>
   );

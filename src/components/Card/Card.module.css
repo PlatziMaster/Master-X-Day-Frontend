@@ -1,3 +1,49 @@
-.Card {
-  
+.card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  padding-left: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.divider {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 6px;
+  height: 57px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.h4 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.text {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #757575;
+}
+
+.editIcon {
+  margin-bottom: 10px;
 }

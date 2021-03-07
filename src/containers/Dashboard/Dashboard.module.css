@@ -1,189 +1,21 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
+.dashboard {
+  margin: 1rem 1.5rem;
+}
+
+.text {
   margin: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 25% 75%;
-}
-
-aside {
-  background-color: #3f51b5;
-  height: 100vh;
-  position: fixed;
-  width: 25%;
-}
-
-aside h1 {
-  font-size: 3.5rem;
-  color: #fff;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  margin-top: 5rem;
-}
-
-.aside__progressBar {
-  margin-top: 5rem;
-}
-
-.aside__progressBar--figureRed {
-  margin: auto;
-  background-color: red;
-  height: 1rem;
-  width: 15rem;
-}
-
-/* .aside__progressBar--figureYellow {
-    background-color: yellow;
-    position: relative;
-    z-index: 2;
-    top: -1rem;
-    left: 9rem;
-    height: 1rem;
-    width: 10rem;
-  } */
-
-.aside__buttons--container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
-}
-
-button {
-  display: block;
-  width: 15rem;
-  margin-top: 5rem;
-  height: 5rem;
-  border-radius: 3.8rem;
-  border: none;
-  outline: none;
-  font-family: "Poppins", sans-serif;
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  grid-column: 2;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #ececec;
-  width: 30rem;
-  height: 23rem;
-  border-radius: 3rem;
-  margin: 4rem;
-}
-
-.card__tasks {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 18rem;
-}
-
-h4 {
-  font-size: 2rem;
-  font-family: "Poppins", sans-serif;
-}
-
-span {
-  font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
-}
-* {
-  margin: 0px;
-  padding: 0px;
-  border-style: none;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
-body {
-  background-color: #303f9f;
+.h4 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
-/*Media Query for 320px*/
-@media (min-width: 320px) {
-  main {
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    width: 100%;
-    text-align: center;
-  }
-
-  #maintitle {
-    padding-top: 150px;
-    line-height: 60px;
-    font-family: "Poppins";
-  }
-
-  #maintitle h1 {
-    font-size: 48px;
-  }
-
-  #maintitle p {
-    font-size: 28px;
-  }
-
-  #idtablero form {
-    display: block;
-    text-align: center;
-    justify-content: center;
-    align-self: center;
-    margin: auto;
-    width: 300px;
-  }
-
-  #idtablero input[type="text"] {
-    text-align: center;
-    color: #747474;
-    width: 240px;
-    height: 54px;
-    border-radius: 10px;
-    font-family: "Roboto";
-    font-size: 18px;
-  }
-
-  #idtablero input[type="button"] {
-    color: white;
-    text-align: center;
-    background-color: #898989;
-    font-family: "Poppins";
-    font-size: 24px;
-    width: 193px;
-    height: 56px;
-    border-radius: 10px;
-    margin-top: 10px;
-  }
-
-  footer {
-    position: fixed;
-    background-color: #3f51b5;
-    width: 100%;
-    height: 68px;
-    color: white;
-    text-align: center;
-    bottom: 0px;
-  }
-
-  footer p {
-    font-family: "Roboto";
-    font-style: italic;
-    padding-top: 20px;
-  }
+.headContainer {
+  margin-bottom: 1.5rem;
 }

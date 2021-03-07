@@ -1,0 +1,171 @@
+﻿@page "/"
+@inject IRepository repositorio
+@inject NavigationManager navigationManager
+@using System.Reflection
+
+@if (!string.IsNullOrWhiteSpace(ErrorMsg))
+{
+    <div>
+        <p>@ErrorMsg</p>
+    </div>
+}
+
+
+<header class="header">
+    <a href="#/">
+        <img class="header__logo" src="img/logo.svg" alt="logo">
+    </a>
+</header>
+<section class="hero">
+    <h1>
+        View the progress of your projects more easily
+        with Eye progress
+    </h1>
+    @if (DashBoard == null)
+    {
+        <text>Cargando...</text>
+    }
+    else
+    {
+        <EditForm Model="@DashBoard" OnValidSubmit="Find">
+            <div class="hero__input">
+                <h2>Insert your Trello Dashboard ID</h2>
+                <InputText class="form-control" @bind-Value="@DashBoard.Id" placeholder="Dashboard" />
+            </div>
+            <div class="hero__btn">
+                <button type="submit" class="hero__btn--get">Get Dashboard</button>
+            </div>
+
+        </EditForm>
+    }
+
+</section>
+<section class="container">
+    @if (totalmembers == 0)
+    {
+        <section class="container__item">
+            <img src="img/Team-work-bro.svg" alt="Team-work-bro">
+            <h2>Visualiza</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet vestibulum velit. Vestibulum mattis vehic</p>
+        </section>
+        <section class="container__item">
+            <img src="img/Pair-programming.svg" alt="Pair-programming">
+            <h2>Compara</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet vestibulum velit. Vestibulum mattis vehic</p>
+        </section>
+        <section class="container__item">
+            <img src="img/Content-team-rafiki.svg" alt="Content-team-rafiki">
+            <h2>Implementa</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet vestibulum velit. Vestibulum mattis vehic</p>
+        </section>
+    }
+    else
+    {
+        <section class="container__item">
+            <h2>Members</h2>
+            <p>@totalmembers</p>
+        </section>
+        <section class="container__item">
+            <h2>Total number of cards</h2>
+            <p>@totalcards</p>
+        </section>
+        <section class="container__item">
+            <h2>Total number of list</h2>
+            <p>@totallist</p>
+        </section>
+    }
+
+</section>
+
+@if (httpList == null)
+{
+    <text>Cargando...</text>
+}
+else
+{
+    <section class="container">
+        @foreach (var item in httpList)
+        {
+            <section class="container__item">
+                <h2>@item.name</h2>
+            </section>
+        }
+    </section>
+}
+
+
+
+
+@code {
+    Dictionary<string, string> queryStringsDict = new Dictionary<string, string>();
+    string ErrorMsg;
+    public DashBoardViewModel DashBoard = new DashBoardViewModel();
+    List<TrelloMembers> httpDashboard;
+    List<TrelloCards> httpCards;
+    List<TrelloLists> httpList;
+    int totalmembers;
+    int totalcards;
+    int totallist;
+
+    protected async override Task OnInitializedAsync()
+    {
+
+    }
+
+    private async Task Find()
+    {
+        //?ProductSearchField=CategoryID&ProductSearchText=3&PageIndex=0&PageSize=10&SortList[0]SortBy=ProductName&SortList[0]SortDirection=asc
+
+
+        //Members
+        var httpResponseMembers = await repositorio.Get<List<TrelloMembers>>($"https://api.trello.com/1/boards/{DashBoard.Id}/memberships?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44");
+
+        if (httpResponseMembers.Error)
+        {
+            ErrorMsg = (await httpResponseMembers.GetBody());
+        }
+        else
+        {
+            httpDashboard = httpResponseMembers.Response;
+            totalmembers = httpDashboard.Count();
+        }
+
+
+        //Cards
+        var httpResponseCards = await repositorio.Get<List<TrelloCards>>($"https://api.trello.com/1/boards/{DashBoard.Id}/cards?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44");
+
+        if (httpResponseCards.Error)
+        {
+            ErrorMsg = (await httpResponseCards.GetBody());
+        }
+        else
+        {
+            httpCards = httpResponseCards.Response;
+            totalcards = httpCards.Count();
+
+            //foreach (var item in httpList)
+            //{
+
+            //}
+        }
+
+
+        //List
+        var httpResponseList = await repositorio.Get<List<TrelloLists>>($"https://api.trello.com/1/boards/{DashBoard.Id}/lists?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44");
+
+        if (httpResponseList.Error)
+        {
+            ErrorMsg = (await httpResponseList.GetBody());
+        }
+        else
+        {
+            httpList = httpResponseList.Response;
+            totallist = httpList.Count();
+
+
+        }
+
+
+        StateHasChanged();
+    }
+}

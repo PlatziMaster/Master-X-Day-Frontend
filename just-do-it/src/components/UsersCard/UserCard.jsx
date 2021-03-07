@@ -22,10 +22,7 @@ const UserCard = ({members}) => {
                             )
                         } )
                       }
-                      <div className="card__user--item">
-                          <img src="https://freesvg.org/img/Male-Avatar.png" alt=""/>
-                          <p>Nombre</p>
-                         </div>
+                     
                       
                      
                 </div>

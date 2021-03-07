@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import UserCard from './components/UsersCard/UserCard' 
+import CenterBoard from './components/CenterBoard/CenterBoard';
+
 // Import assets
 // Import styles
 import './App.css';
@@ -39,10 +41,13 @@ const App = ({
   return (
     <div className="App">
       <UserCard members={members} />
+      <CenterBoard />
      
     </div>
   );
 }
+
+
 
 // Map dispatch
 const mapDispatchToProps = dispatch => ({

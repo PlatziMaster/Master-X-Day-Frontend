@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trello Team #16</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!--favicon-->
+    <link
+      rel="shortcut icon"
+      href="https://static.platzi.com/media/favicons/platzi_favicon.png"
+    />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="https://static.platzi.com/media/favicons/platzi_favicon.png"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+   
+  </head>
+  <body>
+    <header
+      class="header"
+      data-aos="fade-down"
+      data-aos-easing="ease"
+      data-aos-duration="1000"
+    >
+      <div class="contenedor">
+        <div class="logo">
+          <img class="svg" src="./img/trello-logo-gradient-white.svg" alt="" />
+        </div>
+      </div>
+    </header>
+    <div class="row">
+      <aside
+        class="col-12 col-lg-4 aside"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="1000"
+      >
+        <div
+          class="aside__boxPrincipal"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
+          <h1>Team #16</h1>
+          <div class="progress __progressBar">
+            <div
+              class="progress-bar __progressBar--inside"
+              role="progressbar"
+              style="width: 15%"
+              aria-valuenow="15"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              15%
+            </div>
+          </div>
+        </div>
+        <div class="aside__boxSecondary">
+           <div class="aside__members">
+              <div class="aside__members--head">
+                 <h2>Members</h2>
+                 <div class="button__plus"></div>
+              </div>
+              <div class="members__cards">
+                 <div class="members__cards--image" id=imagen></div>
+                 <div class="members__cards--text">
+                    <h4 id="miembro1"></h4>
+                    <p>Charge</p>
+                 </div>
+              </div>
+              <div class="members__cards">
+                <div class="members__cards--image"></div>
+                <div class="members__cards--text">
+                    <h4 id="miembro"></h4>
+                   <p>Charge</p>
+                </div>
+             </div>
+             <div class="members__cards">
+                <div class="members__cards--image"></div>
+                <div class="members__cards--text">
+                    <h4 id="miembro2"></h4>
+                   <p>Charge</p>
+                </div>
+             </div>
+           </div>
+        </div>
+        <div
+          class="aside__boxSecondary"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
+          <div class="aside__cards">
+            <div class="aside__cards--head">
+              <h2>Cards</h2>
+            </div>
+            <div class="cards__cards">
+              <div class="cards__cards--text">
+                <h4>Total number of cards</h4>
+                <p>3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="aside__boxSecondary"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
+          <div class="aside__lists">
+            <div class="aside__lists--head">
+              <h2>Lists</h2>
+            </div>
+            <div class="lists__cards">
+              <div class="lists__cards--text">
+                <h4>Total number of lists</h4>
+                <p>7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="row col-12 col-lg-8 p-lg-5 pt-5 pb-5">
+        <div
+          class="col-lg-4"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
+          <center>
+            <div class="trelo__container">
+              <div class="trelo__container-header">
+                <div class="titrelo__container__header-title">
+                  <img class="icon__ad" src="./img/toDoIcon.svg" alt="" />
+                  <p id="listas" class="d-inline"></p>
+                </div>
+                <img src="./img/plusIcon.svg" alt="" style="cursor: pointer" />
+              </div>
+
+              <div class="progress __progressBar">
+                <div
+                  class="progress-bar __progressBar--inside __progressBar__background--toDo"
+                  role="progressbar"
+                  style="width: 25%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  25%
+                </div>
+              </div>
+
+              <div class="trelo__container-body">
+                <div class="trelo__container-cards">
+                  <p id="prueba" class="d-inline">
+                  </p>
+                </div>
+              </div>
+
+              <div class="trelo__container-body">
+                <div class="trelo__container-cards">
+                  <p id="prueba1" class="d-inline d-flex">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div
+          class="col-lg-4"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
+          <center>
+            <div class="trelo__container">
+              <div class="trelo__container-header">
+                <div class="titrelo__container__header-title">
+                  <img class="icon__ad" src="./img/inPogressIcon.svg" alt="" />
+                  <span id="segunda" class="d-inline"></span>
+                </div>
+                <div class="titrelo__container__header-icon">
+                  <img
+                    src="./img/plusIcon.svg"
+                    alt=""
+                    style="cursor: pointer"
+                  />
+                </div>
+              </div>
+              <div class="progress __progressBar">
+                <div
+                  class="progress-bar __progressBar--inside __progressBar__background--inProgress"
+                  role="progressbar"
+                  style="width: 75%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  75%
+                </div>
+              </div>
+              <div class="trelo__container-body">
+                <div class="trelo__container-cards">
+                  <p id="otraPruebita"></p>
+                </div>
+              </div>
+              <div class="trelo__container-body">
+                <div class="trelo__container-cards">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+              </div>
+              <div class="trelo__container-body">
+                <div class="trelo__container-cards">
+                  <p>
+                    Mauris eget neque non felis tincidunt hendrerit. Fusce
+                    sollicitudin quis nisi ac mattis.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div
+          class="col-lg-4"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
+        >
+          <center>
+            <div class="trelo__container">
+              <div class="trelo__container-header">
+                <div class="titrelo__container__header-title">
+                  <img class="icon__ad" src="./img/doneIcon.svg" alt="" /> <span id="hecho"></span>
+                </div>
+                <img src="./img/plusIcon.svg" alt="" style="cursor: pointer" />
+              </div>
+
+              <div class="progress __progressBar">
+                <div
+                  class="progress-bar __progressBar--inside"
+                  role="progressbar"
+                  style="width: 15%"
+                  aria-valuenow="15"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  15%
+                </div>
+              </div>
+              <div class="trelo__container-body">
+                <div class="trelo__container-cards">
+                  <p id="final">
+                  </p>
+                </div>
+              </div>
+              <div class="trelo__container-body">
+                <div class="trelo__container-body">
+                  <div class="trelo__container-cards">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </center>
+        </div>
+      </main>
+    </div>
+    <!--Modal-->
+    <div class="modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

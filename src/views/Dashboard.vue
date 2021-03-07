@@ -2,7 +2,7 @@
   <NavBar />
 
   <div class="flex flex-col xl:flex-row w-full h-full">
-    <div class="w-full bg-MTDarkGreen flex content-center block xl:hidden">
+    <div class="w-full bg-MTDarkGreen flex content-center block xl:hidden shadow-md">
       <div
         class=" w-14  mt-4 mb-4 ml-4 bg-MTLightGreen flex flex-col jusfity-center content-center cursor-pointer"
         @click="openSidebar = !openSidebar"
@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="w-1/4 h-screen bg-MTDarkGreen hidden xl:block">
+    <div class="w-1/4 h-screen bg-MTDarkGreen hidden xl:block shadow-md">
       <img
         aria-label="Profile Image"
         class="my-8 h-32 w-32 rounded-full border-4 mx-auto mt-24"

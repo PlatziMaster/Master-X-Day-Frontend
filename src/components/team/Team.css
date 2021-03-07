@@ -1,0 +1,31 @@
+.team {
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.171);
+  min-width: 500px;
+  width: fit-content;
+  margin: 10px 0px;
+}
+.members {
+  display: flex;
+  padding: 10px;
+}
+ul {
+  list-style-type: none;
+}
+.title {
+  background-color: #c3c3c3;
+  padding: 10px;
+}
+.avatar {
+  background-color: #808080;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+.member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px;
+}

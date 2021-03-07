@@ -12,3 +12,10 @@ Promise.all(requests)
     .then(responses => responses.forEach(
         response => console.log(`${response.url}: response : ${response.status} `)
     ));
+
+    //Function for prompt
+    function isEmpty(){
+        if (tId.value == ""){
+            return alert("The dashboard can't be read")
+        }
+    }

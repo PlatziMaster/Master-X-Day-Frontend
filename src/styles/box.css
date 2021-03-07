@@ -1,0 +1,49 @@
+
+.containerBox{
+    max-width: 200px;
+}
+
+.Box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 20px
+    
+}
+
+.blue{
+    background-color: #00416a ;
+}
+.green{
+    background-color: #008891;
+}
+
+.Box__head{
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.Box__Number{
+    font-size: 2rem;
+    margin: 0px auto ;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .containerBox{
+        max-width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Box{
+        margin: 0 2rem;
+        padding: 1rem;
+        width: 40%;
+    }
+  }

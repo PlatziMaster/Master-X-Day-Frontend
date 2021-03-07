@@ -1,0 +1,21 @@
+.centerBoard__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid blue; */
+  height: 600px;
+  overflow: hidden;
+  overflow-x: scroll;
+  min-width: 320px;
+}
+
+@media (max-width: 600px) {
+  .centerBoard__container {
+    /*  border: 1px solid red; */
+    height: 400px;
+  }
+}
+
+.graphs {
+  display: flex;
+}

@@ -4,7 +4,7 @@
   >
     <!--Componente de gráfico-->
     <div class="h-3/5 flex flex-wrap content-center justify-center ">
-      <mt-dashboard-pie color="#FF8C8C" backgroundColor="#FFE5E5" label="prueba" :percent="50"/>
+      <mt-dashboard-pie color="#75A1C1" backgroundColor="#B7E1FF" label="prueba" :percent="totalPercent" id="dos"/>
       <span class="font-bold text-center text-2xl p-4">
         Progreso del tablero
       </span>
@@ -21,6 +21,7 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
+    totalPercent: Number
   },
   components: {
     'mt-dashboard-pie': MTDashboardPieChart

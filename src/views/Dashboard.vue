@@ -14,10 +14,10 @@
         <div class="w-full flex flex-col content-center ">
           <div class="grid grid-cols-1 gap-x-8 gap-y-8 mx-auto pb-8 ">
             <div class="hidden md:block">
-              <!-- <MTDashboardCardLarge /> -->
+              <MTDashboardCardLarge v-if="cards.length > 0" :totalPercent="50" />
             </div>
             <div class="block md:hidden">
-              <!-- <MTDashboardCardSmall /> -->
+              <MTDashboardCardSmall v-if="cards.length > 0"  :totalPercent="50" />
             </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 mx-auto">
@@ -39,8 +39,8 @@
 // @ is an alias to /src
 import MTDashboardSidebar from "@/components/MTDashboardSidebar.vue";
 import MTDashboardCard from "@/components/MTDashboardCard.vue";
-// import MTDashboardCardLarge from "@/components/MTDashboardCardLarge.vue";
-// import MTDashboardCardSmall from "@/components/MTDashboardCardSmall.vue";
+import MTDashboardCardLarge from "@/components/MTDashboardCardLarge.vue";
+import MTDashboardCardSmall from "@/components/MTDashboardCardSmall.vue";
 import NavBar from "@/components/MTNavBar.vue";
 
 const DONE_LIST_NAME = "Done";
@@ -54,8 +54,8 @@ export default {
   components: {
     MTDashboardSidebar,
     MTDashboardCard,
-    // MTDashboardCardLarge,
-    // MTDashboardCardSmall,
+    MTDashboardCardLarge,
+    MTDashboardCardSmall,
     NavBar,
   },
   data() {
@@ -73,7 +73,12 @@ export default {
   },
   computed: {
     totalPercent() {
-      return (this.cardsDone / this.cards) * 100;
+      debugger
+      if (this.cardsDone.length > 0 && this.cards.length > 0) {
+        return (this.cardsDone.length / this.cards.length) * 100;
+      } else {
+        return 0;
+      }
     },
   },
   async created() {

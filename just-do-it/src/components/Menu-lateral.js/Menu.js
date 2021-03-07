@@ -4,7 +4,7 @@ import Notifications from "../../assets/Frame.png";
 import Calendario from "../../assets/calendario.png";
 import Members from "../../assets/Members.png";
 import Star from "../../assets/star.png";
-import "../styles/menu.css";
+import "./Menu.css";
 
 const Menu = () => {
   return (

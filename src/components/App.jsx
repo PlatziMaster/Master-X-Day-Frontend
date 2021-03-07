@@ -3,6 +3,7 @@ import '../styles/App.scss';
 import AsideBar from './AsideBar';
 import Dashboard from './Dashboard';
 import Header from './Header';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           db
         </Dashboard>
       </div>
+      <Footer />
     </div>
   );
 }

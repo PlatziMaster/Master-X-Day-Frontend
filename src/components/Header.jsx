@@ -2,7 +2,7 @@ import React from 'react';
 import loadingBar from '../icons/loading_bar.svg';
 import '../styles/Header.scss';
 
-class Card extends React.Component {
+class Header extends React.Component {
   render() {
     return (
       <div className="header-container">
@@ -22,4 +22,4 @@ class Card extends React.Component {
   }
 }
 
-export default Card;
+export default Header;

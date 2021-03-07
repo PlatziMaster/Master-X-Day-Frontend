@@ -2,7 +2,7 @@
   <NavBar />
 
   <div class="flex flex-col xl:flex-row w-full h-full">
-    <div class="w-full bg-MTDarkGreen flex content-center block xl:hidden shadow-md">
+    <div class="w-full bg-MTDarkGreen flex content-center block xl:hidden">
       <div
         class=" w-14  mt-4 mb-4 ml-4 bg-MTLightGreen flex flex-col jusfity-center content-center cursor-pointer"
         @click="openSidebar = !openSidebar"
@@ -13,12 +13,12 @@
           <div class="burger"></div>
         </div>
         <div v-if="!openSidebar" class="mx-auto mt-2 mb-2">
-          <span class="text-xl text-white font-bold">X</span>          
+          <span class="text-xl text-white font-bold">X</span>
         </div>
       </div>
     </div>
 
-    <div class="w-1/4 h-screen bg-MTDarkGreen hidden xl:block shadow-md">
+    <div class="w-1/4 h-screen bg-MTDarkGreen hidden xl:block">
       <img
         aria-label="Profile Image"
         class="my-8 h-32 w-32 rounded-full border-4 mx-auto mt-24"
@@ -58,13 +58,13 @@
           </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 mx-auto">
             <MTDashboardCard
-          v-for="item in listsData"
-          :key="item.id"
-          :listName="item.name"
-          :cardsNumber="item.cardsNumber"
-          :id="item.id"
-          :percent="percent"
-        />
+              v-for="item in listsData"
+              :key="item.id"
+              :listName="item.name"
+              :cardsNumber="item.cardsNumber"
+              :id="item.id"
+              :percent="percent"
+            />
           </div>
         </div>
       </div>
@@ -79,14 +79,9 @@ import MTDashboardCard from "@/components/MTDashboardCard.vue";
 // import MTDashboardCardSmall from "@/components/MTDashboardCardSmall.vue";
 import NavBar from "@/components/MTNavBar.vue";
 
-const DONE_LIST_NAME = 'Done';
+const DONE_LIST_NAME = "Done";
 
-import {
-  lists,
-  boardData,
-  members,
-  cardsBoard,
-} from "@/api/trello.service.js";
+import { lists, boardData, members, cardsBoard } from "@/api/trello.service.js";
 
 const idBoard = "6043b76b2ab9f31967290262";
 
@@ -113,42 +108,43 @@ export default {
     };
   },
   computed: {
-    totalPercent(){
-      return this.cardsDone / this.cards * 100;
-    }
+    totalPercent() {
+      return (this.cardsDone / this.cards) * 100;
+    },
   },
   async created() {
     boardData(idBoard).then((board) => (this.board = board));
     members(idBoard).then((members) => (this.members = members));
-    await cardsBoard(idBoard).then((cards) => {
-      this.cards = cards;
-      return lists(idBoard);
-    })
-    .then((lists) => {
+    await cardsBoard(idBoard)
+      .then((cards) => {
+        this.cards = cards;
+        return lists(idBoard);
+      })
+      .then((lists) => {
         this.listsData = this.loadCardsInList(lists);
-    });
+      });
     console.log(this.listsData);
   },
   methods: {
     loadCardsInList(lists) {
       const newList = lists.map((list) => {
-        const cards = this.cards.filter(card => card.idList === list.id);
-        if(list.name === DONE_LIST_NAME) {
+        const cards = this.cards.filter((card) => card.idList === list.id);
+        if (list.name === DONE_LIST_NAME) {
           this.cardsDone = cards;
         }
 
         return {
           ...list,
           cardsNumber: cards.length,
-        }
+        };
       });
-      return newList.map(list => {
-        const percent = list.cardsNumber/this.cards.length * 100;
+      return newList.map((list) => {
+        const percent = (list.cardsNumber / this.cards.length) * 100;
         return {
           ...list,
-          percent
-        }
-      })
+          percent,
+        };
+      });
     },
   },
 };
@@ -162,12 +158,10 @@ export default {
   margin: 6px 0;
 }
 
-.burgerSide{
+.burgerSide {
   width: 35px;
   height: 5px;
   background-color: white;
   margin: 6px 0;
-
 }
-
 </style>

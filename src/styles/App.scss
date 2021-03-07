@@ -1,0 +1,39 @@
+@import './root.scss';
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  // background-color: red;
+  width: 90%;
+  height: 90vh;
+  margin: 5vh 5vw;
+  display: grid;
+  grid-template: 0.4fr 1fr / 0.8fr 2.2fr;
+  -webkit-box-shadow: 4px 3px 54px -18px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 3px 54px -18px rgba(0,0,0,0.75);
+  box-shadow: 4px 3px 54px -18px rgba(0,0,0,0.75);
+  border-radius: 30px;
+
+  header{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+  }
+  
+  //mobile devices
+  @media only screen and (max-width: 576px ){
+    display : grid;
+    grid-template : 0.4fr 1fr 1fr / 1fr ;
+
+    header{
+      font-size: 1.6rem
+    }
+  };
+}
+

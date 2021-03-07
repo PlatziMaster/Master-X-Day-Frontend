@@ -1,17 +1,16 @@
 // Import libraries
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import UserCard from './components/UsersCard/UserCard'
+import UserCard from './components/UsersCard/UserCard';
+import PieChart from "./components/PieChart/PieChart";
+import VerticalBar from "./components/VerticalBar/VerticalBar";
 // Import assets
 // Import styles
 import "./App.css";
 // Import actions
-import { getBoards, resetRequest } from "./redux/actions/boardActions";
 
-import PieChart from "./components/Graphs/PieChart"
 
 import { getBoards, getMembersByBoardId, resetRequest } from './redux/actions/boardActions';
-
 
 const App = ({
   getBoards,
@@ -42,7 +41,10 @@ const App = ({
   return (
     <div className="App">
       <UserCard members={members} />
-
+      <section className="graphs">
+        <VerticalBar tasks={[12, 19, 3]}/>
+        <PieChart tasks={[12, 19, 3]}/>
+      </section>
     </div>
   );
 };

@@ -1,31 +1,6 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
 .container {
   display: grid;
   grid-template-columns: 25% 75%;
-}
-
-aside {
-  background-color: #3f51b5;
-  height: 100vh;
-  position: fixed;
-  width: 25%;
-}
-
-aside h1 {
-  font-size: 3.5rem;
-  color: #fff;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  margin-top: 5rem;
 }
 
 .aside__progressBar {
@@ -57,24 +32,6 @@ aside h1 {
   height: 70vh;
 }
 
-button {
-  display: block;
-  width: 15rem;
-  margin-top: 5rem;
-  height: 5rem;
-  border-radius: 3.8rem;
-  border: none;
-  outline: none;
-  font-family: "Poppins", sans-serif;
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  grid-column: 2;
-}
 
 .card {
   display: flex;
@@ -96,35 +53,9 @@ main {
   width: 18rem;
 }
 
-h4 {
-  font-size: 2rem;
-  font-family: "Poppins", sans-serif;
-}
-
-span {
-  font-size: 1.5rem;
-  font-family: "Roboto", sans-serif;
-}
-* {
-  margin: 0px;
-  padding: 0px;
-  border-style: none;
-}
-
-body {
-  background-color: #303f9f;
-}
 
 /*Media Query for 320px*/
 @media (min-width: 320px) {
-  main {
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    width: 100%;
-    text-align: center;
-  }
 
   #maintitle {
     padding-top: 150px;
@@ -171,19 +102,4 @@ body {
     margin-top: 10px;
   }
 
-  footer {
-    position: fixed;
-    background-color: #3f51b5;
-    width: 100%;
-    height: 68px;
-    color: white;
-    text-align: center;
-    bottom: 0px;
-  }
-
-  footer p {
-    font-family: "Roboto";
-    font-style: italic;
-    padding-top: 20px;
-  }
 }

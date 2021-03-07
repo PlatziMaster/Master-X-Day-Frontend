@@ -1,3 +1,11 @@
-.Button {
-  
+.button {
+  padding: 1rem 2rem;
+  background-color: deeppink;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }

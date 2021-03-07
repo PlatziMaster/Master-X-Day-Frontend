@@ -1,17 +1,17 @@
 export const setToken = (payload) => ({
-  type: 'SET_TOKEN',
+  type: "SET_TOKEN",
   payload,
 });
 
 export const getToken = ({ dispatch }) => {
   try {
-    const token = window.localStorage.getItem('trello_token');
+    const token = window.localStorage.getItem("trello_token");
     if (token) {
       dispatch(setToken(token));
       return;
     }
-    dispatch(setToken(''));
+    dispatch(setToken(""));
   } catch (error) {
-    dispatch(setToken(''));
+    dispatch(setToken(""));
   }
-}
+};

@@ -1,0 +1,13 @@
+.header {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+}
+
+.dashboardIcon {
+  margin-right: 1rem;
+}

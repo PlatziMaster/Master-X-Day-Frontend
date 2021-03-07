@@ -8,3 +8,7 @@ Instructions:
 4. In url link eg. "https://github.com/PlatziMaster/Master-X-Day-Frontend/compare/main...rafalagunas:main" you have to concatenate
    "?template=phase1.md" so your url looks like this => "https://github.com/PlatziMaster/Master-X-Day-Frontend/compare/main...rafalagunas:main?template=phase1.md"
 5. Create the pull request
+
+
+# Deployment
+https://platzi-master-x-day.herokuapp.com/

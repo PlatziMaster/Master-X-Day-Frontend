@@ -21,10 +21,11 @@ const useBoardLists = ({ text }) => {
   }
 
   useEffect(() => {
-    if (token && id) {
+    if (token && id && text) {
+      console.log(text);
       getBoards();
     }
-  }, [token, id])
+  }, [token, id, text])
 
   return { lists };
 }

@@ -1,13 +1,28 @@
 <template>
-  <div class="container bg-MTDarkGreen text-MTWhite w-auto lg:w-1/4 h-auto lg:h-full px-4 py-2 flex justify-center fixed lg:static">
-    <div class="block lg:hidden">
-      <button>Burger</button>
+  <div 
+    class="container bg-MTDarkGreen text-MTWhite lg:h-full lg:w-1/4 flex flex-col justify-start fixed lg:static "
+    :class="visibility === 'hidden' ? 'w-auto h-auto' : 'w-full h-full'"
+    >
+    <div 
+      class="block lg:hidden px-4 py-2"
+      :class="visibility === 'hidden' ? 'block' : 'hidden'"
+    >
+      <button v-on:click="visibility = 'block'">Burger</button>
+    </div>
+    <div 
+      class="Sidebar__header w-full flex justify-end block lg:hidden"
+      :class="visibility === 'hidden' ? 'hidden' : block"
+    >
+      <button
+        v-on:click="visibility = 'hidden'"
+        class="Sidebar__cross p-4 border-none bg-transparent h-full"
+      >
+        X
+      </button>
     </div>
 
-    <section class="flex flex-col items-center w-screen hidden lg:block">
-      <div class="py-2 flex justify-end">
-        <button class="bg-MTDarkGreen">X</button>
-      </div>
+    <section class="flex flex-col items-center lg:block lg:h-full"
+    :class="visibility === 'hidden' ? 'hidden' : 'w-full lg:w-auto'">
 
       <img 
         aria-label="Profile Image"
@@ -40,11 +55,22 @@ export default {
       type: Array,
       required: true,
     }
+  },
+  data: function() {
+    return {
+      visibility: 'hidden'
+    };
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.Sidebar__header {
+  background-color: #020303;
+}
 
+.Sidebar__cross {
+  background-color: #18202b;
+}
 </style>

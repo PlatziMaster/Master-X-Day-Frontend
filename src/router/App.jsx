@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
+
 import { useStateValue } from "../context";
 import { getToken } from "../context/actions";
 import OnBoarding from "../containers/Onboarding/";
 import Dashboard from "../containers/Dashboard/";
+import BoardConfirm from "../containers/BoardConfirm";
 import Login from "../containers/Login/";
-import Staticts from "../containers/Staticts";
 
 const App = () => {
   const { token, dispatch } = useStateValue();

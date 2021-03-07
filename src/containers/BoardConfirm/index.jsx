@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./BoardConfirm.module.css";
 import ButtonBoard from "../../components/ButtonBoard";
 import ButtonSecondary from "../../components/ButtonSecondary";
+import useBoardList from "../../hooks/useBoardLists"
 
 const BoardConfirm = () =>
 {

@@ -12,11 +12,11 @@ const UserCard = ({members}) => {
                   
                       <p>Members:</p>
                       {
-                        members.map( (m) =>{
+                        members.map( (m, i) =>{
                             return (
-                                <div className="card__user--item">
+                                <div className="card__user--item" key={i}>
                                <img src="https://freesvg.org/img/Male-Avatar.png" alt=""/>
-                                <p> {m.username} </p>
+                                <p> {m.fullName} </p>
                                </div>
                               
                             )

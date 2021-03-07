@@ -7,6 +7,8 @@ import './App.css';
 import UserCard from './components/UsersCard/UserCard';
 import CenterBoard from './components/CenterBoard/CenterBoard';
 import VerticalBar from "./components/VerticalBar/VerticalBar";
+import Menu from "./components/Menu-lateral.js/Menu";
+import PieChart from "./components/PieChart/PieChart";
 // Import actions
 import { getBoards, getMembersByBoardId, getListsByBoardId, getCardsByBoardId, resetRequest } from './redux/actions/boardActions';
 

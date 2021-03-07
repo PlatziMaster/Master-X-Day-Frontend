@@ -1,5 +1,5 @@
 ---
-name: 'Phase I: Design of the project'
+name: 'Phase IV: Deployment'
 about: FIGMA prototype and API connection
 title: "[Phase I: Design of the project]"
 labels: ''
@@ -15,11 +15,29 @@ https://xd.adobe.com/view/bc49dc6d-24d2-4a0c-8dcb-836ab2b663ad-e91a/
 **How would you improve this phase in the future?**
 to improve this phase we can know who is the costumer for identity, colors, typography
 
-**Describe other alternatives that you considered:**
-use Figma for prototype and SASS, Flexbox maybe bootstrap, BEM
+**Tools:**
+SASS,
+Flexbox,
+Bootstrap, 
+BEM,
+JS,
+PHP,
+ADOBE XD,
+API REST Trello,
+
 
 **How did you connect to the API?**
 follow documentation step by step in trello API, and after write the code in HTML, JS and use postman for call API 
 
 
-https://github.com/PlatziMaster/Master-X-Day-Frontend/compare/main...rafalagunas:main?template=phase1.md
+**Deployment of your project**
+You have deployed your project using Vercel, Heroku or Netlify
+
+we use for deploy platform Heroku because we had experience with that and the URL for watch the deployment is:
+
+https://platzi-master-frontend-team16.herokuapp.com/
+
+**Authors**
+Juan David Niño Rodriguez
+Cristian Andres Bustos Ayala
+Julian Tomas Vergara Cifuentes

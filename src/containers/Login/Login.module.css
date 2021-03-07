@@ -1,0 +1,46 @@
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 4.8rem;
+  text-align: center;
+  color: white;
+}
+
+.subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-align: center;
+  color: white;
+}
+
+#id__input {
+  display: block;
+  margin: 0 auto;
+  background-color: #f4f4fc;
+  width: 24rem;
+  height: 5.4rem;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  padding: 1rem 2.5rem;
+  color: #747474;
+  margin-top: 1.5rem;
+}
+
+#id__input::placeholder {
+  color: 747474;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: "Roboto";
+}

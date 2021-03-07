@@ -1,0 +1,14 @@
+.Button {
+    background-color: #FF4081;
+    margin: 0 auto;
+    margin-left: 20px;
+    width:129px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: white;
+    list-style: none;
+  }

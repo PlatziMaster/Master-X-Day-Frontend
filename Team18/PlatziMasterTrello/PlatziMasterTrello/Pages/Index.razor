@@ -1,6 +1,7 @@
 ﻿@page "/"
 @inject IRepository repositorio
 @inject NavigationManager navigationManager
+@using System.Reflection
 
 @if (!string.IsNullOrWhiteSpace(ErrorMsg))
 {
@@ -76,76 +77,95 @@
 
 </section>
 
-
-
-    @code {
-        Dictionary<string, string> queryStringsDict = new Dictionary<string, string>();
-        string ErrorMsg;
-        public DashBoardViewModel DashBoard = new DashBoardViewModel();
-        List<TrelloMembers> httpDashboard;
-        List<TrelloCards> httpCards;
-        List<TrelloLists> httpList;
-        int totalmembers;
-        int totalcards;
-        int totallist;
-
-        protected async override Task OnInitializedAsync()
+@if (httpList == null)
+{
+    <text>Cargando...</text>
+}
+else
+{
+    <section class="container">
+        @foreach (var item in httpList)
         {
-
+            <section class="container__item">
+                <h2>@item.name</h2>
+            </section>
         }
-
-        private async Task Find()
-        {
-            //?ProductSearchField=CategoryID&ProductSearchText=3&PageIndex=0&PageSize=10&SortList[0]SortBy=ProductName&SortList[0]SortDirection=asc
+    </section>
+}
 
 
-            //Members
-            var httpResponseMembers = await repositorio.Get<List<TrelloMembers>>($"https://api.trello.com/1/boards/{DashBoard.Id}/memberships?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44");
-
-            if (httpResponseMembers.Error)
-            {
-                ErrorMsg = (await httpResponseMembers.GetBody());
-            }
-            else
-            {
-                httpDashboard = httpResponseMembers.Response;
-                totalmembers = httpDashboard.Count();
-            }
 
 
-            //Cards
-            var httpResponseCards = await repositorio.Get<List<TrelloCards>>($"https://api.trello.com/1/boards/{DashBoard.Id}/cards?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44");
+@code {
+    Dictionary<string, string> queryStringsDict = new Dictionary<string, string>();
+    string ErrorMsg;
+    public DashBoardViewModel DashBoard = new DashBoardViewModel();
+    List<TrelloMembers> httpDashboard;
+    List<TrelloCards> httpCards;
+    List<TrelloLists> httpList;
+    int totalmembers;
+    int totalcards;
+    int totallist;
 
-            if (httpResponseCards.Error)
-            {
-                ErrorMsg = (await httpResponseCards.GetBody());
-            }
-            else
-            {
-                httpCards = httpResponseCards.Response;
-                totalcards = httpCards.Count();
-            }
+    protected async override Task OnInitializedAsync()
+    {
 
-
-            //List
-            var httpResponseList = await repositorio.Get<List<TrelloLists>>($"https://api.trello.com/1/boards/{DashBoard.Id}/lists?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44");
-
-            if (httpResponseList.Error)
-            {
-                ErrorMsg = (await httpResponseList.GetBody());
-            }
-            else
-            {
-                httpList = httpResponseList.Response;
-                totallist = httpList.Count();
-
-                //foreach (var item in httpList)
-                //{
-                //    item.
-                //}
-            }
-
-
-            StateHasChanged();
-        }
     }
+
+    private async Task Find()
+    {
+        //?ProductSearchField=CategoryID&ProductSearchText=3&PageIndex=0&PageSize=10&SortList[0]SortBy=ProductName&SortList[0]SortDirection=asc
+
+
+        //Members
+        var httpResponseMembers = await repositorio.Get<List<TrelloMembers>>($"https://api.trello.com/1/boards/{DashBoard.Id}/memberships?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44");
+
+        if (httpResponseMembers.Error)
+        {
+            ErrorMsg = (await httpResponseMembers.GetBody());
+        }
+        else
+        {
+            httpDashboard = httpResponseMembers.Response;
+            totalmembers = httpDashboard.Count();
+        }
+
+
+        //Cards
+        var httpResponseCards = await repositorio.Get<List<TrelloCards>>($"https://api.trello.com/1/boards/{DashBoard.Id}/cards?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44");
+
+        if (httpResponseCards.Error)
+        {
+            ErrorMsg = (await httpResponseCards.GetBody());
+        }
+        else
+        {
+            httpCards = httpResponseCards.Response;
+            totalcards = httpCards.Count();
+
+            //foreach (var item in httpList)
+            //{
+
+            //}
+        }
+
+
+        //List
+        var httpResponseList = await repositorio.Get<List<TrelloLists>>($"https://api.trello.com/1/boards/{DashBoard.Id}/lists?key=d19d98d88e0c3d667eaa30e55750de1f&token=e58553bb91a0b6f6aa5c06add1eb3b2a345bef8e6e754fcd02690d2416c1bd44");
+
+        if (httpResponseList.Error)
+        {
+            ErrorMsg = (await httpResponseList.GetBody());
+        }
+        else
+        {
+            httpList = httpResponseList.Response;
+            totallist = httpList.Count();
+
+
+        }
+
+
+        StateHasChanged();
+    }
+}

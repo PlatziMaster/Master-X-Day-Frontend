@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const AppContext = React.createContext(null);
-
 const { Provider, Consumer } = AppContext;
-
 const AppProvider = ({ children }) => {
   const [data, setData] = useState(null);
   const [list, setList] = useState(null)

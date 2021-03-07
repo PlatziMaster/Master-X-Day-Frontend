@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   box-sizing: inherit;
 }
 
@@ -26,12 +28,12 @@ html {
 
 .container {
   display: flex;
-  background-color: #F2FBFF;
+  background-color: #f2fbff;
 }
 
 .aside {
   flex-direction: column;
-  background-color: #E6F7FF;
+  background-color: #e6f7ff;
   padding: 5rem;
   height: 91.3vh;
 }
@@ -50,11 +52,11 @@ ul {
 
 /*Aside*/
 :root {
-  --blanco:#fff;
-  --principal: #8EE0FF;
-  --principalVariacion: #E6F7FF;
-  --secundario: #B784D8;
-  --grisClaro: #EEEEEE;
+  --blanco: #fff;
+  --principal: #8ee0ff;
+  --principalVariacion: #e6f7ff;
+  --secundario: #b784d8;
+  --grisClaro: #eeeeee;
   font-size: 62.5%;
   --toDo: #fece7a;
   --inProgress: #60e973;
@@ -155,14 +157,16 @@ body {
 }
 
 /*Aside Cards -lists*/
-.aside__cards--head, .aside__lists--head {
+.aside__cards--head,
+.aside__lists--head {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.aside__cards--head h2, .aside__lists--head h2 {
+.aside__cards--head h2,
+.aside__lists--head h2 {
   font-weight: 800;
   color: var(--secundario);
   font-size: 3rem;
@@ -170,7 +174,8 @@ body {
   margin-bottom: 30px;
 }
 
-.cards__cards, .lists__cards {
+.cards__cards,
+.lists__cards {
   background-color: var(--blanco);
   border-radius: 20px;
   padding: 10px 15px;
@@ -179,14 +184,16 @@ body {
   box-shadow: 0px 3px 20px 0px #cef1ff;
 }
 
-.cards__cards--text, .lists__cards--text {
+.cards__cards--text,
+.lists__cards--text {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.cards__cards--text h4, .lists__cards--text h4 {
+.cards__cards--text h4,
+.lists__cards--text h4 {
   font-weight: 800;
   font-size: 2rem;
   color: var(--principal);
@@ -194,7 +201,8 @@ body {
   margin-bottom: 0;
 }
 
-.cards__cards--text p, .lists__cards--text p {
+.cards__cards--text p,
+.lists__cards--text p {
   font-weight: 300;
   text-align: left;
   font-size: 1.5rem;
@@ -227,7 +235,7 @@ body {
 }
 
 body {
-  background-color: #F2FBFF;
+  background-color: #f2fbff;
 }
 
 .trelo__container {
@@ -245,7 +253,7 @@ body {
 }
 
 .trelo__container-header {
-  color: #B784D8;
+  color: #b784d8;
   font-weight: 800;
   font-size: 3rem;
   display: flex;
@@ -255,11 +263,23 @@ body {
 }
 
 .trelo__container-cards {
-  border: 2px solid #E6E6E6;
+  border: 2px solid #e6e6e6;
   border-radius: 10px;
   margin: 20px 0px;
   padding: 10px 15px;
   font-size: 1.5rem;
   font-weight: 300;
   text-align: left;
+}
+
+/*fix id's API <p>*/
+#listas p {
+  display: inline;
+}
+#segunda p {
+  display: inline;
+}
+
+#hecho p {
+  display: inline;
 }

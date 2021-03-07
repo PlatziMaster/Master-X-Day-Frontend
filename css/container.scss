@@ -1,35 +1,35 @@
-body{
-    background-color: #F2FBFF;
+body {
+  background-color: #f2fbff;
 }
-.trelo__container{
-    margin: 10px;
-    border-radius: 10px;
-    height: auto;
-    background-color: white;
-    -webkit-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
-    -moz-box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
-    box-shadow: 0px 3px 20px 0px rgba(206,241,255,1);
-    padding: 10px 15px;
-    margin-bottom: 30px;
+.trelo__container {
+  margin: 10px;
+  border-radius: 10px;
+  height: auto;
+  background-color: white;
+  -webkit-box-shadow: 0px 3px 20px 0px rgba(206, 241, 255, 1);
+  -moz-box-shadow: 0px 3px 20px 0px rgba(206, 241, 255, 1);
+  box-shadow: 0px 3px 20px 0px rgba(206, 241, 255, 1);
+  padding: 10px 15px;
+  margin-bottom: 30px;
 }
-.icon__ad{
-    height: 2.5rem;
+.icon__ad {
+  height: 2.5rem;
 }
-.trelo__container-header{
-    color: #B784D8;
-    font-weight: 800;
-    font-size: 3rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    text-align: left;
+.trelo__container-header {
+  color: #b784d8;
+  font-weight: 800;
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: left;
 }
-.trelo__container-cards{
-    border: 2px solid #E6E6E6;
-    border-radius: 10px;
-    margin: 20px 0px;
-    padding: 10px 15px;
-    font-size: 1.5rem;
-    font-weight: 300    ;
-    text-align: left;
+.trelo__container-cards {
+  border: 2px solid #e6e6e6;
+  border-radius: 10px;
+  margin: 20px 0px;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: left;
 }

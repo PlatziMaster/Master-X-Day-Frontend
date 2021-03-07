@@ -20,4 +20,8 @@ exitIcon.addEventListener('click', () => {
 	menuExit.style.display = 'none'
 })
 // Menu Hamburguer
-
+function isEmpty(){
+	if (tId.value == ""){
+		return alert("The dashboard can't be read")
+	}
+}

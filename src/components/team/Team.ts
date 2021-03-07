@@ -15,6 +15,7 @@ members = '';
 created() {
   this.$nextTick(async () => {
     this.members = await getMembers();
+    console.log('😎', this.members);
   });
 }
 }

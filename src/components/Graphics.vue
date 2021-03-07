@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import PieChart from '../PieChart.ts';
+import PieChart from '../PieChart';
 
 export default {
   name: 'LineChartContainer',

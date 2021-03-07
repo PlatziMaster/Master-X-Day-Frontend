@@ -10,11 +10,6 @@ const routes: Array<RouteConfig> = [
     name: 'Home',
     component: Home,
   },
-  {
-    path: '/graphics',
-    name: 'GraphicsPage',
-    component: () => import('../views/GraphicsPage.vue'),
-  },
 ];
 
 const router = new VueRouter({

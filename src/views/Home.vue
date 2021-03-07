@@ -11,29 +11,38 @@
 
     <div class="tab-content">
       <div id="board" class="tab-pane fade in active show">
-        <team />
-    <column columnName="To Do" />
+        <Team />
+        <Column />
       </div>
       <div id="graphics" class="tab-pane fade">
-        <!-- Graphics content -->
+         <GraphicPage />
       </div>
     </div>
+    <!--  -->
+  </div>
 </template>
 
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
+import Column from '../components/column';
+import Team from '../components/team';
+import GraphicPage from './GraphicsPage.vue';
 
 @Component({
-  components: {},
+  components: {
+    GraphicPage,
+    Column,
+    Team,
+  },
 })
 export default class Home extends Vue {}
 </script>
 
 <style scoped>
 .nav-tabs .nav-link {
-  color: #388e3c;
+  color: #388E3C ;
 }
 .nav-tabs .nav-link.active {
-  color: #212121;
+  color: #212121 ;
 }
 </style>

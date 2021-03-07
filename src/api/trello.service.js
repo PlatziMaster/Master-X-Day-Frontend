@@ -35,12 +35,9 @@ const members = (idBoard) => {
   );
 };
 
-const totalCardsBoard = (idBoard) => {
-  return getBoardTotalCards(idBoard).then((data) => {
-    return data && data.length > 0
-      ? data.reduce((acum) => (acum = acum + 1), 0)
-      : 0;
-  });
+
+const cardsBoard = (idBoard) => {
+  return getBoardTotalCards(idBoard);
 };
 
 const lists = (idBoard) => {
@@ -63,4 +60,4 @@ const cardsInList = (idList) => {
   });
 };
 
-export { boardData, members, totalCardsBoard, lists, cardsInList };
+export { boardData, members, cardsBoard, lists, cardsInList };

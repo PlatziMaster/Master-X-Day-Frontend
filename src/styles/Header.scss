@@ -1,0 +1,36 @@
+@mixin media-breakpoint-up($width) {
+  @media only screen and (min-width: $width) {
+    @content
+  }
+}
+
+.presentation-info {
+  padding-top: 12%;
+}
+
+.header-container {
+  background: linear-gradient(243.2deg, #A8F0F9 0%, #037E8C 74.36%), linear-gradient(180deg, #024959 0%, #037E8C 45.31%);
+  height: 100vh;
+}
+
+.title, .slogan {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: 'Roboto';
+}
+
+.title {
+  h1 {
+    font-size: 3.5em;
+  }
+}
+
+.image-container {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.loading-bar {
+  max-width: 280px;
+}

@@ -32,7 +32,7 @@ const Login = () => {
           authorizeScopeWrite={true}
           authorizeScopeAccount={true}
           authorizeExpiration="never"
-          authorizeOnSuccess={() => window.location.href = '/' }
+          authorizeOnSuccess={() => window.location.href = '/onboarding' }
           authorizeOnError={() => console.log('Login error!')}
           autoAuthorize={false}
           authorizeButton={true}

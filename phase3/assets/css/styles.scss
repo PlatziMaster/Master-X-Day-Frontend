@@ -1,0 +1,113 @@
+
+/*Vars*/
+$color_green_platzi: #99c84a;
+$color_green: #b6ca67;
+$color_black: #2c2f33;
+$color_white: white;
+$font_page: "Roboto", sans-serif;
+
+/*Body*/
+body {
+    background: #f1f5c5;
+    font-family: $font_page;
+    margin: 0;
+}
+
+/*Header*/
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background: $color_black;
+  padding: 4vh 0vh;
+}
+.header__img {
+  width: 40px;
+}
+.header__title {
+  color: $color_white;
+  padding-top: 7px;
+  font-size: 18px;
+}
+
+/* cards */
+.card {
+  box-shadow: -5px 5px 2px $color_green_platzi;
+  max-width: 300px;
+  margin-bottom: 20px;
+
+  .card:hover {
+    cursor: pointer;
+  }
+
+}
+.card-header {
+  color: $color_white;
+  font-weight: bold;
+  background-color: $color_black;
+}
+.card-header {
+  font-size: 1.5em;
+}
+
+/*btns*/
+.btnPlatzi {
+  max-width: 200px;
+  background: $color_green_platzi !important;
+  box-shadow: -3px 3px 2px $color_green;
+
+  .btnPlatzi:hover {
+      transform: scale(1.03);
+  }
+}
+
+/*modal*/
+.modal-header {
+  color: $color_white;
+  background-color: $color_black;
+}
+
+/*Piechart*/
+#chart_wrap {
+  position: relative;
+  padding-bottom: 60%;
+  height: 0;
+  overflow: hidden;
+}
+#piechart_3d {
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*footer*/
+footer {
+  width: 100%;
+  height: 80px;
+  background: $color_black;
+  text-align: center;
+  padding: 23px;
+  a {
+    color: $color_white;
+  }
+}
+
+/*@Media*/
+
+@media screen and (min-width: 500px) {
+    /*Header*/
+  .header {
+    padding: 3vh 0vh;
+  }
+  .header__img {
+    width: 60px;
+  }
+  .header__title {
+    font-size: 25px;
+  }
+}

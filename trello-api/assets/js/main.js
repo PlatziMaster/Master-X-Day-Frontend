@@ -17,16 +17,20 @@ init = async () => {
         jsonBoard.members = getMembersName( boardMemberships );         
         let listInfo = await getListInfo( board );
         jsonBoard.lists = listInfo.length;  
-        listInfo.forEach( async list => {
+        let jsonList = [];
+        listInfo.forEach( async list => {            
             let cardsInfo = await getCardsInfo( list );            
-            jsonBoard.cards = cardsInfo.length;
-            jsonBoard.cardsData = cardsInfo;        
+            list.numCards = cardsInfo.length;
+            list.cardsData = cardsInfo;            
+            jsonList.push( list );
         });
 
+        jsonBoard.listData = jsonList;
 
-        console.log( jsonBoard );
-
+        jsonData.push( jsonBoard );
     });
+
+    return jsonData;
 } 
 
 fetchData = ( endpoint, query ) => {
@@ -82,4 +86,9 @@ getMembersName = ( boardMemberships ) => {
     return jsonMembers;
 }  
 
-init();
+loadData = async () => {
+    let jsonData = await init();
+    console.log( jsonData );
+};
+
+loadData();

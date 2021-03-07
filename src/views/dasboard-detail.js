@@ -57,7 +57,11 @@ useEffect(() => {
     })
     .then((res) => {
         console.log('list after the getLists', res)
-        res.forEach(list => {
+        res.sort(function(a, b){
+            if(a.name < b.name) { return -1; }
+            if(a.name > b.name) { return 1; }
+            return 0;
+        }).forEach(list => {
         getCardsByList(list.id)
         .then(res => {
             console.log('getCardsByList', res)

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +16,9 @@
         max-width: 1000px;
         width: 100%;
         margin: 0 auto;
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .chartDisplay {
@@ -23,8 +26,9 @@
         border: 1px solid #ccc;
         margin: 1em auto;
         padding: 1em;
-        display: inline-block  !important;
+        display: inline-block !important;
     }
+
     .chartDisplay.longDisplay {
         width: 100%;
         max-width: 840px;
@@ -33,56 +37,70 @@
         display: inline-block;
     }
 
-  
-.informationTable {
-    width: 100%;
-    max-width: 880px;
-}
+    .informationTable {
+        width: 100%;
+        max-width: 880px;
+        margin: 0 auto;
+    }
 
-.informationTable td, .informationTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
+    .informationTable td,
+    .informationTable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
 
-.informationTable tr:nth-child(even){background-color: #f2f2f2;}
+    .informationTable tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 
-.informationTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #56CCF2;
-  font-weight: bold;
-}
-
-
+    .informationTable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #56CCF2;
+        font-weight: bold;
+    }
 </style>
+
 <body>
 
-    <div class="containerStats">
-        <canvas id="pie-chart"  class="chartDisplay"></canvas>
-        <canvas id="bar-chart" class="chartDisplay"></canvas>
+    <div id="container">
 
-        <div id="dataTable" class="dataTable">
-            
+        <nav>
+            <span class="dashname">X- Project</span>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a class="nav_active" href="stats.html">Stats</a></li>
+        </nav>
+
+        <section class="dashdetails">
+            <div class="dashdetails__count">
+                <p class="dashdetails__title--darkblue">TOTAL CARDS: </p>
+                <p class="dashdetails__title--black">6</p>
+            </div>
+            <div class="dashdetails__count">
+                <p class="dashdetails__title--blue">TOTAL MEMBERS: </p>
+                <p class="dashdetails__title--black">4</p>
+            </div>
+            <div class="dashdetails__count">
+                <p class="dashdetails__title--blue">PROJECT COMPLETION: </p>
+                <p class="dashdetails__title--black">50%</p>
+            </div>
+        </section>
+
+            <div class="containerStats">
+                <canvas id="pie-chart" class="chartDisplay"></canvas>
+                <canvas id="bar-chart" class="chartDisplay"></canvas>
+            </div>
+            <div id="dataTable" class="dataTable">
+            </div>
         </div>
-        
+
     </div>
-    
 
-        
-        
-    
-    
-      
-        
-        </div>
-
-  
     <script src="./api/index.js"></script>
     <script src="./js/stats.js"></script>
-
-    
 
 </body>
 </html>

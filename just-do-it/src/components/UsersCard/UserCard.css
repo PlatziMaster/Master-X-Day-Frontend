@@ -1,11 +1,15 @@
 .container__users {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
 }
 .card__user {
   display: flex;
-  width: 100%;
-  height: 60px;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  height: 120px;
   min-width: 320px;
   padding: 5px 5px;
   border-radius: 5px;
@@ -15,19 +19,45 @@
 }
 
 .card__user--item {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   height: 60px;
+  width: 80px;
   margin-left: 5px;
   border-radius: 5px;
 }
 .card__user--item img {
   border: 1px solid green;
-  height: 30px;
-  width: 30px;
+  height: 45px;
+  width: 45px;
   margin-top: 5px;
   margin-left: 5px;
   border-radius: 5px;
+  border-radius: 50%;
 }
 .card__user--item p {
   margin: 0;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+}
+@media (min-width: 600px) {
+  .card__user {
+    overflow: hidden;
+  }
+
+  .card__user--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+    width: 100px;
+    margin-left: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
 }

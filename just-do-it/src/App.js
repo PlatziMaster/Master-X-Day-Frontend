@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import './App.css';
 // Import components
 import UserCard from './components/UsersCard/UserCard';
+import CenterBoard from './components/CenterBoard/CenterBoard';
 // Import actions
 import { getBoards, getMembersByBoardId, getListsByBoardId, getCardsByBoardId, resetRequest } from './redux/actions/boardActions';
 
@@ -48,9 +49,12 @@ const App = ({
     <div className="App">
       <Menu />
       <UserCard members={members} />
+      <CenterBoard />
     </div>
   );
 };
+
+
 
 // Map dispatch
 const mapDispatchToProps = (dispatch) => ({

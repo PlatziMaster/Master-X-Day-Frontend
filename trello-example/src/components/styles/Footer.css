@@ -1,0 +1,22 @@
+.Footer{
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: black;
+  }
+
+  .Footer__container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+  .Footer__container-logo{
+    width: 100px;
+    /* padding-left: 10px;
+    margin-right: 5rem; */
+  }
+.font-weight-bold{
+  color: white;
+}
+  
+  

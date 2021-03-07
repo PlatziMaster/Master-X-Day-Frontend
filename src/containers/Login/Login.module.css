@@ -1,28 +1,4 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
-html {
-  font-size: 62.5%;
-}
-
-.body {
-  height: 100vh;
-  background-color: #04042c;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  gap: 20px;
-}
-
-.logos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-}
 
 .container {
   display: flex;
@@ -68,3 +44,7 @@ html {
   font-size: 1.8rem;
   font-family: "Roboto";
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8311d1ba91b1a3f6470ab4b40d25d012f02a6544

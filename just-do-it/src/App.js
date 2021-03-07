@@ -6,6 +6,7 @@ import './App.css';
 // Import components
 import UserCard from './components/UsersCard/UserCard';
 import CenterBoard from './components/CenterBoard/CenterBoard';
+import VerticalBar from "./components/VerticalBar/VerticalBar";
 // Import actions
 import { getBoards, getMembersByBoardId, getListsByBoardId, getCardsByBoardId, resetRequest } from './redux/actions/boardActions';
 
@@ -50,6 +51,10 @@ const App = ({
       <Menu />
       <UserCard members={members} />
       <CenterBoard />
+      <section className="graphs">
+        <VerticalBar tasks={[12, 19, 3]}/>
+        <PieChart tasks={[12, 19, 3]}/>
+      </section>
     </div>
   );
 };

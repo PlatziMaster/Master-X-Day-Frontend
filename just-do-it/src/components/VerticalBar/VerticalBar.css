@@ -1,0 +1,19 @@
+.vertical-bar-section {
+    width: 27rem;
+    height: 20rem;
+    border-radius: 5px;
+    background-color: #C4C4C4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-bar-section__title {
+    font-size: 1rem;
+    /* text-align: left; */
+}
+
+.vertical-bar-section__graph {
+    
+}

@@ -16,7 +16,6 @@ const token ='77d05764808a1a37da01293c2fde4e21f5aaa3d377fc79d6402528654984fc85'
 function DasboardDetail(props) {
 const [lists, setLists] = useState([])
 const [members, setMembers] = useState([])
-const [boards, setBoards] = useState([])
 const { id } = useParams()
 
 const getLists = async () => {
@@ -69,22 +68,8 @@ useEffect(() => {
             setLists(lists => [...lists, object])
         })
         });
-        // setCards(CardsInList)
     })
     }
-    
-
-    const getBoards = async ()  => {
-    let res = await axios.get(`https://api.trello.com/1/members/me/boards?key=${key}&token=${token}`)
-    console.log('getInfo',res.data)
-    return res.data
-    }
-
-    getBoards()
-    .then(res => {
-    console.log('Boards', res);
-    setBoards(res)
-    })
     
     getMembersOfBoard()
     .then(members => {
@@ -110,8 +95,6 @@ return (
         {/* {boards.length >= 1 ? (
             boards.map(board => <div key={board.id}>{board.name}</div>)
         ) : null} */}
-
-        
 
         {lists.length >= 1 ? (
             lists.map(list => 

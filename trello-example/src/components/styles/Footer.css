@@ -10,9 +10,11 @@
       justify-content: space-between;
   }
   
-  .Footer__container-logo {
+  .Footer__container-logo{
+    width: 5px;
     padding-left: 10px;
     margin-right: 5rem;
   }
+
   
   

@@ -2,7 +2,6 @@
 @media (min-width: 320px){
     #main
     {
-        background-color: white;
         width: 100%;
         height: auto;
     }
@@ -84,25 +83,7 @@
        font-size: 16px;
        font-family: "Poppins";
     }
-    
-    #white
-    {
-        margin-left: 20px;
-        border: 2px solid #FF4081;
-        border-radius: 10px;
-        color: #FF4081;
-        background-color: transparent;
-    }
-    
-    #pink
-    {
-        margin-left: 20px;
-        border-radius: 10px;
-        color: white;
-        background-color: #FF4081;
-    }
-    
-    
+
     }
     
     @media (min-width: 768px){
@@ -110,7 +91,7 @@
     
         #userimg figure
         {
-            width: 269px;
+            width: 269px ; 
             height: 269px;
         }
         

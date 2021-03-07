@@ -13,3 +13,12 @@
   font-weight: 500;
   color: white;
 }
+
+@media (min-width: 768px) {
+  .Button {
+    width: 25rem;
+    height: 10rem;  
+    border-radius: 2rem;
+    font-size: 3rem;
+  }
+}

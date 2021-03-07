@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./BoardConfirm.module.css";
+import ButtonBoard from "../../components/ButtonBoard";
+import ButtonSecondary from "../../components/ButtonSecondary";
 
 const BoardConfirm = () =>
 {
+    
     return(
         <main id={styles.main}>
         <section id={styles.welcome}>
@@ -28,8 +31,8 @@ const BoardConfirm = () =>
             <p id="cards" className={styles.lctitle}>Cards</p>
         </section>
         <form id="buttons">
-            <input type="button" value="Back" id={styles.white}/>
-            <input type="button" value="Continue" id={styles.pink}/>
+            <ButtonBoard>Continue</ButtonBoard>
+            <ButtonSecondary>Back</ButtonSecondary>
         </form> 
     </main>
     );

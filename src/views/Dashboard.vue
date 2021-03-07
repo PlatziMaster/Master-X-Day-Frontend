@@ -1,73 +1,11 @@
 <template>
   <!-- Overlay -->
-  <div
-    class="transform top-0 left-0 w-full bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30 lg:hidden bg-MTDarkGreen"
-  >
-    <div class="w-full h-full bg-MTDarkGreen">
-      <!-- <MTDashboardSidebar /> -->
-      <img 
-        aria-label="Profile Image"
-        class="my-8 h-32 w-32 rounded-full border-4 mx-auto mt-24"
-        alt=""
-        src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
-      />
-
-      <h2 class="my-4 text-2xl font-bold text-MTWhite">Team Members</h2>
-
-      <div class="flex flex-col items-start text-white ">
-        <ul class="my-0 list-disc mx-auto">
-          <li v-for="(member, index) in members"
-            :key="index"
-            class="my-2 text-base font-thin mx-auto"
-            >
-            {{ member }}
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  
 
   <NavBar />
 
   <div class="flex flex-col xl:flex-row w-full h-full">
-    <div class="w-full bg-MTDarkGreen flex content-center block xl:hidden">
-      <div
-        class=" w-14  mt-4 mb-4 ml-4 bg-MTLightGreen flex flex-col jusfity-center content-center cursor-pointer"
-        @click="openSidebar = !openSidebar"
-      >
-        <div v-if="openSidebar" class="mx-auto">
-          <div class="burger"></div>
-          <div class="burger"></div>
-          <div class="burger"></div>
-        </div>
-        <div v-if="!openSidebar" class="mx-auto mt-2 mb-2">
-          <span class="text-xl text-white font-bold">X</span>          
-        </div>
-      </div>
-    </div>
-
-    <div class="w-1/4 h-screen bg-MTDarkGreen hidden xl:block">
-      <img
-        aria-label="Profile Image"
-        class="my-8 h-32 w-32 rounded-full border-4 mx-auto mt-24"
-        alt=""
-        src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
-      />
-
-      <h2 class="my-4 text-2xl font-bold text-MTWhite">Team Members</h2>
-
-      <div class="flex flex-col items-start text-white ">
-        <ul class="my-0 list-disc mx-auto">
-          <li
-            v-for="(member, index) in members"
-            :key="index"
-            class="my-2 text-base font-thin mx-auto"
-          >
-            {{ member }}
-          </li>
-        </ul>
-      </div>
-    </div>
+    <MTDashboardSidebar v-bind:members="members" />
 
     <div class="w-full xl:w-3/4 ">
       <div class="about pb-24 pt-12">
@@ -101,7 +39,7 @@
 </template>
 <script>
 // @ is an alias to /src
-/* import MTDashboardSidebar from "@/components/MTDashboardSidebar.vue"; */
+import MTDashboardSidebar from "@/components/MTDashboardSidebar.vue";
 import MTDashboardCard from "@/components/MTDashboardCard.vue";
 // import MTDashboardCardLarge from "@/components/MTDashboardCardLarge.vue";
 // import MTDashboardCardSmall from "@/components/MTDashboardCardSmall.vue";
@@ -120,7 +58,7 @@ const idBoard = "6043b76b2ab9f31967290262";
 export default {
   name: "Dashboard",
   components: {
-    /* MTDashboardSidebar, */
+    MTDashboardSidebar,
     MTDashboardCard,
     // MTDashboardCardLarge,
     // MTDashboardCardSmall,

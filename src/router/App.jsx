@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import OnBoarding from "../containers/Onboarding/";
 import Dashboard from "../containers/Dashboard/";
 import Login from "../containers/Login/";
+import BoardConfirm from "../containers/BoardConfirm";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Switch>
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/onboarding" component={OnBoarding} />
+        <Route exact path="/boardconfirm" component={BoardConfirm}/>
         <Route path="/" component={Login} />
       </Switch>
     </BrowserRouter>

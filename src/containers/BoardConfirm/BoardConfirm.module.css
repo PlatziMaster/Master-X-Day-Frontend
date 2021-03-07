@@ -1,0 +1,117 @@
+/*Media Query for 320px*/
+@media (min-width: 320px){
+    #main
+    {
+        background-color: white;
+        width: 100%;
+        height: auto;
+    }
+    
+    #welcome
+    {
+        text-align: center;
+        font-family: "Poppins";
+        color: white;
+        font-size: 22px;
+        line-height: 33px;
+        background-color:#303F9F;
+        width: 100%
+    }
+    
+    #userimg figure
+    {
+        background-color: gray;
+        border-radius: 100%;
+        width: 75px;
+        height: 75px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #members h2
+    {
+        font-family: "Poppins";
+        font-size: 22px;
+        padding-left: 20px;
+        display: inline-block;
+    }
+    
+    .member
+    {
+        font-family: "Roboto";
+        font-size: 16px;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        margin-top: 10px;
+    }
+    
+    .member figure
+    {
+        width: 30px;
+        height: 30px;
+        background-color: gray;
+        border-radius: 100%;
+    }
+    
+    .member p
+    {
+        align-self: center;
+        margin-left: 10px;    
+    }
+    
+    #listcards
+    {
+        font-family: "Poppins";
+        font-size: 22px;
+        font-weight: 700;
+        margin: 20px 10%;
+        width: 100px;
+    }
+    
+    #buttons
+    {
+        position: fixed;
+        bottom: 40px;
+        margin: auto;
+    }
+    
+    #buttons input[type="button"]
+    {
+       width: 128px;
+       height: 40px;
+       font-size: 16px;
+       font-family: "Poppins";
+    }
+    
+    #white
+    {
+        margin-left: 20px;
+        border: 2px solid #FF4081;
+        border-radius: 10px;
+        color: #FF4081;
+        background-color: transparent;
+    }
+    
+    #pink
+    {
+        margin-left: 20px;
+        border-radius: 10px;
+        color: white;
+        background-color: #FF4081;
+    }
+    
+    
+    }
+    
+    @media (min-width: 768px){
+    
+    
+        #userimg figure
+        {
+            width: 269px;
+            height: 269px;
+        }
+        
+    }

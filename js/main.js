@@ -65,7 +65,9 @@ const idmiembro3 = 'https://api.trello.com/1/members/6043bbc71a1e421b33ea5d27?ke
   })
   .catch(err=>console.log(err))
 
- /** Get -> that provide us the lists from Trello **/
+  
+
+ /** Get que trae las listas de Trello **/
 fetch(urlList)
 .then(response => response.json())
 .then (data =>{
@@ -78,8 +80,48 @@ fetch(urlList)
 .catch(err=>console.log(err))
 
 
-/** Get -> that provide us the boards from Trello**/
-fetch(urlBoard)
+ /** Get que trae las listas de Trello **/
+ fetch(urlList1)
+ .then(response => response.json())
+ .then (data =>{
+ 
+     let element = document.getElementById('segunda')
+     element.innerHTML = `
+         <p>${data.name}</p>
+     `
+ })
+ .catch(err=>console.log(err))
+
+  /** Get que trae las listas de Trello **/
+  fetch(urlList2)
+  .then(response => response.json())
+  .then (data =>{
+  
+      let element = document.getElementById('hecho')
+      element.innerHTML = `
+          <p>${data.name}</p>
+      `
+  })
+  .catch(err=>console.log(err))
+
+
+
+
+/** Get que trae los cards de Trello de la lista **/
+fetch(urlcardslist)
+.then(response => response.json())
+.then (data =>{
+
+    let element = document.getElementById('prueba')
+    element.innerHTML = `
+        <p>${data.name}</p>
+    `
+})
+.catch(err=>console.log(err))
+
+
+/** Get que trae los cards de Trello de la lista 1 **/
+fetch(urlCardslist1)
 .then(response => response.json())
 .then (data =>{
 
@@ -91,11 +133,12 @@ fetch(urlBoard)
 .catch(err=>console.log(err))
 
 
-/** Get -> that provide us the cards from Trello **/
-fetch(urlcards)
+/** Get que trae los cards de Trello de la lista 2 **/
+fetch(urlCardsList2)
 .then(response => response.json())
 .then (data =>{
-    let element = document.getElementById('prueba')
+
+    let element = document.getElementById('otraPruebita')
     element.innerHTML = `
         <p>${data.name}</p>
     `
@@ -103,4 +146,45 @@ fetch(urlcards)
     console.log(data)
 })
 .catch(err=>console.log(err))
+
+
+
+/** Get que trae los cards de Trello de la lista 2 **/
+    fetch(urlCardsList3)
+    .then(response => response.json())
+    .then (data =>{
+    
+        let element = document.getElementById('final')
+        element.innerHTML = `
+            <p>${data.name}</p>
+        `
+    })
+    .catch(err=>console.log(err))
+
+
+
+
+
+
+/** Get que trae los tableros de Trello**/
+fetch(urlBoard)
+.then(response => response.json())
+.then (data =>{
+
+    let element = document.getElementById('boards')
+    element.innerHTML = `
+        <p>${data.name}</p>
+    `
+})
+.catch(err=>console.log(err))
+
+
+
+
+
+
+
+
+
+
 

@@ -4,11 +4,24 @@ import ApiService from './services/api';
 
 import './App.css';
 
+
 function App() {
 
-  ApiService.getBoards().then(response => {
-    console.log(response);
+  let idBoard = ApiService.getBoards().then(response => {
+    return response.data[0].id
   })
+
+  
+ 
+  idBoard.then(function(result){
+    console.log(result);
+
+    ApiService.getCards(result).then(response =>{
+      console.log(response);
+    })
+  })
+
+
 
   return (
     <div className="App">
@@ -52,7 +65,7 @@ function App() {
           <div className="col-md-4">
             <h3>To do</h3>
             <div className="total-todo">
-
+              
             </div>
           </div>
           <div className="col-md-4">

@@ -25,9 +25,11 @@ const urlCardsList3 = 'https://api.trello.com/1/cards/604396d6f0d57d1da5fd9058?k
 
 
 const idmiembro = 'https://api.trello.com/1/members/6043bbcf190a3f6bd0b31611?key=1a2d88f8c99ace7c5391697413220037&token=c719c5ceb460648640d2fba3d1e356be33e30cbcd3a523bc12ddbcf4824c3b44'
+const idmiembro2 = 'https://api.trello.com/1/members/604395f6a3759c40bf81695c?key=1a2d88f8c99ace7c5391697413220037&token=c719c5ceb460648640d2fba3d1e356be33e30cbcd3a523bc12ddbcf4824c3b44'
+const idmiembro3 = 'https://api.trello.com/1/members/6043bbc71a1e421b33ea5d27?key=1a2d88f8c99ace7c5391697413220037&token=c719c5ceb460648640d2fba3d1e356be33e30cbcd3a523bc12ddbcf4824c3b44'
 
 
- /** Get que trae las listas de Trello **/
+ /** Get que trae los miembros de del equipo **/
  fetch(idmiembro)
  .then(response => response.json())
  .then (data =>{
@@ -39,7 +41,29 @@ const idmiembro = 'https://api.trello.com/1/members/6043bbcf190a3f6bd0b31611?key
  })
  .catch(err=>console.log(err))
 
+ /** Get que trae los miembros de del equipo **/
+ fetch(idmiembro2)
+ .then(response => response.json())
+ .then (data =>{
+    let elemento = document.getElementById('miembro')
+    elemento.innerHTML = `
+        <h4>${data.fullName}</h4>
+    `
+     console.log(data)
+ })
+ .catch(err=>console.log(err))
 
+  /** Get que trae los miembros de del equipo **/
+  fetch(idmiembro3)
+  .then(response => response.json())
+  .then (data =>{
+     let elemento = document.getElementById('miembro2')
+     elemento.innerHTML = `
+         <h4>${data.fullName}</h4>
+     `
+      console.log(data)
+  })
+  .catch(err=>console.log(err))
 
  /** Get que trae las listas de Trello **/
 fetch(urlList)

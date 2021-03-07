@@ -10,7 +10,7 @@ import VerticalBar from "./components/VerticalBar/VerticalBar";
 import Menu from "./components/Menu-lateral.js/Menu";
 import PieChart from "./components/PieChart/PieChart";
 // Import actions
-import { getBoards, getMembersByBoardId, getListsByBoardId, getCardsByBoardId, resetRequest } from './redux/actions/boardActions';
+import { getBoards, getMembersByBoardId, getListsByBoardId, getCardsByBoardId, getCardsByListId, resetRequest } from './redux/actions/boardActions';
 
 // Component
 const App = ({
@@ -18,11 +18,13 @@ const App = ({
   getMembersByBoardId,
   getListsByBoardId,
   getCardsByBoardId,
+  getCardsByListId,
   resetRequest,
   boards,
   members,
   lists,
   cardsByBoard,
+  cardsByList,
   successRequest,
   errorRequest,
 }) => {
@@ -42,26 +44,39 @@ const App = ({
       getCardsByBoardId(boards[0].id);
     }
   }, [boards, getMembersByBoardId, getListsByBoardId, getCardsByBoardId])
+
+  // Get cards by list
+  useEffect(() => {
+    if (lists[0]) {
+      lists.forEach(list => {
+        getCardsByListId(list.id);
+      })
+    }
+  }, [lists, getCardsByListId])
   
   if ((successRequest || errorRequest) && loading) {
     setTimeout(() => resetRequest());
     setLoading(false);
   }
-
+  // console.log(cardsByList.length, lists.length);
   return (
     <div className="App">
       <Menu />
       <UserCard members={members} />
-      <CenterBoard />
+      {cardsByBoard[0] ? 
+        <div className="centerBoard__container">
+          {lists.map((list, i) => 
+            <CenterBoard key={i} list={list} cards={cardsByBoard}/>
+          )}
+        </div>
+      : null}
       <section className="graphs">
-        <VerticalBar tasks={[12, 19, 3]}/>
-        <PieChart tasks={[12, 19, 3]}/>
+        <VerticalBar lists={lists} cards={cardsByBoard}/>
+        <PieChart lists={lists} cards={cardsByBoard}/>
       </section>
     </div>
   );
 };
-
-
 
 // Map dispatch
 const mapDispatchToProps = (dispatch) => ({
@@ -77,6 +92,9 @@ const mapDispatchToProps = (dispatch) => ({
   getCardsByBoardId(boardId) {
     dispatch(getCardsByBoardId({ boardId }))
   },
+  getCardsByListId(listId) {
+    dispatch(getCardsByListId({ listId }))
+  },
   resetRequest() {
     dispatch(resetRequest());
   },
@@ -88,6 +106,7 @@ const mapStateToProps = (state) => ({
   members: state.boardReducer.members,
   lists: state.boardReducer.lists,
   cardsByBoard: state.boardReducer.cardsByBoard,
+  cardsByList: state.boardReducer.cardsByList,
   errorRequest: state.boardReducer.errorRequest,
   successRequest: state.boardReducer.successRequest,
 });

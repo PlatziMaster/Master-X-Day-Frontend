@@ -40,7 +40,6 @@ const boardReducer = (state = initialState, action) => {
                 boards: [] 
             };
         case SUCCESS_GET_BOARDS:
-            console.log(action.result);
             const boards = action.result;
             return { 
                 ...state,
@@ -48,7 +47,6 @@ const boardReducer = (state = initialState, action) => {
                 boards
             };
         case ERROR_GET_BOARDS:
-            console.log(action.error);
             return { 
                 ...state,
                 errorRequest: true,
@@ -61,7 +59,6 @@ const boardReducer = (state = initialState, action) => {
                 members: [] 
             };
         case SUCCESS_GET_MEMBERS_BY_BOARD_ID:
-            console.log(action.result);
             const members = action.result;
             return { 
                 ...state,
@@ -69,7 +66,6 @@ const boardReducer = (state = initialState, action) => {
                 members
             };
         case ERROR_GET_MEMBERS_BY_BOARD_ID:
-            console.log(action.error);
             return { 
                 ...state,
                 errorRequest: true,
@@ -82,7 +78,6 @@ const boardReducer = (state = initialState, action) => {
                 lists: [] 
             };
         case SUCCESS_GET_LISTS_BY_BOARD_ID:
-            console.log(action.result);
             const lists = action.result;
             return { 
                 ...state,
@@ -90,7 +85,6 @@ const boardReducer = (state = initialState, action) => {
                 lists
             };
         case ERROR_GET_LISTS_BY_BOARD_ID:
-            console.log(action.error);
             return { 
                 ...state,
                 errorRequest: true,
@@ -103,7 +97,6 @@ const boardReducer = (state = initialState, action) => {
                 cardsByBoard: [] 
             };
         case SUCCESS_GET_CARDS_BY_BOARD_ID:
-            console.log(action.result);
             const cardsByBoard = action.result;
             return { 
                 ...state,
@@ -111,7 +104,6 @@ const boardReducer = (state = initialState, action) => {
                 cardsByBoard
             };
         case ERROR_GET_CARDS_BY_BOARD_ID:
-            console.log(action.error);
             return { 
                 ...state,
                 errorRequest: true,
@@ -124,7 +116,6 @@ const boardReducer = (state = initialState, action) => {
                 cardsByList: [] 
             };
         case SUCCESS_GET_CARDS_BY_LIST_ID:
-            console.log(action.result);
             const cardsByList = action.result;
             return { 
                 ...state,

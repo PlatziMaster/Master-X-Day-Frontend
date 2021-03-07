@@ -2,12 +2,15 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import "./VerticalBar.css"
 
-const VerticalBar = ({ tasks }) => {
+const VerticalBar = ({ lists, cards }) => {
 	const data = {
-		labels: ['To do', 'In progress', 'Done'],
+		labels: lists.map(list => list.name),
 		datasets: [
 			{
-				data: tasks,
+				data: lists.map(list => {
+					const newList = cards.filter(card => card.idList === list.id);
+					return newList.length
+				}),
 				label: 'Tasks to do',
 				backgroundColor: [
 					'rgba(244, 67, 54)',

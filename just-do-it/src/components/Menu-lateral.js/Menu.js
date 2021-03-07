@@ -11,33 +11,33 @@ const Menu = () => {
     <nav className="menu">
       <ul className="container">
         <li className="items">
-          <a href="">
+          <div className="icon_container">
             {" "}
             <img src={Logo} alt="" />
-          </a>
+          </div>
         </li>
         <li className="items">
-          <a href="">
+          <div className="icon_container">
             {" "}
             <img src={Notifications} alt="" />
-          </a>
+          </div>
         </li>
         <li className="items">
-          <a href="">
+          <div className="icon_container">
             <img src={Calendario} alt="" />
-          </a>
+          </div>
         </li>
       </ul>
       <ul className="container2">
         <li className="items">
-          <a href="">
+          <div className="icon_container">
             <img src={Members} alt="" />
-          </a>
+          </div>
         </li>
         <li className="items">
-          <a href="">
+          <div className="icon_container">
             <img src={Star} alt="" />
-          </a>
+          </div>
         </li>
       </ul>
     </nav>

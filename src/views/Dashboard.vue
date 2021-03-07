@@ -27,7 +27,7 @@
               :listName="item.name"
               :cardsNumber="item.cardsNumber"
               :id="item.id"
-              :percent="percent"
+              :percent="item.percent"
             />
           </div>
         </div>
@@ -81,13 +81,16 @@ export default {
     members(idBoard).then((members) => (this.members = members));
     await cardsBoard(idBoard)
       .then((cards) => {
+        debugger;
         this.cards = cards;
         return lists(idBoard);
       })
       .then((lists) => {
+        debugger;
         this.listsData = this.loadCardsInList(lists);
       });
     console.log(this.listsData);
+    debugger;
   },
   methods: {
     loadCardsInList(lists) {

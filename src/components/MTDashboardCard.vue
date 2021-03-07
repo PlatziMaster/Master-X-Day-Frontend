@@ -10,7 +10,7 @@
         color="#FF8C8C"
         backgroundColor="#FFE5E5"
         label="prueba"
-        :percent="50"
+        :percent="percent"
       />
     </div>
     <div
@@ -39,12 +39,12 @@ export default {
     listName: String,
     cardsNumber: String,
     id: String,
+    percent: Number,
   },
   components: {
     "mt-dashboard-pie": MTDashboardPieChart,
   },
   created() {
-    debugger;
     console.log(this.id);
     console.log(this.listName);
     console.log(this.listName);

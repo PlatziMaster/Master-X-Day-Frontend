@@ -9,7 +9,7 @@
         <div class="text-white mb-12 text-center md:text-left md:ml-32">
           <h1 class="underline text-4xl font-bold mb-2">{{ board.name }}</h1>
           <h2 class="text-2xl font-bold">{{ listsData.length }} Lists</h2>
-          <h3 class="text-md">{{ totalCardsBoard }} Cards</h3>
+          <h3 class="text-md">{{ cards.length }} Cards</h3>
         </div>
         <div class="w-full flex flex-col content-center ">
           <div class="grid grid-cols-1 gap-x-8 gap-y-8 mx-auto pb-8 ">
@@ -81,16 +81,12 @@ export default {
     members(idBoard).then((members) => (this.members = members));
     await cardsBoard(idBoard)
       .then((cards) => {
-        debugger;
         this.cards = cards;
         return lists(idBoard);
       })
       .then((lists) => {
-        debugger;
         this.listsData = this.loadCardsInList(lists);
       });
-    console.log(this.listsData);
-    debugger;
   },
   methods: {
     loadCardsInList(lists) {

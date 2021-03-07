@@ -4,6 +4,7 @@
 ## Design 
 
 The design was made with figma and can be accessed in https://imgur.com/a/TdCjzv2
+To see this project on action, visit https://mtdrello.herokuapp.com/
 
 
 Instructions:

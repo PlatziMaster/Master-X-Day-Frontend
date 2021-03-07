@@ -1,0 +1,12 @@
+.board{
+    background-color: #121F3D;
+    padding: 80px 0;
+    height: 100vh;
+}
+
+@media screen and(max-width: 768px){
+    .board{
+        height: auto;
+        min-height: 100vh;
+    }
+}

@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import PieChart from '../PieChart';
+import PieChart from '../PieChart.js';
 
 @Component({
   components: { PieChart },

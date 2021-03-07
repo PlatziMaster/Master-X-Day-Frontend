@@ -1,5 +1,6 @@
 <template>
-  <div class="home container">
+  <div class="container py-5">
+    <div class="home container">
     <ul class="nav nav-tabs nav-fill">
       <li class="nav-item">
         <a class="nav-link active" data-toggle="tab" href="#board">Board</a>
@@ -11,38 +12,36 @@
 
     <div class="tab-content">
       <div id="board" class="tab-pane fade in active show">
+
         <Team />
-        <Column />
+        <div class="row">
+      <div :key="list.id" v-for="list in lists" class="col-lg-4 col-md-4 col-sm-12 col-12">
+        <column
+          :columnName="list.name"
+          :cards="list.cards"
+          :counter="list.cards.length"
+          :totalTasks="totalTasks"
+          :progress="((list.cards.length) * 100) / totalTasks"
+          />
+      </div>
+    </div>
       </div>
       <div id="graphics" class="tab-pane fade">
          <GraphicPage />
       </div>
     </div>
-    <!--  -->
+    <div class="row">
+      <div class="col">
+        <h1>Board: {{ boardName.name }}</h1>
+      </div>
+    </div>
+    <div class="row py-3">
+      <div class="col text-right">
+        <p>Total Project Progress: {{ progress }}%</p>
+      </div>
+    </div>
   </div>
 </template>
-
-<script lang='ts'>
-import { Component, Vue } from 'vue-property-decorator';
-import Column from '../components/column';
-import Team from '../components/team';
-import GraphicPage from './GraphicsPage.vue';
-
-@Component({
-  components: {
-    GraphicPage,
-    Column,
-    Team,
-  },
-})
-export default class Home extends Vue {}
+<script lang='ts' src='./Home.ts'>
 </script>
-
-<style scoped>
-.nav-tabs .nav-link {
-  color: #388E3C ;
-}
-.nav-tabs .nav-link.active {
-  color: #212121 ;
-}
-</style>
+<style lang='css' src='./Home.ts'/>
